@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3447864244	Play_PhoneRing			\Default Work Unit\Play_PhoneRing	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	675303891	Phone0011-RING	.cache\3F\{3F358B70-A79C-485A-4420-7525E2EBAEA3}.wem		\Containers\Default Work Unit\Phone0011-RING		434272
+
