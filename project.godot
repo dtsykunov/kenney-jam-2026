@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 
 WwiseRuntimeManager="*uid://dc5vfmhe4p2e8"
 Global="*uid://cohloyy6bqshe"
+ProjectUiSoundController="*uid://cc37235kj4384"
 
 [display]
 
