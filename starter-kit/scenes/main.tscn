@@ -29,6 +29,7 @@ script = ExtResource("1_jkv2x")
 environment = ExtResource("1_ahusb")
 
 [node name="Player" parent="." unique_id=1565091568 node_paths=PackedStringArray("view") instance=ExtResource("2_onms2")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49277484, 0)
 view = NodePath("../View")
 
@@ -185,34 +186,44 @@ size_flags_horizontal = 8
 size_flags_vertical = 8
 script = ExtResource("11_apvpm")
 
-[node name="Icon" type="TextureRect" parent="HUD" unique_id=663121849]
+[node name="VBoxContainer" type="HBoxContainer" parent="HUD" unique_id=1439097745]
 layout_mode = 0
-offset_left = 57.0
-offset_top = 67.0
-offset_right = 313.0
-offset_bottom = 323.0
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("13_jfda3")
-
-[node name="x" type="Label" parent="HUD" unique_id=695667162]
-layout_mode = 0
-offset_left = 112.0
+offset_left = 142.0
 offset_top = 64.0
-offset_right = 144.0
-offset_bottom = 123.0
+offset_right = 398.0
+offset_bottom = 126.0
+
+[node name="Icon" type="TextureRect" parent="HUD/VBoxContainer" unique_id=663121849]
+layout_mode = 2
+texture = ExtResource("13_jfda3")
+expand_mode = 3
+
+[node name="x" type="Label" parent="HUD/VBoxContainer" unique_id=695667162]
+layout_mode = 2
 text = "×"
 label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
-[node name="Coins" type="Label" parent="HUD" unique_id=1941258750]
-layout_mode = 0
-offset_left = 144.0
-offset_top = 64.0
-offset_right = 368.0
-offset_bottom = 123.0
+[node name="Coins" type="Label" parent="HUD/VBoxContainer" unique_id=1941258750]
+unique_name_in_owner = true
+layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
+[node name="_" type="Label" parent="HUD/VBoxContainer" unique_id=807845015]
+layout_mode = 2
+text = "/"
+label_settings = SubResource("LabelSettings_38ys3")
+metadata/_edit_use_anchors_ = true
+
+[node name="TotalCoins" type="Label" parent="HUD/VBoxContainer" unique_id=1909711795]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00"
+label_settings = SubResource("LabelSettings_38ys3")
+metadata/_edit_use_anchors_ = true
+
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
+[connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="player_entered" from="World/platform-medium3/Flag" to="." method="_on_flag_player_entered"]
