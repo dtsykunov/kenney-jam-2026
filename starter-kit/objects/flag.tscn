@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://db7w38e2es7pu"]
+
+[ext_resource type="Script" uid="uid://cou1qbnsmgcoo" path="res://starter-kit/objects/flag.gd" id="1_ixwpr"]
+[ext_resource type="PackedScene" uid="uid://dtjvjdjl8cs6e" path="res://starter-kit/models/flag.glb" id="1_t0ogh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_od15b"]
+size = Vector3(0.35021973, 1.153717, 0.7425537)
+
+[node name="Flag" type="Node3D" unique_id=1734636906]
+script = ExtResource("1_ixwpr")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=447584069]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=395851327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023742676, 0.728775, 0.21014404)
+shape = SubResource("BoxShape3D_od15b")
+
+[node name="flag" parent="." unique_id=1292721022 instance=ExtResource("1_t0ogh")]
+transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0, 0)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

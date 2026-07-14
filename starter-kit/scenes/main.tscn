@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://rjh4ifidqrfp" path="res://starter-kit/objects/platform_medium.tscn" id="7_ixpj3"]
 [ext_resource type="PackedScene" uid="uid://uqr4hswv6d2g" path="res://starter-kit/objects/platform_grass_large_round.tscn" id="8_4oh1e"]
 [ext_resource type="PackedScene" uid="uid://c8up71en5djgm" path="res://starter-kit/objects/platform_falling.tscn" id="9_2fnpo"]
-[ext_resource type="PackedScene" uid="uid://dtjvjdjl8cs6e" path="res://starter-kit/models/flag.glb" id="9_fw1f5"]
+[ext_resource type="PackedScene" uid="uid://db7w38e2es7pu" path="res://starter-kit/objects/flag.tscn" id="9_4my8f"]
 [ext_resource type="PackedScene" uid="uid://dfpisimsgf5ce" path="res://starter-kit/objects/coin.tscn" id="10_fwhys"]
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://starter-kit/scripts/hud.gd" id="11_apvpm"]
 [ext_resource type="PackedScene" uid="uid://85ldumyetgou" path="res://starter-kit/objects/brick.tscn" id="12_jkv2x"]
@@ -28,7 +28,7 @@ script = ExtResource("1_jkv2x")
 [node name="Environment" type="WorldEnvironment" parent="." unique_id=1179719708]
 environment = ExtResource("1_ahusb")
 
-[node name="Player" parent="." unique_id=1565091568 node_paths=PackedStringArray("view") groups=["player"] instance=ExtResource("2_onms2")]
+[node name="Player" parent="." unique_id=1565091568 node_paths=PackedStringArray("view") instance=ExtResource("2_onms2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49277484, 0)
 view = NodePath("../View")
 
@@ -74,6 +74,10 @@ transform = Transform3D(0.929796, 0, -0.368076, 0, 1, 0, 0.368076, 0, 0.929796, 
 [node name="platform-medium3" parent="World" unique_id=1343028642 instance=ExtResource("7_ixpj3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -6)
 
+[node name="Flag" parent="World/platform-medium3" unique_id=1734636906 instance=ExtResource("9_4my8f")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002531767, 0.51855516, -0.10875416)
+
 [node name="platform-falling" parent="World" unique_id=997243909 instance=ExtResource("9_2fnpo")]
 transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, -9, 0.419294, 4)
 
@@ -88,9 +92,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -2)
 
 [node name="platform-grass-large-round2" parent="World" unique_id=1485874776 instance=ExtResource("8_4oh1e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.31048, 1, 2.8319645)
-
-[node name="flag" parent="World" unique_id=1526901277 instance=ExtResource("9_fw1f5")]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 3.48077, -6)
 
 [node name="coin" parent="World" unique_id=484036642 instance=ExtResource("10_fwhys")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.635, 0)
@@ -117,7 +118,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8111, 2.6888, 0.328574)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9647, 0.801836, 3.99354)
 
 [node name="coin9" parent="World" unique_id=235585109 instance=ExtResource("10_fwhys")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.049279, 3.5980878, -5.014135)
 
 [node name="coin4" parent="World" unique_id=2092212566 instance=ExtResource("10_fwhys")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0437, 1.97005, -2.33003)
@@ -214,3 +215,4 @@ label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
+[connection signal="player_entered" from="World/platform-medium3/Flag" to="." method="_on_flag_player_entered"]

@@ -30,7 +30,7 @@ level_container = NodePath("../ViewportContainer/ConfigurableSubViewport")
 [node name="LevelManager" type="Node" parent="." unique_id=835425583 node_paths=PackedStringArray("level_loader", "scene_lister")]
 script = ExtResource("4_7aihr")
 level_loader = NodePath("../LevelLoader")
-starting_level_path = "res://scenes/game_scene/levels/level_1.tscn"
+starting_level_path = "uid://bqqgyqafm7xwp"
 scene_lister = NodePath("SceneLister")
 main_menu_scene_path = "res://scenes/menus/main_menu/main_menu_with_animations.tscn"
 ending_scene_path = "res://scenes/end_credits/end_credits.tscn"
@@ -40,8 +40,8 @@ level_won_scene = ExtResource("7_wr4n6")
 
 [node name="SceneLister" type="Node" parent="LevelManager" unique_id=992453837]
 script = ExtResource("8_ukb12")
-files = Array[String](["res://scenes/game_scene/levels/level_1.tscn", "res://scenes/game_scene/levels/level_2.tscn", "res://scenes/game_scene/levels/level_3.tscn"])
-directory = "res://scenes/game_scene/levels"
+files = Array[String](["res://starter-kit/scenes//main.tscn"])
+directory = "res://starter-kit/scenes/"
 
 [node name="ViewportContainer" type="SubViewportContainer" parent="." unique_id=1010541234]
 layout_mode = 1

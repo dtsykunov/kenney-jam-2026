@@ -32,6 +32,10 @@ window/stretch/aspect="expand"
 
 enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
 
+[global_group]
+
+player=""
+
 [gui]
 
 theme/custom="res://resources/themes/gravity.tres"
