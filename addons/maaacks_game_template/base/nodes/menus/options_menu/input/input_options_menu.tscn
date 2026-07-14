@@ -58,7 +58,6 @@ text = "Reset"
 visible = false
 custom_minimum_size = Vector2(420, 200)
 layout_mode = 2
-ignore_siblings = false
 title = "Remove Key"
 text = "Are you sure you want to remove KEY from ACTION?"
 
@@ -66,7 +65,6 @@ text = "Are you sure you want to remove KEY from ACTION?"
 visible = false
 custom_minimum_size = Vector2(420, 200)
 layout_mode = 2
-ignore_siblings = false
 title = "Reset to Default"
 text = "Are you sure you want to reset controls back to the defaults?"
 
@@ -74,7 +72,6 @@ text = "Are you sure you want to reset controls back to the defaults?"
 visible = false
 custom_minimum_size = Vector2(420, 200)
 layout_mode = 2
-ignore_siblings = false
 update_content = true
 title = "One Input Minimum"
 
@@ -82,7 +79,6 @@ title = "One Input Minimum"
 visible = false
 custom_minimum_size = Vector2(420, 200)
 layout_mode = 2
-ignore_siblings = false
 update_content = true
 title = "Already Assigned"
 
@@ -90,7 +86,6 @@ title = "Already Assigned"
 visible = false
 custom_minimum_size = Vector2(420, 200)
 layout_mode = 2
-ignore_siblings = false
 
 [connection signal="already_assigned" from="VBoxContainer/InputMappingContainer/InputActionsList" to="." method="_on_input_actions_list_already_assigned"]
 [connection signal="button_clicked" from="VBoxContainer/InputMappingContainer/InputActionsList" to="." method="_on_input_actions_list_button_clicked"]

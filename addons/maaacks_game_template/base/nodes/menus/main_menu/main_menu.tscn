@@ -164,7 +164,6 @@ offset_left = -150.0
 offset_top = -80.0
 offset_right = 150.0
 offset_bottom = 80.0
-ignore_siblings = false
 ui_cancel_closes = false
 title = "Exit Game?"
 text = "Really exit the game?"
