@@ -166,6 +166,7 @@ transform = Transform3D(0.93908226, 0, 0.34369248, 0, 1, 0, -0.34369248, 0, 0.93
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=964166913]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
+light_energy = 0.2
 shadow_enabled = true
 shadow_opacity = 0.75
 
