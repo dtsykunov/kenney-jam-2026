@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bo1wyljecgc0o"]
+
+[ext_resource type="Script" uid="uid://djpme521r3cxe" path="res://starter-kit/scripts/main.gd" id="1_pk42c"]
+[ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://starter-kit/scenes/main-environment.tres" id="2_6yumh"]
+[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://starter-kit/objects/player.tscn" id="3_nyf5e"]
+[ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://starter-kit/scripts/view.gd" id="4_ke8g5"]
+[ext_resource type="PackedScene" uid="uid://rjh4ifidqrfp" path="res://starter-kit/objects/platform_medium.tscn" id="6_lok2r"]
+[ext_resource type="PackedScene" uid="uid://db7w38e2es7pu" path="res://starter-kit/objects/flag.tscn" id="7_nrwsv"]
+[ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://starter-kit/scripts/hud.gd" id="13_omv8b"]
+[ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://starter-kit/sprites/coin.png" id="14_vdtp8"]
+[ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://starter-kit/fonts/lilita_one_regular.ttf" id="15_apxhq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_38ys3"]
+font = ExtResource("15_apxhq")
+font_size = 48
+shadow_color = Color(0, 0, 0, 0.376471)
+shadow_offset = Vector2(2, 2)
+
+[node name="Main" type="Node3D" unique_id=829422984]
+script = ExtResource("1_pk42c")
+
+[node name="Environment" type="WorldEnvironment" parent="." unique_id=1179719708]
+environment = ExtResource("2_6yumh")
+
+[node name="Player" parent="." unique_id=1565091568 node_paths=PackedStringArray("view") instance=ExtResource("3_nyf5e")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009939194, 0.52693737, -0.02141571)
+view = NodePath("../View")
+
+[node name="View" type="Node3D" parent="." unique_id=179348308 node_paths=PackedStringArray("target")]
+transform = Transform3D(0.707107, -0.298836, 0.640856, 0, 0.906308, 0.422618, -0.707107, -0.298836, 0.640856, 0, 0, 0)
+script = ExtResource("4_ke8g5")
+target = NodePath("../Player")
+
+[node name="Camera" type="Camera3D" parent="View" unique_id=945257446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+current = true
+fov = 40.0
+
+[node name="World" type="Node3D" parent="." unique_id=409273785]
+
+[node name="Flag" parent="World" unique_id=1734636906 instance=ExtResource("7_nrwsv")]
+unique_name_in_owner = true
+transform = Transform3D(0.99999994, 0, -7.450581e-09, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.012470722, -0.3671515, -6.130169)
+
+[node name="platform-medium2" parent="World" unique_id=294514762 instance=ExtResource("6_lok2r")]
+transform = Transform3D(25.53664, 0, 1.9336977, 0, 1, 0, -2.5317924, 0, 19.504026, -2.1707425, -0.82862854, 4.9496574)
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=964166913]
+transform = Transform3D(-0.42261794, -0.6942719, 0.58256376, 0, 0.64278793, 0.7660442, -0.9063079, 0.32374403, -0.27165374, -0.009939194, 0.03416252, -0.02141571)
+light_energy = 0.2
+shadow_enabled = true
+shadow_opacity = 0.75
+
+[node name="HUD" type="Control" parent="." unique_id=1822401724]
+layout_mode = 3
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_right = 640.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+script = ExtResource("13_omv8b")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="HUD" unique_id=1439097745]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 64.0
+offset_right = 398.0
+offset_bottom = 126.0
+
+[node name="Icon" type="TextureRect" parent="HUD/VBoxContainer" unique_id=663121849]
+layout_mode = 2
+texture = ExtResource("14_vdtp8")
+expand_mode = 3
+
+[node name="x" type="Label" parent="HUD/VBoxContainer" unique_id=695667162]
+layout_mode = 2
+text = "×"
+label_settings = SubResource("LabelSettings_38ys3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Coins" type="Label" parent="HUD/VBoxContainer" unique_id=1941258750]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_38ys3")
+metadata/_edit_use_anchors_ = true
+
+[node name="_" type="Label" parent="HUD/VBoxContainer" unique_id=807845015]
+layout_mode = 2
+text = "/"
+label_settings = SubResource("LabelSettings_38ys3")
+metadata/_edit_use_anchors_ = true
+
+[node name="TotalCoins" type="Label" parent="HUD/VBoxContainer" unique_id=1909711795]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00"
+label_settings = SubResource("LabelSettings_38ys3")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
+[connection signal="died" from="Player" to="." method="_on_player_died"]
+[connection signal="player_entered" from="World/Flag" to="." method="_on_flag_player_entered"]

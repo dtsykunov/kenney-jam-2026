@@ -1,6 +1,9 @@
 # Attribution
 ## Collaborators
 
+### Programming
+Author: [Dima Tsykunov](https://dtsykunov.itch.io/)
+
 ## Sourced
 #### Godot Engine Logo
 Author: Andrea Calabró  
