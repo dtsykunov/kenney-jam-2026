@@ -17,7 +17,6 @@ config/icon="res://icon.png"
 
 [autoload]
 
-WwiseRuntimeManager="*uid://dc5vfmhe4p2e8"
 Global="*uid://cohloyy6bqshe"
 ProjectUiSoundController="*uid://cc37235kj4384"
 

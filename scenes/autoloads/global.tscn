@@ -1,11 +1,6 @@
 [gd_scene format=3 uid="uid://cohloyy6bqshe"]
 
-[ext_resource type="WwiseBank" uid="uid://c1yeynh0u45a0" path="res://Wwise/resources/SoundBank/{68FE701F-4665-4B31-9C81-A5749A048039}.tres" id="1_fg6a1"]
+[ext_resource type="Script" uid="uid://d2s8lw5id0oec" path="res://scenes/autoloads/global.gd" id="1_fg6a1"]
 
 [node name="Global" type="Node" unique_id=218078197]
-
-[node name="AkListener2D" type="AkListener2D" parent="." unique_id=1389893538]
-
-[node name="AkBank" type="AkBank" parent="." unique_id=2145195854]
-bank = ExtResource("1_fg6a1")
-load_on = 2
+script = ExtResource("1_fg6a1")
