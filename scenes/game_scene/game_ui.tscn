@@ -40,8 +40,8 @@ level_won_scene = ExtResource("7_wr4n6")
 
 [node name="SceneLister" type="Node" parent="LevelManager" unique_id=992453837]
 script = ExtResource("8_ukb12")
-files = Array[String](["res://starter-kit/scenes//main.tscn"])
-directory = "res://starter-kit/scenes/"
+files = Array[String](["res://starter-kit/scenes/main.tscn", "res://starter-kit/scenes/level_2.tscn"])
+directory = "res://starter-kit/scenes"
 
 [node name="ViewportContainer" type="SubViewportContainer" parent="." unique_id=1010541234]
 layout_mode = 1
