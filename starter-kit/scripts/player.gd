@@ -55,10 +55,7 @@ func _physics_process(delta):
 
 	# Rotation
 
-	if Vector2(velocity.z, velocity.x).length() > 0:
-		rotation_direction = Vector2(velocity.z, velocity.x).angle()
-
-	rotation.y = lerp_angle(rotation.y, rotation_direction, delta * 10)
+	get_viewport().get_mouse_position()
 
 	# Falling/respawning
 
@@ -181,3 +178,10 @@ func attack():
 	for body in hurtbox.get_overlapping_bodies():
 		if body.is_in_group("enemy"):
 			pass
+
+func _on_mouse_area_input_event(_camera: Node, event: InputEvent, event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
+	print(event_position)
+	if event is InputEventMouseMotion:
+		var dir := event_position - global_position
+		dir.y = 0
+		look_at(global_position + dir)
