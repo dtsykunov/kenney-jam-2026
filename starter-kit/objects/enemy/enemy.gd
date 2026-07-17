@@ -4,7 +4,7 @@ enum State {
 	IDLE,
 	FOLLOW,
 	ATTACK,
-	IN_AIR,
+	KNOCKED_BACK,
 }
 
 @export var speed := 5.0
@@ -12,7 +12,7 @@ enum State {
 
 @onready var nav_agent : NavigationAgent3D = $NavigationAgent3D
 
-@onready var player : CharacterBody3D = %Player
+@onready var player : CharacterBody3D = get_tree().get_first_node_in_group("player")
 
 var state := State.FOLLOW
 
@@ -26,8 +26,8 @@ func _physics_process(delta: float) -> void:
 		_physics_process_follow(delta)
 	elif state == State.ATTACK:
 		pass
-	elif state == State.IN_AIR:
-		_physics_process_in_air(delta)
+	elif state == State.KNOCKED_BACK:
+		_physics_process_knocked_back(delta)
 
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -39,19 +39,20 @@ func _physics_process_follow(_delta: float) -> void:
 		return
 
 	nav_agent.target_position = player.global_position
-
 	var next_position := nav_agent.get_next_path_position()
 	var direction := global_position.direction_to(next_position)
-	velocity = direction * speed
+
+	if not nav_agent.is_navigation_finished():
+		velocity = direction * speed
 
 	direction.y = 0 # kill pitch
 	look_at(global_position + direction)
 
-func _physics_process_in_air(delta: float) -> void:
+func _physics_process_knocked_back(delta: float) -> void:
 	pass
 
 func hit() -> void:
-	state = State.IN_AIR
+	state = State.KNOCKED_BACK
 
 	health -= 1.0
 	if health <= 0:
@@ -60,7 +61,7 @@ func hit() -> void:
 
 	$KnockbackTimer.start()
 
-	var fly_direction := (global_position - player.global_position).normalized() # away from player
+	var fly_direction := (global_position - player.global_position).normalized()
 	var hit_force := 5.0
 
 	velocity = fly_direction * hit_force

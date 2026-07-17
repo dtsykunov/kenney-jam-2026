@@ -1,27 +1,30 @@
 [gd_scene format=3 uid="uid://bxsobfwcube2v"]
 
-[ext_resource type="Script" uid="uid://d1e1ndtueax41" path="res://starter-kit/objects/enemy/character_body_3d.gd" id="1_vgb22"]
+[ext_resource type="Script" uid="uid://d1e1ndtueax41" path="res://starter-kit/objects/enemy/enemy.gd" id="1_g1lxi"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_od15b"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_xxt43"]
+size = Vector3(1, 1.6591797, 1)
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=229839524 groups=["enemy"]]
 input_ray_pickable = false
-script = ExtResource("1_vgb22")
+script = ExtResource("1_g1lxi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1657452726]
-shape = SubResource("CapsuleShape3D_od15b")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.93922234, 0)
+shape = SubResource("BoxShape3D_xxt43")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1988504491]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 1.038358, 0)
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="CSGSphere3D" unique_id=1267297407]
 transform = Transform3D(0.30027646, 0, 0, 0, 0.40333688, 0, 0, 0, 1, 0, 0, -0.57304907)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=199035392]
+path_height_offset = 0.5
 
 [node name="KnockbackTimer" type="Timer" parent="." unique_id=433224512]
 process_callback = 0
-wait_time = 2.0
+wait_time = 1.2
 one_shot = true
 
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]

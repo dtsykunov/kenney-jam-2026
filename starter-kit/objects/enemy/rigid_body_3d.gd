@@ -4,7 +4,7 @@ enum State {
 	IDLE,
 	FOLLOW,
 	ATTACK,
-	IN_AIR,
+	KNOCKED_BACK,
 }
 
 @export var speed: float = 5.0
@@ -12,6 +12,8 @@ enum State {
 @onready var nav_agent : NavigationAgent3D = $NavigationAgent3D
 
 @onready var player : CharacterBody3D = %Player
+
+var state := State.FOLLOW
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,6 +30,8 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	# state.linear_velocity = direction * speed
 
 func hit() -> void:
+	state = State.KNOCKED_BACK
+
 	var fly_direction := (global_position - player.global_position).normalized() # away from player
 	var hit_force := 4.0
 	apply_central_impulse(fly_direction * hit_force + Vector3.UP * hit_force)
