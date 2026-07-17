@@ -28,6 +28,8 @@ var dead := false
 @onready var model = $Character
 @onready var animation = $Character/AnimationPlayer
 
+@onready var hurtbox := %HurtBox
+
 # Functions
 
 func _physics_process(delta):
@@ -134,6 +136,12 @@ func handle_controls(delta):
 		if jump_single or jump_double:
 			jump()
 
+
+	# Attack
+
+	if Input.is_action_just_pressed("attack"):
+		attack()
+
 # Handle gravity
 
 func handle_gravity(delta):
@@ -168,3 +176,8 @@ func collect_coin():
 	coins += 1
 
 	coin_collected.emit(coins)
+
+func attack():
+	for body in hurtbox.get_overlapping_bodies():
+		if body.is_in_group("enemy"):
+			pass
