@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+signal died
+
 enum State {
 	IDLE,
 	FOLLOW,
@@ -51,10 +53,10 @@ func _physics_process_follow(_delta: float) -> void:
 func _physics_process_knocked_back(delta: float) -> void:
 	pass
 
-func hit() -> void:
+func hit(damage: float) -> void:
 	state = State.KNOCKED_BACK
 
-	health -= 1.0
+	health -= damage
 	if health <= 0:
 		explode()
 		return
@@ -68,6 +70,7 @@ func hit() -> void:
 
 
 func explode() -> void:
+	died.emit()
 	queue_free()
 
 func _on_knockback_timer_timeout() -> void:

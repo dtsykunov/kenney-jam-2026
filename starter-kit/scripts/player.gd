@@ -23,6 +23,8 @@ var coins := 0
 
 var dead := false
 
+var hit_damage := 3.0
+
 @onready var particles_trail = $ParticlesTrail
 @onready var sound_footsteps = $SoundFootsteps
 @onready var model = $Character
@@ -177,7 +179,7 @@ func collect_coin():
 func attack():
 	for body in hitbox.get_overlapping_bodies():
 		if body.is_in_group("enemy"):
-			body.hit()
+			body.hit(hit_damage)
 
 func _on_mouse_area_input_event(_camera: Node, event: InputEvent, event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if event is InputEventMouseMotion:
