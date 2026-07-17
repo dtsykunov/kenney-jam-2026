@@ -165,6 +165,7 @@ transform = Transform3D(0.10749044, 0, -0.99419725, 0, 1, 0, 0.99419725, 0, 0.10
 
 [node name="EnemySpawnTimer" type="Timer" parent="." unique_id=1930182169]
 wait_time = 4.0
+autostart = true
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="damaged" from="Player" to="." method="_on_player_damaged"]
