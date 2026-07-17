@@ -1,16 +1,42 @@
 extends CharacterBody3D
 
+enum State {
+	IDLE,
+	FOLLOW,
+	ATTACK,
+	IN_AIR,
+}
 
 @export var speed := 5.0
+@export var health := 10.0
 
 @onready var nav_agent : NavigationAgent3D = $NavigationAgent3D
 
 @onready var player : CharacterBody3D = %Player
 
+var state := State.FOLLOW
+
+var knockback : Vector3 = Vector3.ZERO
+
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+
+	if state == State.IDLE:
+		pass
+	elif state == State.FOLLOW:
+		_physics_process_follow(delta)
+	elif state == State.ATTACK:
+		pass
+	elif state == State.IN_AIR:
+		_physics_process_in_air(delta)
+
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+
+	move_and_slide()
+
+func _physics_process_follow(_delta: float) -> void:
+	if not is_on_floor():
+		return
 
 	nav_agent.target_position = player.global_position
 
@@ -21,16 +47,27 @@ func _physics_process(delta: float) -> void:
 	direction.y = 0 # kill pitch
 	look_at(global_position + direction)
 
-	move_and_slide()
+func _physics_process_in_air(delta: float) -> void:
+	pass
 
-
-# hit_point - global space point where this body was hit
 func hit() -> void:
+	state = State.IN_AIR
 
-	var fly_direction := (Vector3.UP + Vector3.BACK).normalized()
-	var hit_force := 3.0
+	health -= 1.0
+	if health <= 0:
+		explode()
+		return
 
-	velocity = basis * fly_direction * hit_force
+	$KnockbackTimer.start()
+
+	var fly_direction := (global_position - player.global_position).normalized() # away from player
+	var hit_force := 5.0
+
+	velocity = fly_direction * hit_force
 
 
+func explode() -> void:
+	queue_free()
 
+func _on_knockback_timer_timeout() -> void:
+	state = State.FOLLOW

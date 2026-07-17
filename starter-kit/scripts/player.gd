@@ -28,7 +28,7 @@ var dead := false
 @onready var model = $Character
 @onready var animation = $Character/AnimationPlayer
 
-@onready var hurtbox := %HurtBox
+@onready var hitbox := %Hitbox
 
 # Functions
 
@@ -175,12 +175,11 @@ func collect_coin():
 	coin_collected.emit(coins)
 
 func attack():
-	for body in hurtbox.get_overlapping_bodies():
+	for body in hitbox.get_overlapping_bodies():
 		if body.is_in_group("enemy"):
-			pass
+			body.hit()
 
 func _on_mouse_area_input_event(_camera: Node, event: InputEvent, event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
-	print(event_position)
 	if event is InputEventMouseMotion:
 		var dir := event_position - global_position
 		dir.y = 0

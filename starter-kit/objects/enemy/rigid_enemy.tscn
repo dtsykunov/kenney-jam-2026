@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://bxsobfwcube2v"]
+[gd_scene format=3 uid="uid://2sn2j0sbib0b"]
 
-[ext_resource type="Script" uid="uid://d1e1ndtueax41" path="res://starter-kit/objects/enemy/character_body_3d.gd" id="1_vgb22"]
+[ext_resource type="Script" uid="uid://50pobjlhujdr" path="res://starter-kit/objects/enemy/rigid_body_3d.gd" id="1_op13i"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_od15b"]
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=229839524 groups=["enemy"]]
+[node name="CharacterBody3D" type="RigidBody3D" unique_id=2048651071 groups=["enemy"]]
 input_ray_pickable = false
-script = ExtResource("1_vgb22")
+script = ExtResource("1_op13i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1657452726]
 shape = SubResource("CapsuleShape3D_od15b")
@@ -18,5 +18,3 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
 transform = Transform3D(0.30027646, 0, 0, 0, 0.40333688, 0, 0, 0, 1, 0, 0, -0.57304907)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=199035392]
-
-[connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]

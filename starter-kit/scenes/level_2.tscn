@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://starter-kit/scripts/view.gd" id="4_ke8g5"]
 [ext_resource type="PackedScene" uid="uid://rjh4ifidqrfp" path="res://starter-kit/objects/platform_medium.tscn" id="6_lok2r"]
 [ext_resource type="PackedScene" uid="uid://db7w38e2es7pu" path="res://starter-kit/objects/flag.tscn" id="7_nrwsv"]
-[ext_resource type="PackedScene" uid="uid://bxsobfwcube2v" path="res://starter-kit/scenes/enemy.tscn" id="7_xxt43"]
+[ext_resource type="PackedScene" uid="uid://bxsobfwcube2v" path="res://starter-kit/objects/enemy/enemy.tscn" id="7_xxt43"]
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://starter-kit/scripts/hud.gd" id="13_omv8b"]
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://starter-kit/sprites/coin.png" id="14_vdtp8"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://starter-kit/fonts/lilita_one_regular.ttf" id="15_apxhq"]
