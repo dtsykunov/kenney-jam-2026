@@ -3,17 +3,19 @@ extends Node3D
 signal level_lost
 signal level_won(level_path : String)
 
+@export_file_path("*.tscn") var enemy_scene : String  = "res://starter-kit/objects/enemy/enemy.tscn"
+
 @onready var total_coins := len(get_tree().get_nodes_in_group("coin"))
 @onready var player := %Player
-
 @onready var enemy_spawn : PathFollow3D = %EnemySpawnPathFollow3D
 
-@export_file_path("*.tscn") var enemy_scene : String  = "res://starter-kit/objects/enemy/enemy.tscn"
+@onready var kills_label: Label = %KillsLabel
+@onready var health_bar: HSlider = %HealthBarSlider
 
 var enemies_killed := 0
 
 func _ready() -> void:
-	pass
+	health_bar.max_value = player.health
 
 func _on_flag_player_entered() -> void:
 	if player.coins == total_coins:
@@ -28,7 +30,6 @@ func _on_enemy_spawn_timer_timeout() -> void:
 	enemy_spawn.progress_ratio = randf()
 
 	var spawn_loc := enemy_spawn.global_position
-
 	var loaded_enemy_scene := load(enemy_scene)
 	var enemy : CharacterBody3D = loaded_enemy_scene.instantiate()
 
@@ -40,3 +41,6 @@ func _on_enemy_spawn_timer_timeout() -> void:
 func _on_enemy_died() -> void:
 	enemies_killed += 1
 	%KillsLabel.text = str(enemies_killed)
+
+func _on_player_damaged(health_left: float) -> void:
+	health_bar.value = health_left

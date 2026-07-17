@@ -13,12 +13,18 @@ enum State {
 @export var health := 10.0
 
 @onready var nav_agent : NavigationAgent3D = $NavigationAgent3D
-
 @onready var player : CharacterBody3D = get_tree().get_first_node_in_group("player")
 
-var state := State.FOLLOW
+@onready var attack_timer: Timer = %AttackTimer
+@onready var knockback_timer: Timer = %KnockbackTimer
 
+@onready var hitbox: Area3D = %HitBox
+
+var attack_damage := 2.0
+
+var state := State.FOLLOW
 var knockback : Vector3 = Vector3.ZERO
+var is_player_inside_hurtbox := false
 
 func _physics_process(delta: float) -> void:
 
@@ -27,7 +33,7 @@ func _physics_process(delta: float) -> void:
 	elif state == State.FOLLOW:
 		_physics_process_follow(delta)
 	elif state == State.ATTACK:
-		pass
+		velocity = Vector3.ZERO
 	elif state == State.KNOCKED_BACK:
 		_physics_process_knocked_back(delta)
 
@@ -61,7 +67,7 @@ func hit(damage: float) -> void:
 		explode()
 		return
 
-	$KnockbackTimer.start()
+	knockback_timer.start()
 
 	var fly_direction := (global_position - player.global_position).normalized()
 	var hit_force := 5.0
@@ -75,3 +81,26 @@ func explode() -> void:
 
 func _on_knockback_timer_timeout() -> void:
 	state = State.FOLLOW
+
+
+func _on_hurt_box_body_entered(body: Node3D) -> void:
+	if state in [State.IDLE, State.FOLLOW] and body.is_in_group("player"):
+		is_player_inside_hurtbox = true
+		state = State.ATTACK
+		attack_timer.start()
+
+
+func _on_attack_timer_timeout() -> void:
+	for body in hitbox.get_overlapping_bodies():
+		if body.is_in_group("player"):
+			body.hit(attack_damage)
+
+	if is_player_inside_hurtbox:
+		attack_timer.start()
+	else:
+		state = State.FOLLOW
+
+
+func _on_hit_box_body_exited(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		is_player_inside_hurtbox = false

@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 signal coin_collected
 signal died
+signal damaged(health_left: float)
 
 @export_subgroup("Components")
 @export var view: Node3D
@@ -25,12 +26,14 @@ var dead := false
 
 var hit_damage := 3.0
 
+var health := 10.0
+
 @onready var particles_trail = $ParticlesTrail
 @onready var sound_footsteps = $SoundFootsteps
 @onready var model = $Character
 @onready var animation = $Character/AnimationPlayer
 
-@onready var hitbox := %Hitbox
+@onready var hurtbox := %HurtBox
 
 # Functions
 
@@ -54,10 +57,6 @@ func _physics_process(delta):
 
 	velocity = applied_velocity
 	move_and_slide()
-
-	# Rotation
-
-	get_viewport().get_mouse_position()
 
 	# Falling/respawning
 
@@ -177,7 +176,7 @@ func collect_coin():
 	coin_collected.emit(coins)
 
 func attack():
-	for body in hitbox.get_overlapping_bodies():
+	for body in hurtbox.get_overlapping_bodies():
 		if body.is_in_group("enemy"):
 			body.hit(hit_damage)
 
@@ -186,3 +185,11 @@ func _on_mouse_area_input_event(_camera: Node, event: InputEvent, event_position
 		var dir := event_position - global_position
 		dir.y = 0
 		look_at(global_position + dir)
+
+func hit(damage: float) -> void:
+	health -= damage
+	damaged.emit(health)
+
+	if health <= 0.0:
+		dead = true
+		died.emit()

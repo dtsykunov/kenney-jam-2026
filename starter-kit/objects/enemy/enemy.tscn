@@ -5,11 +5,13 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_xxt43"]
 size = Vector3(1, 1.6591797, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g1lxi"]
+
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=229839524 groups=["enemy"]]
 input_ray_pickable = false
 script = ExtResource("1_g1lxi")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1657452726]
+[node name="HurtBox" type="CollisionShape3D" parent="." unique_id=1657452726]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.93922234, 0)
 shape = SubResource("BoxShape3D_xxt43")
 
@@ -23,9 +25,27 @@ transform = Transform3D(0.30027646, 0, 0, 0, 0.40333688, 0, 0, 0, 1, 0, 0, -0.57
 path_height_offset = 0.5
 
 [node name="KnockbackTimer" type="Timer" parent="." unique_id=433224512]
+unique_name_in_owner = true
 process_callback = 0
 wait_time = 1.2
 one_shot = true
 
+[node name="AttackTimer" type="Timer" parent="." unique_id=1081430421]
+unique_name_in_owner = true
+process_callback = 0
+one_shot = true
+
+[node name="HitBox" type="Area3D" parent="." unique_id=1272935179]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8092406, -0.8203709)
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox" unique_id=874708332]
+shape = SubResource("BoxShape3D_g1lxi")
+debug_color = Color(1, 0, 0, 0.41960785)
+
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
 [connection signal="timeout" from="KnockbackTimer" to="." method="_on_knockback_timer_timeout"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="body_entered" from="HitBox" to="." method="_on_hurt_box_body_entered"]
+[connection signal="body_exited" from="HitBox" to="." method="_on_hit_box_body_exited"]

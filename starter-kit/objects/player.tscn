@@ -66,13 +66,14 @@ volume_db = -5.0
 pitch_scale = 1.25
 autoplay = true
 
-[node name="Hitbox" type="Area3D" parent="." unique_id=1589727926]
+[node name="HurtBox" type="Area3D" parent="." unique_id=1589727926]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46433997, -0.619881)
 collision_layer = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox" unique_id=884894486]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox" unique_id=884894486]
 shape = SubResource("BoxShape3D_od15b")
+debug_color = Color(1, 0, 0, 0.41960785)
 
 [node name="MouseArea" type="Area3D" parent="." unique_id=726582649]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1800452, 0)
