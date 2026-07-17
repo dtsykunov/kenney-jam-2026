@@ -6,9 +6,17 @@
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://starter-kit/scripts/view.gd" id="4_ke8g5"]
 [ext_resource type="PackedScene" uid="uid://rjh4ifidqrfp" path="res://starter-kit/objects/platform_medium.tscn" id="6_lok2r"]
 [ext_resource type="PackedScene" uid="uid://db7w38e2es7pu" path="res://starter-kit/objects/flag.tscn" id="7_nrwsv"]
+[ext_resource type="Script" uid="uid://d1e1ndtueax41" path="res://starter-kit/objects/enemy/character_body_3d.gd" id="7_xxt43"]
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://starter-kit/scripts/hud.gd" id="13_omv8b"]
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://starter-kit/sprites/coin.png" id="14_vdtp8"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://starter-kit/fonts/lilita_one_regular.ttf" id="15_apxhq"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_u0e45"]
+vertices = PackedVector3Array(33.51049, -0.07862854, -22.59771, 33.26049, -0.07862854, -24.34771, 32.01049, -0.07862854, -26.59771, 25.76049, -0.07862854, -27.09771, 33.76049, -0.07862854, 30.65229, 37.26049, -0.07862854, 29.40229, 38.26049, -0.07862854, 26.90229, -37.23951, -0.07862854, -20.84771, -41.73951, -0.07862854, -19.34771, -42.48951, -0.07862854, -17.34771, -37.73951, -0.07862854, 33.65229, -29.23951, -0.07862854, 36.90229, -36.23951, -0.07862854, 36.65229)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 0), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(0, 4, 3), PackedInt32Array(3, 4, 11), PackedInt32Array(3, 11, 10), PackedInt32Array(3, 10, 7), PackedInt32Array(11, 12, 10)]
+geometry_parsed_geometry_type = 0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_od15b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_38ys3"]
 font = ExtResource("15_apxhq")
@@ -39,12 +47,32 @@ fov = 40.0
 
 [node name="World" type="Node3D" parent="." unique_id=409273785]
 
-[node name="Flag" parent="World" unique_id=1734636906 instance=ExtResource("7_nrwsv")]
-unique_name_in_owner = true
-transform = Transform3D(0.99999994, 0, -7.450581e-09, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.012470722, -0.3671515, -6.130169)
+[node name="Floor" type="Node3D" parent="World" unique_id=1871630990]
 
-[node name="platform-medium2" parent="World" unique_id=294514762 instance=ExtResource("6_lok2r")]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="World/Floor" unique_id=1129291501]
+navigation_mesh = SubResource("NavigationMesh_u0e45")
+
+[node name="FloorMesh" parent="World/Floor/NavigationRegion3D" unique_id=294514762 instance=ExtResource("6_lok2r")]
 transform = Transform3D(25.53664, 0, 1.9336977, 0, 1, 0, -2.5317924, 0, 19.504026, -2.1707425, -0.82862854, 4.9496574)
+
+[node name="Flag" parent="World/Floor" unique_id=1734636906 instance=ExtResource("7_nrwsv")]
+unique_name_in_owner = true
+transform = Transform3D(0.99999976, 0, -2.2351742e-08, 0, 0.9999998, 0, 0, 0, 0.9999998, -0.012470722, -0.36715156, -6.130166)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="World/Floor" unique_id=1971230535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.574, -3.314)
+script = ExtResource("7_xxt43")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Floor/CharacterBody3D" unique_id=1710931562]
+shape = SubResource("CapsuleShape3D_od15b")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="World/Floor/CharacterBody3D" unique_id=2123433332]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="World/Floor/CharacterBody3D/CSGSphere3D" unique_id=1958692499]
+transform = Transform3D(0.30027646, 0, 0, 0, 0.40333688, 0, 0, 0, 1, 0, 0, -0.57304907)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="World/Floor/CharacterBody3D" unique_id=1268957999]
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=964166913]
 transform = Transform3D(-0.42261794, -0.6942719, 0.58256376, 0, 0.64278793, 0.7660442, -0.9063079, 0.32374403, -0.27165374, -0.009939194, 0.03416252, -0.02141571)
@@ -106,4 +134,5 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
-[connection signal="player_entered" from="World/Flag" to="." method="_on_flag_player_entered"]
+[connection signal="player_entered" from="World/Floor/Flag" to="." method="_on_flag_player_entered"]
+[connection signal="target_reached" from="World/Floor/CharacterBody3D/NavigationAgent3D" to="World/Floor/CharacterBody3D" method="_on_navigation_agent_3d_target_reached"]
