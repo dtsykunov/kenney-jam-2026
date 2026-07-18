@@ -23,8 +23,8 @@ var jump_double = true
 
 var coins := 0
 var dead := false
-var hit_damage := 3.0
-var health := 10.0
+@export var hit_damage := 3.0
+@export var health := 10.0
 var scale_factor : float = 1.0:
 	set(value):
 		scale_factor = value

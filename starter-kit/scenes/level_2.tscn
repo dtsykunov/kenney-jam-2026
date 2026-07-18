@@ -77,6 +77,8 @@ environment = ExtResource("2_6yumh")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009939194, 0.52693737, -0.02141571)
 view = NodePath("../View")
+hit_damage = 6.73
+health = 10000.0
 
 [node name="View" type="Node3D" parent="." unique_id=179348308 node_paths=PackedStringArray("target")]
 transform = Transform3D(0.707107, -0.298836, 0.640856, 0, 0.906308, 0.422618, -0.707107, -0.298836, 0.640856, 0, 0, 0)

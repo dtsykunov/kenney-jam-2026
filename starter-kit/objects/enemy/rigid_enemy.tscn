@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://50pobjlhujdr" path="res://starter-kit/objects/enemy/rigid_body_3d.gd" id="1_op13i"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_0ninx"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_op13i"]
+bounce = 0.2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u0e45"]
+height = 1.114502
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_od15b"]
 
@@ -74,12 +78,14 @@ _data = {
 
 [node name="RigidBody3D" type="RigidBody3D" unique_id=2048651071 groups=["enemy"]]
 input_ray_pickable = false
+mass = 3.425
+physics_material_override = SubResource("PhysicsMaterial_op13i")
 lock_rotation = true
 script = ExtResource("1_op13i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1657452726]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.57052076, 0)
-shape = SubResource("BoxShape3D_0ninx")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45189416, 0)
+shape = SubResource("CapsuleShape3D_u0e45")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1988504491]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.4494828, 0)
@@ -89,7 +95,6 @@ transform = Transform3D(0.30027646, 0, 0, 0, 0.40333688, 0, 0, 0, 1, 0, 0, -0.57
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=199035392 groups=["enemy"]]
 path_height_offset = 0.5
-avoidance_enabled = true
 radius = 1.0
 
 [node name="KnockedTimer" type="Timer" parent="." unique_id=1938076834]
@@ -98,7 +103,7 @@ one_shot = true
 
 [node name="DownRay" type="RayCast3D" parent="." unique_id=137563082]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17026207, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07042852, 0)
 target_position = Vector3(0, -0.25, 0)
 hit_from_inside = true
 

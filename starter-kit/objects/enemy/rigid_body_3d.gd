@@ -21,7 +21,7 @@ enum State {
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 
 var state := State.FOLLOWING
-var health := 10.0
+@export var health := 10.0
 var attack_damage := 3.0
 
 var is_player_inside_hurtbox := false
@@ -52,7 +52,7 @@ func _integrate_forces_following(physics_state: PhysicsDirectBodyState3D) -> voi
 	var direction := global_position.direction_to(next_path_position)
 
 	if not nav_agent.is_target_reached():
-		nav_agent.set_velocity(direction * movement_speed)
+		linear_velocity = direction * movement_speed
 
 	look_in_player_direction()
 

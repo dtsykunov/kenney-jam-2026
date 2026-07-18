@@ -51,13 +51,51 @@ shape = SubResource("CapsuleShape3D_gdq8c")
 [node name="Barbarian" parent="." unique_id=854783404 instance=ExtResource("3_3eil1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="Barbarian_LegLeft" parent="Barbarian/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(854783404, 411251183) index="5" unique_id=2001096225]
+[node name="GeneralSkeleton" parent="Barbarian/Rig_Medium" parent_id_path=PackedInt32Array(854783404, 999213936) index="0" unique_id=411251183]
+bones/0/rotation = Quaternion(-8.557133e-09, 1.2043154e-07, -2.0610973e-15, 1)
+bones/1/position = Vector3(1.9293083e-09, 0.39206377, -0.009336822)
+bones/1/rotation = Quaternion(-4.98542e-16, 0.25133026, 2.5013996e-08, 0.96790147)
+bones/2/rotation = Quaternion(0.01184718, -6.285224e-11, -0.001096752, 0.9999293)
+bones/3/rotation = Quaternion(6.524766e-15, -8.881784e-15, -8.5927635e-17, 1)
+bones/4/position = Vector3(0.21200736, 0.13413203, 9.899481e-08)
+bones/4/rotation = Quaternion(-0.40813875, -0.12611094, -0.6174263, 0.6605329)
+bones/5/rotation = Quaternion(2.082009e-07, 7.214618e-08, -0.5629481, 0.82649225)
+bones/7/rotation = Quaternion(-0.09657455, -0.3987689, 0.21373573, 0.8865517)
+bones/8/position = Vector3(-6.0054175e-09, 0.09612519, -0.057499897)
+bones/8/rotation = Quaternion(9.8300355e-08, -4.8704734e-08, -0.7071067, 0.7071068)
+bones/9/rotation = Quaternion(0.036292292, -0.17609236, 0.016545827, 0.98356533)
+bones/10/position = Vector3(-0.2120074, 0.13413203, 7.978132e-08)
+bones/10/rotation = Quaternion(-0.58604556, 0.33903953, 0.5073185, 0.533133)
+bones/11/rotation = Quaternion(1.4747894e-07, -1.9742758e-07, 0.8567813, 0.51567996)
+bones/13/rotation = Quaternion(0.058782723, -0.10556563, -0.3366439, 0.93384767)
+bones/14/position = Vector3(1.9975232e-08, 0.09612515, -0.057500005)
+bones/14/rotation = Quaternion(1.06354896e-07, 5.8332006e-08, 0.7071067, 0.7071068)
+bones/15/position = Vector3(0.17094508, 0.11358725, 2.577196e-08)
+bones/15/rotation = Quaternion(0.96409845, 0.03329535, 0.24141246, -0.10547786)
+bones/16/position = Vector3(-1.1194018e-08, 0.22707741, -2.320756e-08)
+bones/16/rotation = Quaternion(0.11146067, 6.820421e-08, -7.733169e-08, 0.9937689)
+bones/17/rotation = Quaternion(-0.5092174, -0.31487158, -0.0275089, 0.80049783)
+bones/18/position = Vector3(-1.6149015e-10, 0.16565003, 8.797638e-10)
+bones/18/rotation = Quaternion(-0.0018362663, 0.9175629, -0.3975829, 0.0016918632)
+bones/19/position = Vector3(-0.17094508, 0.11358737, 2.0002895e-09)
+bones/19/rotation = Quaternion(0.95987165, -0.05721608, 0.25249377, -0.10779461)
+bones/20/rotation = Quaternion(0.08764325, -7.339827e-08, 5.7819285e-08, 0.996152)
+bones/21/rotation = Quaternion(-0.51184237, 0.114280164, -0.04272619, 0.8503717)
+bones/22/rotation = Quaternion(0.0007392573, 0.9185218, -0.39536923, -0.00060615205)
+
+[node name="Barbarian_LegLeft" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="5" unique_id=2001096225]
 visible = false
 
-[node name="Barbarian_LegRight" parent="Barbarian/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(854783404, 411251183) index="6" unique_id=227596872]
+[node name="Barbarian_LegRight" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="6" unique_id=227596872]
 visible = false
 
-[node name="HurtBox" type="Area3D" parent="Barbarian/Rig_Medium/GeneralSkeleton/BoneAttachment3D/Sword" parent_id_path=PackedInt32Array(854783404, 512072015) index="1" unique_id=1589727926]
+[node name="BoneAttachment3D" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="7" unique_id=45601563]
+transform = Transform3D(-0.99960136, -0.02540734, 0.012309656, 0.013042048, -0.028866485, 0.99949825, -0.025039185, 0.9992602, 0.029186413, -0.19262588, 1.0271455, 0.40615702)
+
+[node name="Sword" parent="Barbarian/Rig_Medium/GeneralSkeleton/BoneAttachment3D" index="0" unique_id=512072015]
+transform = Transform3D(-0.45515525, -0.88982826, -0.032235194, -0.88364697, 0.4469469, 0.13930684, -0.10955175, 0.091890775, -0.98972446, -0.068749785, 0.14926046, 0.0034629703)
+
+[node name="HurtBox" type="Area3D" parent="Barbarian/Rig_Medium/GeneralSkeleton/BoneAttachment3D/Sword" index="1" unique_id=1589727926]
 unique_name_in_owner = true
 transform = Transform3D(-0.31728476, 0.94829273, -0.008463562, 0.004701674, -0.0073517263, -0.999962, -0.9483187, -0.31731248, -0.002125904, 0.00054967403, 1.1113006, 0.00085169077)
 collision_layer = 0
