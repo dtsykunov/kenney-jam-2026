@@ -87,6 +87,7 @@ target = NodePath("../Player")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
 current = true
 fov = 40.0
+size = 13.239
 
 [node name="World" type="Node3D" parent="." unique_id=409273785]
 

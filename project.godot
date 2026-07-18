@@ -13,6 +13,7 @@ config_version=5
 config/name="Kenney Jam"
 run/main_scene="res://scenes/opening/opening.tscn"
 config/features=PackedStringArray("4.7")
+run/max_fps=60
 
 [autoload]
 

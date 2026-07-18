@@ -39,6 +39,8 @@ var scale_factor : float = 1.0:
 
 @onready var hurtbox := %HurtBox
 
+@export var is_attacking := false
+
 # Functions
 
 func _physics_process(delta):
@@ -73,8 +75,7 @@ func _physics_process(delta):
 	# Falling/respawning
 
 	if position.y < -10:
-		dead = true
-		died.emit()
+		die()
 		return
 
 	# Animation for scale (jumping and landing)
@@ -152,7 +153,6 @@ func handle_controls(delta):
 	if Input.is_action_just_pressed("attack"):
 		animationBody.play("static")
 		animationBody.play("attack")
-		# attack()
 
 # Handle gravity
 
@@ -189,12 +189,9 @@ func collect_coin():
 
 	coin_collected.emit(coins)
 
-func attack():
-	for body in hurtbox.get_overlapping_bodies():
-		if body.is_in_group("enemy"):
-			body.hit(hit_damage)
-
 func _on_mouse_area_input_event(_camera: Node, event: InputEvent, event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
+	if dead:
+		return
 	if event is InputEventMouseMotion:
 		var dir := event_position - global_position
 		dir.y = 0
@@ -205,8 +202,7 @@ func hit(damage: float) -> void:
 	damaged.emit(health)
 
 	if health <= 0.0:
-		dead = true
-		died.emit()
+		die()
 
 func _on_enemy_died() -> void:
 	scale_factor += 0.1
@@ -217,11 +213,22 @@ func _on_legs_animation_player_started(anim_name: StringName) -> void:
 	if animationBody.current_animation == "attack":
 		return
 	animationBody.play(animation.current_animation)
-	animationBody.seek(animation.current_animation_position)
+	animationBody.seek(animation.current_animation_position, true)
 
 func _on_body_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name != "attack":
 		return
-
 	animationBody.play(animation.current_animation)
-	animationBody.seek(animation.current_animation_position)
+	animationBody.seek(animation.current_animation_position, true)
+
+
+func _on_hurt_box_body_entered(body: Node3D) -> void:
+	if is_attacking and body.is_in_group("enemy"):
+		body.hit(hit_damage)
+
+func die() -> void:
+	if dead:
+		return
+	dead = true
+	animation.play("die")
+	died.emit()
