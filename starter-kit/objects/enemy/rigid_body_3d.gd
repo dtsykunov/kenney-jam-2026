@@ -18,11 +18,14 @@ enum State {
 @onready var knocked_timer : Timer = %KnockedTimer
 
 @onready var down_ray : RayCast3D = %DownRay
-@onready var anim_player : AnimationPlayer = $AnimationPlayer
+@onready var anim_player : AnimationPlayer = $SkeletonWarrior/AnimationPlayer
 
 var state := State.FOLLOWING
 @export var health := 10.0
 var attack_damage := 3.0
+
+var attack_anims := ["kick", "punch"]
+var hit_anims := ["hit_a", "hit_b"]
 
 var is_player_inside_hurtbox := false
 
@@ -47,6 +50,8 @@ func _integrate_forces_following(physics_state: PhysicsDirectBodyState3D) -> voi
 	if NavigationServer3D.map_get_iteration_id(nav_agent.get_navigation_map()) == 0:
 		return
 
+	anim_player.play("walk")
+
 	set_movement_target(player.global_position)
 	var next_path_position: Vector3 = nav_agent.get_next_path_position()
 	var direction := global_position.direction_to(next_path_position)
@@ -67,8 +72,8 @@ func look_in_player_direction() -> void:
 
 func hit(damage: float) -> void:
 	state = State.KNOCKED
-	anim_player.play("RESET")
-	anim_player.play("knocked")
+	anim_player.play("idle")
+	anim_player.play(hit_anims.pick_random())
 
 	health -= damage
 	if health <= 0.0:
@@ -93,7 +98,7 @@ func _on_hurt_box_body_entered(body: Node3D) -> void:
 	if state in [State.IDLE, State.FOLLOWING] and body.is_in_group("player"):
 		state = State.ATTACKING
 		is_player_inside_hurtbox = true
-		anim_player.play("attack")
+		anim_player.play(attack_anims.pick_random())
 
 func _on_hurt_box_body_exited(body: Node3D) -> void:
 	if body.is_in_group("player"):
@@ -105,11 +110,11 @@ func attack() -> void:
 
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	if anim_name != "attack":
+	if not attack_anims.has(anim_name):
 		return
 
 	if is_player_inside_hurtbox:
-		anim_player.play("attack")
+		anim_player.play(attack_anims.pick_random())
 	else:
 		state = State.IDLE
 

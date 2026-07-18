@@ -1,97 +1,75 @@
 [gd_scene format=3 uid="uid://2sn2j0sbib0b"]
 
 [ext_resource type="Script" uid="uid://50pobjlhujdr" path="res://starter-kit/objects/enemy/rigid_body_3d.gd" id="1_op13i"]
+[ext_resource type="PackedScene" uid="uid://dex0xbdg5hic7" path="res://assets/keykit/SkeletonWarrior.tscn" id="2_0ninx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_op13i"]
 bounce = 0.2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u0e45"]
-height = 1.114502
+radius = 0.52
+height = 2.009002
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_od15b"]
 
-[sub_resource type="Animation" id="Animation_0ninx"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CSGSphere3D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_op13i"]
-resource_name = "attack"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CSGSphere3D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.36333334, 0.4667, 0.56666666),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0.91978854, 0.42760566, 0.2268928), Vector3(-0.2443461, -0.36651915, -0.40142572), Vector3(0, 0, 0)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.4667),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"attack"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_lin6u"]
-resource_name = "knocked"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CSGSphere3D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.23333333, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(1.7453293, 0, 0), Vector3(1.7453293, 0, 0), Vector3(0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0ninx"]
-_data = {
-&"RESET": SubResource("Animation_0ninx"),
-&"attack": SubResource("Animation_op13i"),
-&"knocked": SubResource("Animation_lin6u")
-}
-
 [node name="RigidBody3D" type="RigidBody3D" unique_id=2048651071 groups=["enemy"]]
 input_ray_pickable = false
-mass = 3.425
 physics_material_override = SubResource("PhysicsMaterial_op13i")
 lock_rotation = true
 script = ExtResource("1_op13i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1657452726]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45189416, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9730942, 0)
 shape = SubResource("CapsuleShape3D_u0e45")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1988504491]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.4494828, 0)
+[node name="SkeletonWarrior" parent="." unique_id=148154388 instance=ExtResource("2_0ninx")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGSphere3D" unique_id=1267297407]
-transform = Transform3D(0.30027646, 0, 0, 0, 0.40333688, 0, 0, 0, 1, 0, 0, -0.57304907)
+[node name="GeneralSkeleton" parent="SkeletonWarrior/Rig_Medium" parent_id_path=PackedInt32Array(148154388, 605364865) index="0" unique_id=876716063]
+bones/0/rotation = Quaternion(-8.557133e-09, 1.2043154e-07, -2.0610973e-15, 1)
+bones/1/position = Vector3(6.211716e-09, 0.30412498, -0.030061359)
+bones/1/rotation = Quaternion(-2.2405252e-16, 0.17319313, -8.131409e-17, 0.9848879)
+bones/2/rotation = Quaternion(0.11676578, -0.12958969, 0.025773194, 0.9843313)
+bones/2/scale = Vector3(1, 1, 1.0000002)
+bones/3/rotation = Quaternion(0.28805363, -9.8452256e-05, 0.02476577, 0.957294)
+bones/3/scale = Vector3(0.9999999, 0.99999976, 0.9999999)
+bones/4/position = Vector3(-0.21200737, 0.13413228, -3.1230655e-08)
+bones/4/rotation = Quaternion(-0.8051435, 0.11472361, 0.42954522, 0.39252186)
+bones/4/scale = Vector3(1.0000001, 1.0000001, 1)
+bones/5/rotation = Quaternion(2.3763603e-07, -2.1665555e-08, 0.4839717, 0.8750836)
+bones/5/scale = Vector3(1, 0.99999994, 0.9999999)
+bones/6/rotation = Quaternion(-2.1878056e-07, -1.4356045e-08, -0.026658095, 0.99964464)
+bones/7/rotation = Quaternion(-0.3423603, 0.4101254, -0.08781148, 0.84075904)
+bones/8/position = Vector3(-2.6590882e-08, 0.096125096, -0.057499945)
+bones/8/rotation = Quaternion(9.7840854e-08, 4.669469e-08, 0.7071067, 0.7071068)
+bones/9/position = Vector3(0.21200737, 0.13413215, 1.0503416e-07)
+bones/9/rotation = Quaternion(-0.7574937, -0.18661794, -0.52075857, 0.34668082)
+bones/9/scale = Vector3(1, 1.0000001, 0.99999994)
+bones/10/rotation = Quaternion(2.1696002e-07, 9.321693e-08, -0.59816694, 0.80137163)
+bones/10/scale = Vector3(0.99999994, 0.9999999, 1)
+bones/11/position = Vector3(5.125532e-09, 0.26004383, -2.1610052e-07)
+bones/11/rotation = Quaternion(-2.1604616e-07, -1.817028e-08, 0.02665808, 0.99964464)
+bones/12/rotation = Quaternion(-0.12423869, -0.6084843, 0.00642984, 0.783754)
+bones/13/position = Vector3(7.9644575e-09, 0.09612509, -0.057500053)
+bones/13/rotation = Quaternion(-0.025259113, -0.00061363494, -0.5007621, 0.8652162)
+bones/14/rotation = Quaternion(-0.27768448, -0.04574929, -0.0032730815, 0.9595768)
+bones/14/scale = Vector3(0.9999999, 1, 0.99999994)
+bones/15/position = Vector3(0.17094505, 0.11358723, 1.5310638e-08)
+bones/15/rotation = Quaternion(0.92405653, 0.13652225, 0.21897516, 0.28201267)
+bones/16/position = Vector3(-1.1194018e-08, 0.22707741, -2.320756e-08)
+bones/16/rotation = Quaternion(0.6382697, 6.851078e-08, -4.66203e-07, 0.7698128)
+bones/17/rotation = Quaternion(-0.60849136, -0.36872765, 0.19471627, 0.6751769)
+bones/18/position = Vector3(-1.6149015e-10, 0.16565003, 8.797638e-10)
+bones/18/rotation = Quaternion(-0.00024348519, 0.92009634, -0.39169222, 5.244484e-05)
+bones/19/position = Vector3(-0.17760512, 0.1135872, 0.07694325)
+bones/19/rotation = Quaternion(0.91954195, -0.23177475, 0.2855697, 0.13846686)
+bones/19/scale = Vector3(0.9999999, 1, 1.0000015)
+bones/20/rotation = Quaternion(0.6447679, -7.342677e-08, 4.6226393e-07, 0.7643785)
+bones/21/rotation = Quaternion(-0.73136085, 0.11150125, -0.18732658, 0.64621013)
+bones/22/rotation = Quaternion(0.0002990303, 0.92011803, -0.39164096, -6.304511e-05)
+
+[node name="head" parent="SkeletonWarrior/Rig_Medium/GeneralSkeleton" index="0" unique_id=1137453323]
+transform = Transform3D(0.9998149, -0.013985291, -0.013187483, 0.010063127, 0.96534044, -0.26079965, 0.016377825, 0.26061857, 0.9653028, 7.05946e-05, 1.0424972, 0.25666147)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=199035392 groups=["enemy"]]
 path_height_offset = 0.5
@@ -115,12 +93,9 @@ collision_layer = 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox" unique_id=1772019486]
 shape = SubResource("BoxShape3D_od15b")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=942136499]
-unique_name_in_owner = true
-libraries/ = SubResource("AnimationLibrary_0ninx")
-
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
 [connection signal="timeout" from="KnockedTimer" to="." method="_on_knocked_back_timer_timeout"]
 [connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
 [connection signal="body_exited" from="HurtBox" to="." method="_on_hurt_box_body_exited"]
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+
+[editable path="SkeletonWarrior"]
