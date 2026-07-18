@@ -32,8 +32,10 @@ var scale_factor : float = 1.0:
 
 @onready var particles_trail = $ParticlesTrail
 @onready var sound_footsteps = $SoundFootsteps
-@onready var model = $Character
-@onready var animation = $Character/Barbarian/AnimationPlayer
+@onready var model = $BarbarianLegs
+@onready var animation = $BarbarianLegs/AnimationPlayer
+@onready var modelBody = $Barbarian
+@onready var animationBody = $Barbarian/AnimationPlayer
 
 @onready var hurtbox := %HurtBox
 
@@ -59,6 +61,14 @@ func _physics_process(delta):
 
 	velocity = applied_velocity
 	move_and_slide()
+
+	# Rotation
+
+	if Vector2(velocity.z, velocity.x).length() > 0:
+		rotation_direction = Vector2(velocity.z, velocity.x).angle()
+
+	model.rotation.y = lerp_angle(model.rotation.y, rotation_direction, delta * 10)
+
 
 	# Falling/respawning
 
@@ -140,7 +150,9 @@ func handle_controls(delta):
 	# Attack
 
 	if Input.is_action_just_pressed("attack"):
-		attack()
+		animationBody.play("static")
+		animationBody.play("attack")
+		# attack()
 
 # Handle gravity
 
@@ -186,7 +198,7 @@ func _on_mouse_area_input_event(_camera: Node, event: InputEvent, event_position
 	if event is InputEventMouseMotion:
 		var dir := event_position - global_position
 		dir.y = 0
-		look_at(global_position + dir)
+		modelBody.look_at(global_position - dir)
 
 func hit(damage: float) -> void:
 	health -= damage
@@ -199,3 +211,17 @@ func hit(damage: float) -> void:
 func _on_enemy_died() -> void:
 	scale_factor += 0.1
 	scaled.emit(scale_factor)
+
+
+func _on_legs_animation_player_started(anim_name: StringName) -> void:
+	if animationBody.current_animation == "attack":
+		return
+	animationBody.play(animation.current_animation)
+	animationBody.seek(animation.current_animation_position)
+
+func _on_body_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name != "attack":
+		return
+
+	animationBody.play(animation.current_animation)
+	animationBody.seek(animation.current_animation_position)

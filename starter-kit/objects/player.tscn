@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dl2ed4gkybggf"]
 
 [ext_resource type="Script" uid="uid://br1k30d32naot" path="res://starter-kit/scripts/player.gd" id="1_ffboj"]
-[ext_resource type="PackedScene" uid="uid://c0e27836xgmhi" path="res://starter-kit/objects/character.tscn" id="2_nero3"]
 [ext_resource type="PackedScene" uid="uid://5swa2rh3h31q" path="res://assets/keykit/Barbarian.tscn" id="3_3eil1"]
 [ext_resource type="ArrayMesh" uid="uid://deu06eho4c74" path="res://starter-kit/meshes/dust.res" id="4_mvhqy"]
 [ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://starter-kit/sounds/walking.ogg" id="5_ics1s"]
@@ -9,6 +8,8 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
 radius = 0.3
 height = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_od15b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7stj"]
 diffuse_mode = 2
@@ -35,8 +36,6 @@ gravity = Vector3(0, 0.1, 0)
 scale_min = 0.75
 scale_curve = SubResource("CurveTexture_f46kd")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_od15b"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_gwup8"]
 size = Vector3(200, 0.1, 200)
 
@@ -48,28 +47,105 @@ script = ExtResource("1_ffboj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
 shape = SubResource("CapsuleShape3D_gdq8c")
 
-[node name="Character" parent="." unique_id=1843551170 instance=ExtResource("2_nero3")]
+[node name="Barbarian" parent="." unique_id=854783404 instance=ExtResource("3_3eil1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="character" parent="Character" index="0" unique_id=1849815462]
+[node name="GeneralSkeleton" parent="Barbarian/Rig_Medium" parent_id_path=PackedInt32Array(854783404, 999213936) index="0" unique_id=411251183]
+bones/0/rotation = Quaternion(-8.557133e-09, 1.2043154e-07, -2.0610973e-15, 1)
+bones/1/position = Vector3(2.7184466e-09, 0.39206377, -0.01315583)
+bones/1/rotation = Quaternion(-2.32104e-16, 0.08654428, -4.063245e-17, 0.996248)
+bones/2/rotation = Quaternion(-1.2171337e-15, -7.450578e-09, 6.2791346e-17, 1)
+bones/3/rotation = Quaternion(6.524766e-15, -8.881784e-15, -8.5927635e-17, 1)
+bones/4/position = Vector3(0.21200736, 0.13413203, 9.899481e-08)
+bones/4/rotation = Quaternion(-0.525605, -0.07587275, -0.6575251, 0.5344562)
+bones/5/rotation = Quaternion(2.9714352e-07, 4.9442598e-08, -0.51898235, 0.85478497)
+bones/7/rotation = Quaternion(-0.2911122, -0.35329938, 0.17699815, 0.87126625)
+bones/8/position = Vector3(-6.0054175e-09, 0.09612519, -0.057499897)
+bones/8/rotation = Quaternion(9.8300355e-08, -4.8704734e-08, -0.7071067, 0.7071068)
+bones/9/rotation = Quaternion(0.0071405093, -0.0627877, 0.0032553996, 0.99799615)
+bones/10/position = Vector3(-0.2120074, 0.13413203, 7.978132e-08)
+bones/10/rotation = Quaternion(-0.37436, 0.027366247, 0.7041675, 0.6027054)
+bones/11/rotation = Quaternion(1.9187482e-07, -1.4732812e-07, 0.6348881, 0.7726042)
+bones/13/rotation = Quaternion(-0.1181858, 0.5223824, -0.12184359, 0.8356452)
+bones/14/position = Vector3(1.9975232e-08, 0.09612515, -0.057500005)
+bones/14/rotation = Quaternion(1.07101634e-07, 5.6202428e-08, 0.7071067, 0.7071068)
+bones/15/position = Vector3(0.17094508, 0.11358725, 2.577196e-08)
+bones/15/rotation = Quaternion(0.9937648, 0.042817384, 0.09607213, -0.036992)
+bones/16/position = Vector3(-1.1194018e-08, 0.22707741, -2.320756e-08)
+bones/16/rotation = Quaternion(0.17784347, 7.385146e-08, -1.3070019e-07, 0.9840588)
+bones/17/rotation = Quaternion(-0.53813034, -0.2664219, -0.0054708854, 0.79962814)
+bones/18/position = Vector3(-1.6149015e-10, 0.16565003, 8.797638e-10)
+bones/18/rotation = Quaternion(0.00028054483, 0.9202067, -0.3914326, -6.332058e-05)
+bones/19/position = Vector3(-0.17094508, 0.11358737, 2.0002895e-09)
+bones/19/rotation = Quaternion(0.99506354, -0.03479616, 0.075541615, 0.05414183)
+bones/20/rotation = Quaternion(0.2711435, -7.297891e-08, 1.9334645e-07, 0.962539)
+bones/21/rotation = Quaternion(-0.5589876, 0.114262044, -0.011812363, 0.8211806)
+bones/22/rotation = Quaternion(-8.10596e-05, 0.9202219, -0.391397, 1.85425e-05)
+
+[node name="Barbarian_LegLeft" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="5" unique_id=2001096225]
 visible = false
 
-[node name="leg-left" parent="Character/character/root" parent_id_path=PackedInt32Array(1843551170, 1749478926) index="0" unique_id=1519567524]
-transform = Transform3D(0.96592593, 0, 0.2588191, 0, 1, 0, -0.2588191, 0, 0.96592593, 0.125, 0.17625, -0.02375)
+[node name="Barbarian_LegRight" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="6" unique_id=227596872]
+visible = false
 
-[node name="leg-right" parent="Character/character/root" parent_id_path=PackedInt32Array(1843551170, 1749478926) index="1" unique_id=1793848922]
-transform = Transform3D(0.96592593, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.96592593, -0.125, 0.17625, -0.023750002)
+[node name="HurtBox" type="Area3D" parent="Barbarian" unique_id=1589727926]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.4191716e-08, 0.46433997, 0.619881)
+collision_layer = 0
 
-[node name="torso" parent="Character/character/root" parent_id_path=PackedInt32Array(1843551170, 1749478926) index="2" unique_id=1756202747]
-transform = Transform3D(1, 0, 0, 0, 0.99619395, 0.08715567, 0, -0.08715567, 0.99619395, -1.80478e-15, 0.17625, -0.02375)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barbarian/HurtBox" unique_id=884894486]
+shape = SubResource("BoxShape3D_od15b")
+debug_color = Color(1, 0, 0, 0.41960785)
 
-[node name="arm-left" parent="Character/character/root/torso" index="0" unique_id=2139268913]
-transform = Transform3D(0.70710695, 0.70710695, 0, -0.70710695, 0.70710695, 0, 0, 0, 1, 0.3, 0.175, 0)
+[node name="BarbarianLegs" parent="." unique_id=425867692 instance=ExtResource("3_3eil1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="arm-right" parent="Character/character/root/torso" index="1" unique_id=59291645]
-transform = Transform3D(0.70710695, -0.70710695, 0, 0.70710695, 0.70710695, 0, 0, 0, 1, -0.3, 0.1195, 0)
+[node name="GeneralSkeleton" parent="BarbarianLegs/Rig_Medium" parent_id_path=PackedInt32Array(425867692, 999213936) index="0" unique_id=411251183]
+bones/0/rotation = Quaternion(-8.557133e-09, 1.2043154e-07, -2.0610973e-15, 1)
+bones/1/position = Vector3(2.7184466e-09, 0.39206377, -0.01315583)
+bones/1/rotation = Quaternion(-2.32104e-16, 0.08654428, -4.063245e-17, 0.996248)
+bones/2/rotation = Quaternion(-1.2171337e-15, -7.450578e-09, 6.2791346e-17, 1)
+bones/3/rotation = Quaternion(6.524766e-15, -8.881784e-15, -8.5927635e-17, 1)
+bones/4/position = Vector3(0.21200736, 0.13413203, 9.899481e-08)
+bones/4/rotation = Quaternion(-0.525605, -0.07587275, -0.6575251, 0.5344562)
+bones/5/rotation = Quaternion(2.9714352e-07, 4.9442598e-08, -0.51898235, 0.85478497)
+bones/7/rotation = Quaternion(-0.2911122, -0.35329938, 0.17699815, 0.87126625)
+bones/8/position = Vector3(-6.0054175e-09, 0.09612519, -0.057499897)
+bones/8/rotation = Quaternion(9.8300355e-08, -4.8704734e-08, -0.7071067, 0.7071068)
+bones/9/rotation = Quaternion(0.0071405093, -0.0627877, 0.0032553996, 0.99799615)
+bones/10/position = Vector3(-0.2120074, 0.13413203, 7.978132e-08)
+bones/10/rotation = Quaternion(-0.37436, 0.027366247, 0.7041675, 0.6027054)
+bones/11/rotation = Quaternion(1.9187482e-07, -1.4732812e-07, 0.6348881, 0.7726042)
+bones/13/rotation = Quaternion(-0.1181858, 0.5223824, -0.12184359, 0.8356452)
+bones/14/position = Vector3(1.9975232e-08, 0.09612515, -0.057500005)
+bones/14/rotation = Quaternion(1.07101634e-07, 5.6202428e-08, 0.7071067, 0.7071068)
+bones/15/position = Vector3(0.17094508, 0.11358725, 2.577196e-08)
+bones/15/rotation = Quaternion(0.9937648, 0.042817384, 0.09607213, -0.036992)
+bones/16/position = Vector3(-1.1194018e-08, 0.22707741, -2.320756e-08)
+bones/16/rotation = Quaternion(0.17784347, 7.385146e-08, -1.3070019e-07, 0.9840588)
+bones/17/rotation = Quaternion(-0.53813034, -0.2664219, -0.0054708854, 0.79962814)
+bones/18/position = Vector3(-1.6149015e-10, 0.16565003, 8.797638e-10)
+bones/18/rotation = Quaternion(0.00028054483, 0.9202067, -0.3914326, -6.332058e-05)
+bones/19/position = Vector3(-0.17094508, 0.11358737, 2.0002895e-09)
+bones/19/rotation = Quaternion(0.99506354, -0.03479616, 0.075541615, 0.05414183)
+bones/20/rotation = Quaternion(0.2711435, -7.297891e-08, 1.9334645e-07, 0.962539)
+bones/21/rotation = Quaternion(-0.5589876, 0.114262044, -0.011812363, 0.8211806)
+bones/22/rotation = Quaternion(-8.10596e-05, 0.9202219, -0.391397, 1.85425e-05)
 
-[node name="Barbarian" parent="Character" unique_id=854783404 instance=ExtResource("3_3eil1")]
+[node name="Barbarian_ArmLeft" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" index="0" unique_id=2003629610]
+visible = false
+
+[node name="Barbarian_ArmRight" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" index="1" unique_id=1228990168]
+visible = false
+
+[node name="Barbarian_BearHat" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" index="2" unique_id=1244107446]
+visible = false
+
+[node name="Barbarian_Body" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" index="3" unique_id=833817705]
+visible = false
+
+[node name="Barbarian_Head" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" index="4" unique_id=89488014]
+visible = false
 
 [node name="ParticlesTrail" type="GPUParticles3D" parent="." unique_id=895423842]
 physics_interpolation_mode = 2
@@ -87,15 +163,6 @@ volume_db = -5.0
 pitch_scale = 1.25
 autoplay = true
 
-[node name="HurtBox" type="Area3D" parent="." unique_id=1589727926]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46433997, -0.619881)
-collision_layer = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox" unique_id=884894486]
-shape = SubResource("BoxShape3D_od15b")
-debug_color = Color(1, 0, 0, 0.41960785)
-
 [node name="MouseArea" type="Area3D" parent="." unique_id=726582649]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1800452, 0)
 collision_layer = 2147483648
@@ -105,7 +172,9 @@ collision_mask = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.71568954, 0)
 shape = SubResource("BoxShape3D_gwup8")
 
+[connection signal="animation_finished" from="Barbarian/AnimationPlayer" to="." method="_on_body_animation_player_animation_finished"]
+[connection signal="animation_started" from="BarbarianLegs/AnimationPlayer" to="." method="_on_legs_animation_player_started"]
 [connection signal="input_event" from="MouseArea" to="." method="_on_mouse_area_input_event"]
 
-[editable path="Character"]
-[editable path="Character/Barbarian"]
+[editable path="Barbarian"]
+[editable path="BarbarianLegs"]
