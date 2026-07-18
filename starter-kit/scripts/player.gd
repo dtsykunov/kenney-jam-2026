@@ -3,6 +3,7 @@ extends CharacterBody3D
 signal coin_collected
 signal died
 signal damaged(health_left: float)
+signal scaled(scale_factor: float)
 
 @export_subgroup("Components")
 @export var view: Node3D
@@ -194,3 +195,7 @@ func hit(damage: float) -> void:
 	if health <= 0.0:
 		dead = true
 		died.emit()
+
+func _on_enemy_died() -> void:
+	scale_factor += 0.1
+	scaled.emit(scale_factor)
