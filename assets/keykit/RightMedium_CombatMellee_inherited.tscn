@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cerb17j6cj3nl"]
+
+[ext_resource type="PackedScene" uid="uid://bdc64jqt46o0" path="res://assets/keykit/RigMedium_CombatMelee.blend" id="1_l3df7"]
+[ext_resource type="AnimationLibrary" uid="uid://bnn3t2r7jhed0" path="res://assets/keykit/Animations/CombatMelee_Animations.res" id="2_xuvu6"]
+
+[node name="RigMedium_CombatMelee" unique_id=1337257783 instance=ExtResource("1_l3df7")]
+
+[node name="GeneralSkeleton" parent="Rig_Medium" parent_id_path=PackedInt32Array(2064922402) index="0" unique_id=828597216]
+bones/0/rotation = Quaternion(-8.557133e-09, 1.2043154e-07, -2.0610973e-15, 1)
+bones/1/position = Vector3(-2.8726737e-22, 0.39206377, 8.881784e-16)
+bones/1/rotation = Quaternion(-3.6114295e-16, 0.04211226, 1.862646e-09, 0.99911296)
+bones/2/position = Vector3(0.17094508, 0.11358716, 2.5076279e-08)
+bones/2/rotation = Quaternion(0.99236655, 0.073539846, -0.09128773, -0.038302716)
+bones/3/rotation = Quaternion(0.1637245, 9.6156015e-08, -9.792271e-08, 0.98650616)
+bones/4/rotation = Quaternion(-0.5352607, -0.12492815, 0.053896114, 0.83365715)
+bones/5/rotation = Quaternion(-5.5194887e-06, 0.9202533, -0.3913233, 1.4661762e-06)
+bones/6/rotation = Quaternion(-2.485267e-15, -0.0067792167, 9.433812e-17, 0.999977)
+bones/7/rotation = Quaternion(-0.001609634, 7.2364106e-05, -0.0023745648, 0.9999959)
+bones/8/rotation = Quaternion(-0.002951856, -0.024697699, 0.0010970264, 0.99969)
+bones/9/position = Vector3(0.21200734, 0.13413195, 9.69598e-08)
+bones/9/rotation = Quaternion(-0.56506217, -0.05407723, -0.6338045, 0.52542585)
+bones/10/rotation = Quaternion(2.627239e-07, 9.671518e-08, -0.5026137, 0.8645112)
+bones/12/rotation = Quaternion(-0.3224111, -0.3209327, 0.14635848, 0.87842613)
+bones/13/position = Vector3(-1.5081582e-08, 0.096125126, -0.057500005)
+bones/13/rotation = Quaternion(1.1698495e-07, -6.870434e-08, -0.7071067, 0.7071068)
+bones/14/position = Vector3(-0.21200739, 0.134132, 8.174074e-08)
+bones/14/rotation = Quaternion(-0.61827725, 0.09069123, 0.61591125, 0.47975177)
+bones/15/rotation = Quaternion(2.7624864e-07, -5.8981435e-08, 0.53612405, 0.8441392)
+bones/17/rotation = Quaternion(-0.31787795, 0.3143455, -0.22050272, 0.866902)
+bones/18/position = Vector3(-7.964451e-09, 0.096125096, -0.057500027)
+bones/18/rotation = Quaternion(1.004956e-07, 5.239522e-08, 0.7071067, 0.7071068)
+bones/19/position = Vector3(-0.17094508, 0.11358728, 3.5789278e-09)
+bones/19/rotation = Quaternion(0.9973182, -0.029381137, 0.03046101, 0.059710436)
+bones/20/rotation = Quaternion(0.2743603, -7.652979e-08, 1.9614934e-07, 0.96162695)
+bones/21/rotation = Quaternion(-0.5588248, 0.1145177, -0.008563684, 0.8212961)
+bones/22/rotation = Quaternion(-8.945463e-05, 0.9202218, -0.39139724, 2.0464673e-05)
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=824527733]
+libraries/ = ExtResource("2_xuvu6")
