@@ -45,6 +45,7 @@ shape = SubResource("BoxShape3D_g1lxi")
 debug_color = Color(1, 0, 0, 0.41960785)
 
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
+[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
 [connection signal="timeout" from="KnockbackTimer" to="." method="_on_knockback_timer_timeout"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_hurt_box_body_entered"]

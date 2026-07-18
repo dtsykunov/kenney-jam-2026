@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://starter-kit/scripts/view.gd" id="4_ke8g5"]
 [ext_resource type="PackedScene" uid="uid://rjh4ifidqrfp" path="res://starter-kit/objects/platform_medium.tscn" id="6_lok2r"]
 [ext_resource type="PackedScene" uid="uid://db7w38e2es7pu" path="res://starter-kit/objects/flag.tscn" id="7_nrwsv"]
-[ext_resource type="PackedScene" uid="uid://2sn2j0sbib0b" path="res://starter-kit/objects/enemy/rigid_enemy.tscn" id="9_u0e45"]
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://starter-kit/scripts/hud.gd" id="13_omv8b"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://starter-kit/fonts/lilita_one_regular.ttf" id="15_apxhq"]
 
@@ -161,10 +160,6 @@ transform = Transform3D(0.10749044, 0, -0.99419725, 0, 1, 0, 0.99419725, 0, 0.10
 [node name="EnemySpawnTimer" type="Timer" parent="." unique_id=1930182169]
 wait_time = 4.0
 autostart = true
-
-[node name="CharacterBody3D" parent="." unique_id=2048651071 instance=ExtResource("9_u0e45")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7542872, -0.2781123, 9.891478)
-can_sleep = false
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="damaged" from="Player" to="." method="_on_player_damaged"]

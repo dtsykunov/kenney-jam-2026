@@ -52,7 +52,7 @@ func _integrate_forces_following(physics_state: PhysicsDirectBodyState3D) -> voi
 	var direction := global_position.direction_to(next_path_position)
 
 	if not nav_agent.is_target_reached():
-		physics_state.linear_velocity = direction * movement_speed
+		nav_agent.set_velocity(direction * movement_speed)
 
 	look_in_player_direction()
 
@@ -67,6 +67,7 @@ func look_in_player_direction() -> void:
 
 func hit(damage: float) -> void:
 	state = State.KNOCKED
+	anim_player.play("RESET")
 	anim_player.play("knocked")
 
 	health -= damage
@@ -111,3 +112,8 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		anim_player.play("attack")
 	else:
 		state = State.IDLE
+
+
+func _on_navigation_agent_3d_velocity_computed(safe_velocity: Vector3) -> void:
+	if state == State.FOLLOWING:
+		linear_velocity = safe_velocity
