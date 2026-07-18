@@ -50,42 +50,10 @@ shape = SubResource("CapsuleShape3D_gdq8c")
 [node name="Barbarian" parent="." unique_id=854783404 instance=ExtResource("3_3eil1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="GeneralSkeleton" parent="Barbarian/Rig_Medium" parent_id_path=PackedInt32Array(854783404, 999213936) index="0" unique_id=411251183]
-bones/0/rotation = Quaternion(-8.557133e-09, 1.2043154e-07, -2.0610973e-15, 1)
-bones/1/position = Vector3(2.7184466e-09, 0.39206377, -0.01315583)
-bones/1/rotation = Quaternion(-2.32104e-16, 0.08654428, -4.063245e-17, 0.996248)
-bones/2/rotation = Quaternion(-1.2171337e-15, -7.450578e-09, 6.2791346e-17, 1)
-bones/3/rotation = Quaternion(6.524766e-15, -8.881784e-15, -8.5927635e-17, 1)
-bones/4/position = Vector3(0.21200736, 0.13413203, 9.899481e-08)
-bones/4/rotation = Quaternion(-0.525605, -0.07587275, -0.6575251, 0.5344562)
-bones/5/rotation = Quaternion(2.9714352e-07, 4.9442598e-08, -0.51898235, 0.85478497)
-bones/7/rotation = Quaternion(-0.2911122, -0.35329938, 0.17699815, 0.87126625)
-bones/8/position = Vector3(-6.0054175e-09, 0.09612519, -0.057499897)
-bones/8/rotation = Quaternion(9.8300355e-08, -4.8704734e-08, -0.7071067, 0.7071068)
-bones/9/rotation = Quaternion(0.0071405093, -0.0627877, 0.0032553996, 0.99799615)
-bones/10/position = Vector3(-0.2120074, 0.13413203, 7.978132e-08)
-bones/10/rotation = Quaternion(-0.37436, 0.027366247, 0.7041675, 0.6027054)
-bones/11/rotation = Quaternion(1.9187482e-07, -1.4732812e-07, 0.6348881, 0.7726042)
-bones/13/rotation = Quaternion(-0.1181858, 0.5223824, -0.12184359, 0.8356452)
-bones/14/position = Vector3(1.9975232e-08, 0.09612515, -0.057500005)
-bones/14/rotation = Quaternion(1.07101634e-07, 5.6202428e-08, 0.7071067, 0.7071068)
-bones/15/position = Vector3(0.17094508, 0.11358725, 2.577196e-08)
-bones/15/rotation = Quaternion(0.9937648, 0.042817384, 0.09607213, -0.036992)
-bones/16/position = Vector3(-1.1194018e-08, 0.22707741, -2.320756e-08)
-bones/16/rotation = Quaternion(0.17784347, 7.385146e-08, -1.3070019e-07, 0.9840588)
-bones/17/rotation = Quaternion(-0.53813034, -0.2664219, -0.0054708854, 0.79962814)
-bones/18/position = Vector3(-1.6149015e-10, 0.16565003, 8.797638e-10)
-bones/18/rotation = Quaternion(0.00028054483, 0.9202067, -0.3914326, -6.332058e-05)
-bones/19/position = Vector3(-0.17094508, 0.11358737, 2.0002895e-09)
-bones/19/rotation = Quaternion(0.99506354, -0.03479616, 0.075541615, 0.05414183)
-bones/20/rotation = Quaternion(0.2711435, -7.297891e-08, 1.9334645e-07, 0.962539)
-bones/21/rotation = Quaternion(-0.5589876, 0.114262044, -0.011812363, 0.8211806)
-bones/22/rotation = Quaternion(-8.10596e-05, 0.9202219, -0.391397, 1.85425e-05)
-
-[node name="Barbarian_LegLeft" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="5" unique_id=2001096225]
+[node name="Barbarian_LegLeft" parent="Barbarian/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(854783404, 411251183) index="5" unique_id=2001096225]
 visible = false
 
-[node name="Barbarian_LegRight" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="6" unique_id=227596872]
+[node name="Barbarian_LegRight" parent="Barbarian/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(854783404, 411251183) index="6" unique_id=227596872]
 visible = false
 
 [node name="HurtBox" type="Area3D" parent="Barbarian" unique_id=1589727926]
@@ -101,32 +69,21 @@ debug_color = Color(1, 0, 0, 0.41960785)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="GeneralSkeleton" parent="BarbarianLegs/Rig_Medium" parent_id_path=PackedInt32Array(425867692, 999213936) index="0" unique_id=411251183]
-bones/0/rotation = Quaternion(-8.557133e-09, 1.2043154e-07, -2.0610973e-15, 1)
 bones/1/position = Vector3(2.7184466e-09, 0.39206377, -0.01315583)
 bones/1/rotation = Quaternion(-2.32104e-16, 0.08654428, -4.063245e-17, 0.996248)
 bones/2/rotation = Quaternion(-1.2171337e-15, -7.450578e-09, 6.2791346e-17, 1)
-bones/3/rotation = Quaternion(6.524766e-15, -8.881784e-15, -8.5927635e-17, 1)
-bones/4/position = Vector3(0.21200736, 0.13413203, 9.899481e-08)
 bones/4/rotation = Quaternion(-0.525605, -0.07587275, -0.6575251, 0.5344562)
 bones/5/rotation = Quaternion(2.9714352e-07, 4.9442598e-08, -0.51898235, 0.85478497)
 bones/7/rotation = Quaternion(-0.2911122, -0.35329938, 0.17699815, 0.87126625)
-bones/8/position = Vector3(-6.0054175e-09, 0.09612519, -0.057499897)
-bones/8/rotation = Quaternion(9.8300355e-08, -4.8704734e-08, -0.7071067, 0.7071068)
 bones/9/rotation = Quaternion(0.0071405093, -0.0627877, 0.0032553996, 0.99799615)
-bones/10/position = Vector3(-0.2120074, 0.13413203, 7.978132e-08)
 bones/10/rotation = Quaternion(-0.37436, 0.027366247, 0.7041675, 0.6027054)
 bones/11/rotation = Quaternion(1.9187482e-07, -1.4732812e-07, 0.6348881, 0.7726042)
 bones/13/rotation = Quaternion(-0.1181858, 0.5223824, -0.12184359, 0.8356452)
-bones/14/position = Vector3(1.9975232e-08, 0.09612515, -0.057500005)
 bones/14/rotation = Quaternion(1.07101634e-07, 5.6202428e-08, 0.7071067, 0.7071068)
-bones/15/position = Vector3(0.17094508, 0.11358725, 2.577196e-08)
 bones/15/rotation = Quaternion(0.9937648, 0.042817384, 0.09607213, -0.036992)
-bones/16/position = Vector3(-1.1194018e-08, 0.22707741, -2.320756e-08)
 bones/16/rotation = Quaternion(0.17784347, 7.385146e-08, -1.3070019e-07, 0.9840588)
 bones/17/rotation = Quaternion(-0.53813034, -0.2664219, -0.0054708854, 0.79962814)
-bones/18/position = Vector3(-1.6149015e-10, 0.16565003, 8.797638e-10)
 bones/18/rotation = Quaternion(0.00028054483, 0.9202067, -0.3914326, -6.332058e-05)
-bones/19/position = Vector3(-0.17094508, 0.11358737, 2.0002895e-09)
 bones/19/rotation = Quaternion(0.99506354, -0.03479616, 0.075541615, 0.05414183)
 bones/20/rotation = Quaternion(0.2711435, -7.297891e-08, 1.9334645e-07, 0.962539)
 bones/21/rotation = Quaternion(-0.5589876, 0.114262044, -0.011812363, 0.8211806)
@@ -145,6 +102,10 @@ visible = false
 visible = false
 
 [node name="Barbarian_Head" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" index="4" unique_id=89488014]
+visible = false
+
+[node name="BoneAttachment3D" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" index="7" unique_id=45601563]
+transform = Transform3D(-0.03851092, -0.08867328, -0.9953158, -0.15447697, -0.98355234, 0.09360242, -0.9872455, 0.15735808, 0.024179637, -0.46738994, 0.73813015, 0.12437728)
 visible = false
 
 [node name="ParticlesTrail" type="GPUParticles3D" parent="." unique_id=895423842]
