@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://br1k30d32naot" path="res://starter-kit/scripts/player.gd" id="1_ffboj"]
 [ext_resource type="PackedScene" uid="uid://c0e27836xgmhi" path="res://starter-kit/objects/character.tscn" id="2_nero3"]
+[ext_resource type="PackedScene" uid="uid://5swa2rh3h31q" path="res://assets/keykit/Barbarian.tscn" id="3_3eil1"]
 [ext_resource type="ArrayMesh" uid="uid://deu06eho4c74" path="res://starter-kit/meshes/dust.res" id="4_mvhqy"]
 [ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://starter-kit/sounds/walking.ogg" id="5_ics1s"]
 
@@ -50,6 +51,26 @@ shape = SubResource("CapsuleShape3D_gdq8c")
 [node name="Character" parent="." unique_id=1843551170 instance=ExtResource("2_nero3")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
+[node name="character" parent="Character" index="0" unique_id=1849815462]
+visible = false
+
+[node name="leg-left" parent="Character/character/root" parent_id_path=PackedInt32Array(1843551170, 1749478926) index="0" unique_id=1519567524]
+transform = Transform3D(0.96592593, 0, 0.2588191, 0, 1, 0, -0.2588191, 0, 0.96592593, 0.125, 0.17625, -0.02375)
+
+[node name="leg-right" parent="Character/character/root" parent_id_path=PackedInt32Array(1843551170, 1749478926) index="1" unique_id=1793848922]
+transform = Transform3D(0.96592593, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.96592593, -0.125, 0.17625, -0.023750002)
+
+[node name="torso" parent="Character/character/root" parent_id_path=PackedInt32Array(1843551170, 1749478926) index="2" unique_id=1756202747]
+transform = Transform3D(1, 0, 0, 0, 0.99619395, 0.08715567, 0, -0.08715567, 0.99619395, -1.80478e-15, 0.17625, -0.02375)
+
+[node name="arm-left" parent="Character/character/root/torso" index="0" unique_id=2139268913]
+transform = Transform3D(0.70710695, 0.70710695, 0, -0.70710695, 0.70710695, 0, 0, 0, 1, 0.3, 0.175, 0)
+
+[node name="arm-right" parent="Character/character/root/torso" index="1" unique_id=59291645]
+transform = Transform3D(0.70710695, -0.70710695, 0, 0.70710695, 0.70710695, 0, 0, 0, 1, -0.3, 0.1195, 0)
+
+[node name="Barbarian" parent="Character" unique_id=854783404 instance=ExtResource("3_3eil1")]
+
 [node name="ParticlesTrail" type="GPUParticles3D" parent="." unique_id=895423842]
 physics_interpolation_mode = 2
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
@@ -87,3 +108,4 @@ shape = SubResource("BoxShape3D_gwup8")
 [connection signal="input_event" from="MouseArea" to="." method="_on_mouse_area_input_event"]
 
 [editable path="Character"]
+[editable path="Character/Barbarian"]

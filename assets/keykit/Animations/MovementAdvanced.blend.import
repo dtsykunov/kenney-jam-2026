@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dvsf2x2pw0u1j"
-path="res://.godot/imported/MovementAdvanced.blend-a57e7f57fbce3c781d5d12154417c22c.scn"
+path="res://.godot/imported/MovementAdvanced.blend-478d56db141eea3e0fe7732944ac2c5f.scn"
 
 [deps]
 
-source_file="res://assets/keykit/MovementAdvanced.blend"
-dest_files=["res://.godot/imported/MovementAdvanced.blend-a57e7f57fbce3c781d5d12154417c22c.scn"]
+source_file="res://assets/keykit/Animations/MovementAdvanced.blend"
+dest_files=["res://.godot/imported/MovementAdvanced.blend-478d56db141eea3e0fe7732944ac2c5f.scn"]
 
 [params]
 

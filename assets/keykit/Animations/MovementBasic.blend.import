@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dwk7ssxa0hdvt"
-path="res://.godot/imported/MovementBasic.blend-7b8ca856ff5307c564148b12eed35859.scn"
+path="res://.godot/imported/MovementBasic.blend-99fca5a1ac8bd09d138b51146fbec525.scn"
 
 [deps]
 
-source_file="res://assets/keykit/MovementBasic.blend"
-dest_files=["res://.godot/imported/MovementBasic.blend-7b8ca856ff5307c564148b12eed35859.scn"]
+source_file="res://assets/keykit/Animations/MovementBasic.blend"
+dest_files=["res://.godot/imported/MovementBasic.blend-99fca5a1ac8bd09d138b51146fbec525.scn"]
 
 [params]
 

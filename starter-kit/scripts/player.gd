@@ -33,7 +33,7 @@ var scale_factor : float = 1.0:
 @onready var particles_trail = $ParticlesTrail
 @onready var sound_footsteps = $SoundFootsteps
 @onready var model = $Character
-@onready var animation = $Character/AnimationPlayer
+@onready var animation = $Character/Barbarian/AnimationPlayer
 
 @onready var hurtbox := %HurtBox
 
