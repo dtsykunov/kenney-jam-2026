@@ -21,12 +21,13 @@ var jump_single = true
 var jump_double = true
 
 var coins := 0
-
 var dead := false
-
 var hit_damage := 3.0
-
 var health := 10.0
+var scale_factor : float = 1.0:
+	set(value):
+		scale_factor = value
+		scale = Vector3.ONE * scale_factor
 
 @onready var particles_trail = $ParticlesTrail
 @onready var sound_footsteps = $SoundFootsteps
