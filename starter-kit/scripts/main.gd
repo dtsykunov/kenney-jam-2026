@@ -31,7 +31,7 @@ func _on_enemy_spawn_timer_timeout() -> void:
 
 	var spawn_loc := enemy_spawn.global_position
 	var loaded_enemy_scene := load(enemy_scene)
-	var enemy : CharacterBody3D = loaded_enemy_scene.instantiate()
+	var enemy : Node3D = loaded_enemy_scene.instantiate()
 
 	add_child(enemy)
 	enemy.global_position = spawn_loc

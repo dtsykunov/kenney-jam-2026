@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://starter-kit/scripts/view.gd" id="4_ke8g5"]
 [ext_resource type="PackedScene" uid="uid://rjh4ifidqrfp" path="res://starter-kit/objects/platform_medium.tscn" id="6_lok2r"]
 [ext_resource type="PackedScene" uid="uid://db7w38e2es7pu" path="res://starter-kit/objects/flag.tscn" id="7_nrwsv"]
-[ext_resource type="PackedScene" uid="uid://bxsobfwcube2v" path="res://starter-kit/objects/enemy/enemy.tscn" id="7_xxt43"]
+[ext_resource type="PackedScene" uid="uid://2sn2j0sbib0b" path="res://starter-kit/objects/enemy/rigid_enemy.tscn" id="9_u0e45"]
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://starter-kit/scripts/hud.gd" id="13_omv8b"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://starter-kit/fonts/lilita_one_regular.ttf" id="15_apxhq"]
 
@@ -69,6 +69,7 @@ point_count = 5
 
 [node name="Main" type="Node3D" unique_id=829422984]
 script = ExtResource("1_pk42c")
+enemy_scene = "res://starter-kit/objects/enemy/rigid_enemy.tscn"
 
 [node name="Environment" type="WorldEnvironment" parent="." unique_id=1179719708]
 environment = ExtResource("2_6yumh")
@@ -101,12 +102,6 @@ transform = Transform3D(25.53664, 0, 1.9336977, 0, 1, 0, -2.5317924, 0, 19.50402
 [node name="Flag" parent="World/Floor" unique_id=1734636906 instance=ExtResource("7_nrwsv")]
 unique_name_in_owner = true
 transform = Transform3D(0.99999976, 0, -2.2351742e-08, 0, 0.9999998, 0, 0, 0, 0.9999998, -0.012470722, -0.36715156, -6.130166)
-
-[node name="CharacterBody3D" parent="World/Floor" unique_id=229839524 instance=ExtResource("7_xxt43")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1261125, 0.5778904, -2.238361)
-
-[node name="CharacterBody3D2" parent="World/Floor" unique_id=862960741 instance=ExtResource("7_xxt43")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.796715, 0.5778904, -2.238361)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=964166913]
 transform = Transform3D(-0.42261803, -0.6942719, 0.5825639, -1.1684953e-08, 0.64278793, 0.7660444, -0.9063081, 0.3237441, -0.27165377, -0.009939194, 0.03416252, -0.02141571)
@@ -167,11 +162,13 @@ transform = Transform3D(0.10749044, 0, -0.99419725, 0, 1, 0, 0.99419725, 0, 0.10
 wait_time = 4.0
 autostart = true
 
+[node name="CharacterBody3D" parent="." unique_id=2048651071 instance=ExtResource("9_u0e45")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7542872, -0.2781123, 9.891478)
+can_sleep = false
+
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="damaged" from="Player" to="." method="_on_player_damaged"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="scaled" from="Player" to="View" method="_on_player_scaled"]
 [connection signal="player_entered" from="World/Floor/Flag" to="." method="_on_flag_player_entered"]
-[connection signal="died" from="World/Floor/CharacterBody3D" to="." method="_on_enemy_died"]
-[connection signal="died" from="World/Floor/CharacterBody3D2" to="." method="_on_enemy_died"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]

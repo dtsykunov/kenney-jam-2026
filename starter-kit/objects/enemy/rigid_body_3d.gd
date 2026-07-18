@@ -1,37 +1,113 @@
 extends RigidBody3D
 
+signal died
+
 enum State {
 	IDLE,
-	FOLLOW,
-	ATTACK,
-	KNOCKED_BACK,
+	FOLLOWING,
+	ATTACKING,
+	KNOCKED,
 }
 
-@export var speed: float = 5.0
+@export var movement_speed: float = 4.0
 
-@onready var nav_agent : NavigationAgent3D = $NavigationAgent3D
+@onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
+@onready var player : CharacterBody3D = get_tree().get_first_node_in_group("player")
+@onready var hurtbox: Area3D = %HurtBox
 
-@onready var player : CharacterBody3D = %Player
+@onready var knocked_timer : Timer = %KnockedTimer
 
-var state := State.FOLLOW
+@onready var down_ray : RayCast3D = %DownRay
+@onready var anim_player : AnimationPlayer = $AnimationPlayer
 
-# Called when the node enters the scene tree for the first time.
+var state := State.FOLLOWING
+var health := 10.0
+var attack_damage := 3.0
+
+var is_player_inside_hurtbox := false
+
 func _ready() -> void:
-	pass # Replace with function body.
-
-func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	pass
-	# nav_agent.target_position = player.global_position
 
-	# var next_position := nav_agent.get_next_path_position()
-	# var direction := global_position.direction_to(next_position)
-	# direction.y = 0
+func _physics_process(delta: float) -> void:
+	if state == State.IDLE:
+		state = State.FOLLOWING
+	elif state == State.FOLLOWING:
+		pass
 
-	# state.linear_velocity = direction * speed
+func _integrate_forces(physics_state: PhysicsDirectBodyState3D) -> void:
+	if state == State.FOLLOWING:
+		_integrate_forces_following(physics_state)
 
-func hit() -> void:
-	state = State.KNOCKED_BACK
 
-	var fly_direction := (global_position - player.global_position).normalized() # away from player
-	var hit_force := 4.0
-	apply_central_impulse(fly_direction * hit_force + Vector3.UP * hit_force)
+func _integrate_forces_following(physics_state: PhysicsDirectBodyState3D) -> void:
+	if not down_ray.is_colliding():
+		return
+
+	if NavigationServer3D.map_get_iteration_id(nav_agent.get_navigation_map()) == 0:
+		return
+
+	set_movement_target(player.global_position)
+	var next_path_position: Vector3 = nav_agent.get_next_path_position()
+	var direction := global_position.direction_to(next_path_position)
+
+	if not nav_agent.is_target_reached():
+		physics_state.linear_velocity = direction * movement_speed
+
+	look_in_player_direction()
+
+
+func set_movement_target(movement_target: Vector3):
+	nav_agent.set_target_position(movement_target)
+
+func look_in_player_direction() -> void:
+	var player_direction := global_position.direction_to(player.global_position)
+	player_direction.y = 0
+	look_at(global_position + player_direction)
+
+func hit(damage: float) -> void:
+	state = State.KNOCKED
+	anim_player.play("knocked")
+
+	health -= damage
+	if health <= 0.0:
+		died.emit()
+		queue_free()
+
+	# up and away vector
+	var away_vector := Vector3.UP + (global_position - player.global_position).normalized()
+	away_vector *= damage
+	away_vector -= linear_velocity # correct for movement
+	apply_central_impulse(away_vector)
+	knocked_timer.start()
+
+	# rotate
+	look_in_player_direction()
+
+
+func _on_knocked_back_timer_timeout() -> void:
+	state = State.IDLE
+
+func _on_hurt_box_body_entered(body: Node3D) -> void:
+	if state in [State.IDLE, State.FOLLOWING] and body.is_in_group("player"):
+		state = State.ATTACKING
+		is_player_inside_hurtbox = true
+		anim_player.play("attack")
+
+func _on_hurt_box_body_exited(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		is_player_inside_hurtbox = false
+
+func attack() -> void:
+	if is_player_inside_hurtbox:
+		player.hit(attack_damage)
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name != "attack":
+		return
+
+	if is_player_inside_hurtbox:
+		anim_player.play("attack")
+	else:
+		state = State.IDLE
