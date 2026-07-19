@@ -37,7 +37,7 @@ bones/4/rotation = Quaternion(-0.5459049, 0.36707225, 0.6162768, 0.4329536)
 bones/4/scale = Vector3(1, 1, 1)
 bones/5/rotation = Quaternion(7.524124e-08, -1.3804265e-07, 0.78126556, 0.6241988)
 bones/5/scale = Vector3(1, 1, 1)
-bones/6/rotation = Quaternion(-2.409009e-07, -5.3812648e-09, -0.026658084, 0.99964464)
+bones/6/rotation = Quaternion(-2.3342814e-07, -4.6488946e-09, -0.026658103, 0.99964464)
 bones/7/rotation = Quaternion(0.09670273, 0.44819212, 0.076047026, 0.8854317)
 bones/8/position = Vector3(5.5365494e-08, 0.096125096, -0.057499982)
 bones/8/rotation = Quaternion(1.0722509e-07, 3.8956795e-08, 0.70710665, 0.7071069)
@@ -46,8 +46,7 @@ bones/9/rotation = Quaternion(-0.61706215, -0.4715375, -0.48593545, 0.40094063)
 bones/9/scale = Vector3(1, 1, 1)
 bones/10/rotation = Quaternion(1.9400261e-07, 1.3306783e-07, -0.6865962, 0.727039)
 bones/10/scale = Vector3(1, 1, 1)
-bones/11/position = Vector3(4.2576445e-08, 0.26004377, -7.453946e-08)
-bones/11/rotation = Quaternion(-2.1512763e-07, 1.7257062e-08, 0.026658095, 0.99964464)
+bones/11/rotation = Quaternion(-2.4037607e-07, -1.41608245e-08, 0.026658103, 0.99964464)
 bones/12/rotation = Quaternion(0.0005704842, -0.5546062, -0.0075199087, 0.83207875)
 bones/13/position = Vector3(-8.799371e-09, 0.09612518, -0.05749996)
 bones/13/rotation = Quaternion(1.14187735e-07, -5.3890773e-08, -0.7071067, 0.7071068)
@@ -93,6 +92,10 @@ collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox" unique_id=1772019486]
 shape = SubResource("BoxShape3D_od15b")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1097221790]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1190865330]
 
 [connection signal="animation_finished" from="SkeletonWarrior/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
