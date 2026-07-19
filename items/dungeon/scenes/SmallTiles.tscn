@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dfgw1svon7jye"]
+
+[ext_resource type="PackedScene" uid="uid://dfs8pchhm5ad" path="res://items/dungeon/scenes/floor_tile_small_2.tscn" id="1_sgivr"]
+[ext_resource type="PackedScene" uid="uid://bnksbxd8sal8p" path="res://items/dungeon/floor_tile_small_broken_A.gltf" id="2_d0ylb"]
+[ext_resource type="PackedScene" uid="uid://derst2ahlkljd" path="res://items/dungeon/floor_tile_small_broken_B.gltf" id="3_q7b61"]
+[ext_resource type="PackedScene" uid="uid://biv7bjvp6tdlc" path="res://items/dungeon/floor_tile_small_corner.gltf" id="4_hu75j"]
+[ext_resource type="PackedScene" uid="uid://l8gaiqvebbhf" path="res://items/dungeon/floor_tile_small_decorated.gltf" id="5_slphw"]
+[ext_resource type="PackedScene" uid="uid://4qhs440o3m34" path="res://items/dungeon/floor_tile_small_weeds_A.gltf" id="6_rfees"]
+[ext_resource type="PackedScene" uid="uid://p38tx1mrbdg8" path="res://items/dungeon/floor_tile_small_weeds_B.gltf" id="7_0tx45"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_od15b"]
+size = Vector3(2.21, 0.37, 2.015)
+
+[node name="SmallTiles" type="Node3D" unique_id=2118213420]
+
+[node name="floor_tile_small2" parent="." unique_id=497440784 instance=ExtResource("1_sgivr")]
+
+[node name="floor_tile_small_broken_A2" parent="." unique_id=565200573 instance=ExtResource("2_d0ylb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80683565, 0, -0.5806685)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor_tile_small_broken_A2" unique_id=1214533833]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_tile_small_broken_A2/StaticBody3D" unique_id=1209451065]
+shape = SubResource("BoxShape3D_od15b")
+
+[node name="floor_tile_small_broken_B2" parent="." unique_id=888540616 instance=ExtResource("3_q7b61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80683565, 0, -0.5806685)
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="floor_tile_small_broken_B2" unique_id=785660236]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_tile_small_broken_B2/StaticBody3D3" unique_id=232791743]
+shape = SubResource("BoxShape3D_od15b")
+
+[node name="floor_tile_small_corner2" parent="." unique_id=175367865 instance=ExtResource("4_hu75j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80683565, 0, -0.5806685)
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="floor_tile_small_corner2" unique_id=1445135353]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_tile_small_corner2/StaticBody3D4" unique_id=2109779955]
+shape = SubResource("BoxShape3D_od15b")
+
+[node name="floor_tile_small_decorated2" parent="." unique_id=215133851 instance=ExtResource("5_slphw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80683565, 0, -0.5806685)
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="floor_tile_small_decorated2" unique_id=2080466078]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_tile_small_decorated2/StaticBody3D4" unique_id=1372492909]
+shape = SubResource("BoxShape3D_od15b")
+
+[node name="floor_tile_small_weeds_A2" parent="." unique_id=842682906 instance=ExtResource("6_rfees")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80683565, 0, -0.5806685)
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="floor_tile_small_weeds_A2" unique_id=198972160]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_tile_small_weeds_A2/StaticBody3D5" unique_id=1503941875]
+shape = SubResource("BoxShape3D_od15b")
+
+[node name="floor_tile_small_weeds_B2" parent="." unique_id=164230391 instance=ExtResource("7_0tx45")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80683565, 0, -0.5806685)
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="floor_tile_small_weeds_B2" unique_id=1432269731]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_tile_small_weeds_B2/StaticBody3D6" unique_id=2111965540]
+shape = SubResource("BoxShape3D_od15b")

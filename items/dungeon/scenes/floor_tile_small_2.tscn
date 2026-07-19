@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dfs8pchhm5ad"]
+
+[ext_resource type="PackedScene" uid="uid://cyx03bb63vjgl" path="res://items/dungeon/floor_tile_small.gltf" id="1_ffe7q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ffe7q"]
+size = Vector3(1.97, 0.31, 2.105)
+
+[node name="floor_tile_small2" unique_id=497440784 instance=ExtResource("1_ffe7q")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor_tile_small" parent_id_path=PackedInt32Array(1316499854) index="0" unique_id=1490771860]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_tile_small/StaticBody3D" index="0" unique_id=830147119]
+shape = SubResource("BoxShape3D_ffe7q")
