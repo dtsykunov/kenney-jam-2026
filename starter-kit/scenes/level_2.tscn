@@ -131,7 +131,7 @@ script = ExtResource("4_ke8g5")
 target = NodePath("../Player")
 
 [node name="Camera" type="Camera3D" parent="View" unique_id=945257446]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 1.0000005, -33.32689, -12.20121, 42.034595)
 current = true
 fov = 40.0
 size = 13.239

@@ -12,7 +12,7 @@ extends Node3D
 @export var rotation_speed = 120
 
 var camera_rotation:Vector3
-var zoom = 10
+var zoom = 16
 
 @onready var camera = $Camera
 
@@ -54,5 +54,6 @@ func handle_input(delta):
 
 
 func _on_player_scaled(scale_factor: float) -> void:
-	zoom = zoom_minimum * scale_factor
+	# zoom = zoom_minimum * scale_factor
+	pass
 
