@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://da7xhui8v2h0h"]
+
+[ext_resource type="PackedScene" uid="uid://6gdbfi0172ji" path="res://addons/maaacks_game_template/base/nodes/windows/overlaid_window.tscn" id="1_7oys2"]
+[ext_resource type="Script" uid="uid://chcsoo6o1v1wv" path="res://scenes/windows/level_up_card.gd" id="2_c1vqf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7oys2"]
+content_margin_left = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 14.0
+bg_color = Color(0.21960784, 0.78431374, 0.20784314, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 12
+border_color = Color(0.29586652, 0.29586652, 0.29586634, 1)
+corner_radius_top_left = 52
+corner_radius_top_right = 52
+corner_radius_bottom_right = 52
+corner_radius_bottom_left = 52
+
+[sub_resource type="DPITexture" id="DPITexture_7oys2"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".75\"/></svg>
+"
+base_scale = 0.01
+
+[sub_resource type="DPITexture" id="DPITexture_c1vqf"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\"/></svg>
+"
+base_scale = 0.01
+
+[sub_resource type="DPITexture" id="DPITexture_peslr"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".37\"/></svg>
+"
+base_scale = 0.01
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cf5uf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+corner_radius_top_left = 52
+corner_radius_top_right = 52
+corner_radius_bottom_right = 52
+corner_radius_bottom_left = 52
+corner_detail = 6
+expand_margin_top = 25.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d824j"]
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.9402127, 0.7682469, 0.21324763, 1)
+corner_radius_top_left = 52
+corner_radius_top_right = 52
+corner_radius_bottom_right = 52
+corner_radius_bottom_left = 52
+corner_detail = 6
+expand_margin_top = 25.0
+expand_margin_bottom = 25.0
+
+[node name="OverlaidWindow" unique_id=1589953425 instance=ExtResource("1_7oys2")]
+process_mode = 3
+script = ExtResource("2_c1vqf")
+pauses_game = true
+
+[node name="TitleMargin" parent="ContentContainer/BoxContainer" parent_id_path=PackedInt32Array(181378129) index="0" unique_id=1685835029]
+visible = false
+
+[node name="Label" type="Label" parent="ContentContainer/BoxContainer" parent_id_path=PackedInt32Array(181378129) index="2" unique_id=388341867]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 42
+text = "SCALE
+THE SWORD?"
+horizontal_alignment = 1
+
+[node name="CloseButton" parent="ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(1139131565) index="0" unique_id=283447605]
+visible = false
+
+[node name="AcceptButton" type="Button" parent="ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(1139131565) index="1" unique_id=1358634523]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxFlat_7oys2")
+text = "YES!"
+
+[node name="ScaleCardSlider" type="HSlider" parent="ContentContainer/BoxContainer" parent_id_path=PackedInt32Array(181378129) index="4" unique_id=337042521]
+unique_name_in_owner = true
+process_mode = 3
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_icons/grabber = SubResource("DPITexture_7oys2")
+theme_override_icons/grabber_highlight = SubResource("DPITexture_c1vqf")
+theme_override_icons/grabber_disabled = SubResource("DPITexture_peslr")
+theme_override_styles/slider = SubResource("StyleBoxFlat_cf5uf")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_d824j")
+max_value = 5.0
+step = 0.1
+value = 5.0
+
+[node name="ScaleCardTimer" type="Timer" parent="ContentContainer/BoxContainer/ScaleCardSlider" index="0" unique_id=452769695]
+unique_name_in_owner = true
+wait_time = 5.0
+one_shot = true
+
+[connection signal="pressed" from="ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons/AcceptButton" to="." method="_on_accept_button_pressed"]
+[connection signal="timeout" from="ContentContainer/BoxContainer/ScaleCardSlider/ScaleCardTimer" to="." method="_on_timer_timeout"]

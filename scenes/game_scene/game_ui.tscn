@@ -44,6 +44,7 @@ files = Array[String](["res://starter-kit/scenes/level_2.tscn"])
 directory = "res://starter-kit/scenes"
 
 [node name="ViewportContainer" type="SubViewportContainer" parent="." unique_id=1010541234]
+process_mode = 3
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

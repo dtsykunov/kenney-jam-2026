@@ -4,9 +4,8 @@
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://starter-kit/scenes/main-environment.tres" id="2_6yumh"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://starter-kit/objects/player.tscn" id="3_nyf5e"]
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://starter-kit/scripts/view.gd" id="4_ke8g5"]
-[ext_resource type="Script" uid="uid://cqmb0av7n74r8" path="res://starter-kit/scenes/hud/scale_card.gd" id="9_mfitm"]
+[ext_resource type="PackedScene" uid="uid://da7xhui8v2h0h" path="res://scenes/windows/level_up_card.tscn" id="8_u0e45"]
 [ext_resource type="PackedScene" uid="uid://d265pfnhxda5u" path="res://scenes/arena/Arena.tscn" id="9_u0e45"]
-[ext_resource type="PackedScene" uid="uid://2sn2j0sbib0b" path="res://starter-kit/objects/enemy/rigid_enemy.tscn" id="9_xxt43"]
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://starter-kit/scripts/hud.gd" id="13_omv8b"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://starter-kit/fonts/lilita_one_regular.ttf" id="15_apxhq"]
 
@@ -76,43 +75,16 @@ corner_detail = 6
 expand_margin_top = 25.0
 expand_margin_bottom = 25.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xs5o"]
-content_margin_left = 12.0
-content_margin_right = 12.0
-content_margin_bottom = 14.0
-bg_color = Color(0.21960784, 0.78431374, 0.20784314, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 12
-border_color = Color(0.29586652, 0.29586652, 0.29586634, 1)
-corner_radius_top_left = 52
-corner_radius_top_right = 52
-corner_radius_bottom_right = 52
-corner_radius_bottom_left = 52
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ealsi"]
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.9402127, 0.7682469, 0.21324763, 1)
-corner_radius_top_left = 52
-corner_radius_top_right = 52
-corner_radius_bottom_right = 52
-corner_radius_bottom_left = 52
-corner_detail = 6
-expand_margin_top = 25.0
-expand_margin_bottom = 25.0
-
-[sub_resource type="Curve3D" id="Curve3D_xxt43"]
+[sub_resource type="Curve3D" id="Curve3D_u743v"]
 closed = true
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -17.664268, -0.32862854, 27.536861, 0, 0, 0, 0, 0, 0, 26.726963, -0.32862854, 22.737375, 0, 0, 0, 0, 0, 0, 22.594452, -0.32862854, -15.589176, 0, 0, 0, 0, 0, 0, -26.150162, -0.32863235, -11.551571, 0, 0, 0, 0, 0, 0, -30.899221, -0.32862854, 9.508525),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -12.397259, -0.6448294, -8.583166, 0, 0, 0, 0, 0, 0, -24.498938, 3.337771, -3.080738, 0, 0, 0, 0, 0, 0, -36.191032, -0.6448294, 5.5193386, 0, 0, 0, 0, 0, 0, -36.19463, -0.6448294, 25.873789, 0, 0, 0, 0, 0, 0, -35.497158, -0.6448294, 40.621643, 0, 0, 0, 0, 0, 0, -21.795082, -0.6448275, 40.782455, 0, 0, 0, 0, 0, 0, -11.542833, -0.6448294, 44.13024, 0, 0, 0, 0, 0, 0, -7.0175056, -0.6448275, 46.03398, 0, 0, 0, 0, 0, 0, -0.95662045, -0.6448294, 43.364197, 0, 0, 0, 0, 0, 0, 13.8768835, -0.64482987, 34.46321, 0, 0, 0, 0, 0, 0, 14.528002, -0.6448294, 19.455713, 0, 0, 0, 0, 0, 0, 11.971359, -0.6448294, 7.9610004, 0, 0, 0, 0, 0, 0, 12.5596485, -0.6448294, -4.192339, 0, 0, 0, 0, 0, 0, 3.7934663, -0.6448289, -6.8513603),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
-point_count = 5
+point_count = 14
 
 [node name="Main" type="Node3D" unique_id=829422984]
+process_mode = 1
 script = ExtResource("1_pk42c")
 enemy_scene = "res://starter-kit/objects/enemy/rigid_enemy.tscn"
 
@@ -150,7 +122,11 @@ light_energy = 0.2
 shadow_enabled = true
 shadow_opacity = 0.75
 
-[node name="HUD" type="Control" parent="." unique_id=1822401724]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=159281648]
+process_mode = 3
+layer = 0
+
+[node name="HUD" type="Control" parent="CanvasLayer" unique_id=1822401724]
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -162,21 +138,21 @@ size_flags_horizontal = 8
 size_flags_vertical = 8
 script = ExtResource("13_omv8b")
 
-[node name="VBoxContainer" type="HBoxContainer" parent="HUD" unique_id=1439097745]
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/HUD" unique_id=1439097745]
 layout_mode = 0
 offset_left = 142.0
 offset_top = 64.0
 offset_right = 398.0
 offset_bottom = 126.0
 
-[node name="KillsLabel" type="Label" parent="HUD/VBoxContainer" unique_id=1941258750]
+[node name="KillsLabel" type="Label" parent="CanvasLayer/HUD/VBoxContainer" unique_id=1941258750]
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer2" type="HBoxContainer" parent="HUD" unique_id=1706298623]
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/HUD" unique_id=1706298623]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -190,27 +166,27 @@ offset_bottom = 130.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="ObsticlesLabel" type="Label" parent="HUD/VBoxContainer2" unique_id=565001665]
+[node name="ObsticlesLabel" type="Label" parent="CanvasLayer/HUD/VBoxContainer2" unique_id=565001665]
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
-[node name="x" type="Label" parent="HUD/VBoxContainer2" unique_id=581088159]
+[node name="x" type="Label" parent="CanvasLayer/HUD/VBoxContainer2" unique_id=581088159]
 layout_mode = 2
 text = "/"
 label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
-[node name="TotalObsticlesLabel" type="Label" parent="HUD/VBoxContainer2" unique_id=161328079]
+[node name="TotalObsticlesLabel" type="Label" parent="CanvasLayer/HUD/VBoxContainer2" unique_id=161328079]
 unique_name_in_owner = true
 layout_mode = 2
 text = "00"
 label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
-[node name="XPBar" type="HSlider" parent="HUD" unique_id=499202688]
+[node name="XPBar" type="HSlider" parent="CanvasLayer/HUD" unique_id=499202688]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 201.0
@@ -227,7 +203,7 @@ theme_override_styles/slider = SubResource("StyleBoxFlat_u0e45")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_mfitm")
 max_value = 5.0
 
-[node name="HealthBarSlider" type="HSlider" parent="HUD" unique_id=677023783]
+[node name="HealthBarSlider" type="HSlider" parent="CanvasLayer/HUD" unique_id=677023783]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 141.0
@@ -243,87 +219,30 @@ theme_override_styles/slider = SubResource("StyleBoxFlat_u0e45")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_xxt43")
 value = 50.0
 
-[node name="ScaleCard" type="PanelContainer" parent="HUD" unique_id=1922084426]
+[node name="LevelUpCard" parent="CanvasLayer/HUD" unique_id=1589953425 instance=ExtResource("8_u0e45")]
 unique_name_in_owner = true
-process_mode = 3
 visible = false
-custom_minimum_size = Vector2(400, 500)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -84.0
-offset_top = 401.0
-offset_right = 84.0
-offset_bottom = 509.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("9_mfitm")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HUD/ScaleCard" unique_id=62776816]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="HUD/ScaleCard/VBoxContainer" unique_id=309129978]
-layout_mode = 2
-size_flags_vertical = 6
-theme_override_font_sizes/font_size = 42
-text = "SCALE
-THE SWORD?"
-horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="HUD/ScaleCard/VBoxContainer" unique_id=1015928331]
-custom_minimum_size = Vector2(300, 150)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-theme_override_font_sizes/font_size = 72
-theme_override_styles/normal = SubResource("StyleBoxFlat_5xs5o")
-text = "YES!"
-
-[node name="ScaleCardSlider" type="HSlider" parent="HUD/ScaleCard/VBoxContainer" unique_id=534188546]
-unique_name_in_owner = true
-process_mode = 3
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-mouse_filter = 2
-mouse_behavior_recursive = 1
-theme_override_icons/grabber = SubResource("DPITexture_u0e45")
-theme_override_icons/grabber_highlight = SubResource("DPITexture_xxt43")
-theme_override_icons/grabber_disabled = SubResource("DPITexture_mfitm")
-theme_override_styles/slider = SubResource("StyleBoxFlat_u0e45")
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ealsi")
-max_value = 5.0
-step = 0.1
-value = 5.0
-
-[node name="ScaleCardTimer" type="Timer" parent="HUD/ScaleCard" unique_id=819424027]
-unique_name_in_owner = true
-wait_time = 5.0
+offset_left = -188.0
+offset_top = 254.0
+offset_right = 160.0
+offset_bottom = 703.0
 
 [node name="EnemySpawnPath3D" type="Path3D" parent="." unique_id=1860924238]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26, -0.105, 23.4)
-curve = SubResource("Curve3D_xxt43")
+curve = SubResource("Curve3D_u743v")
 
 [node name="EnemySpawnPathFollow3D" type="PathFollow3D" parent="EnemySpawnPath3D" unique_id=1305883621]
 unique_name_in_owner = true
-transform = Transform3D(0.10749044, 0, -0.99419725, 0, 1, 0, 0.99419725, 0, 0.10749044, -17.664268, -0.32862854, 27.536861)
+transform = Transform3D(-0.41390315, 0.26124343, 0.87202036, 0, 0.9579366, -0.2869775, -0.91031104, -0.118783005, -0.39649305, -12.397259, -0.6448294, -8.583166)
 
 [node name="EnemySpawnTimer" type="Timer" parent="." unique_id=1930182169]
-wait_time = 4.0
+wait_time = 2.0
 autostart = true
 
-[node name="RigidBody3D" parent="." unique_id=2048651071 instance=ExtResource("9_xxt43")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.925886, -0.7498028, 5.2640023)
-
-[connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Player" to="CanvasLayer/HUD" method="_on_coin_collected"]
 [connection signal="damaged" from="Player" to="." method="_on_player_damaged"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="scaled" from="Player" to="View" method="_on_player_scaled"]
-[connection signal="pressed" from="HUD/ScaleCard/VBoxContainer/Button" to="." method="_on_card_button_pressed"]
-[connection signal="timeout" from="HUD/ScaleCard/ScaleCardTimer" to="." method="_on_scale_card_timer_timeout"]
+[connection signal="accepted" from="CanvasLayer/HUD/LevelUpCard" to="." method="_on_card_button_pressed"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
-[connection signal="died" from="RigidBody3D" to="." method="_on_enemy_died"]

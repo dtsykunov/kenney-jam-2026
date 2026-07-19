@@ -38,7 +38,7 @@ var dead := false
 
 @export var is_attacking := false
 
-var scale_factor : float = 1.0:
+@export var scale_factor : float = 1.0:
 	set(value):
 		scale_factor = value
 		sword.scale = Vector3.ONE * scale_factor
