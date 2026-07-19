@@ -16,6 +16,11 @@ signal level_won(level_path : String)
 @onready var health_bar: HSlider = %HealthBarSlider
 @onready var xp_bar: HSlider = %XPBar
 
+var scale_card_shown := false
+@onready var scale_card :Control = %ScaleCard
+@onready var scale_card_slider :Control = %ScaleCardSlider
+@onready var scale_card_timer : Timer = %ScaleCardTimer
+
 var player_xp := 0.0
 var player_level := 1
 
@@ -71,6 +76,31 @@ func add_xp(amount: float) -> void:
 		player_level += 1
 		player_xp = 0
 		level_up.emit()
+		show_scale_card()
 
 	xp_bar.value = player_xp
 	xp_bar.max_value = player_level * 5.0
+
+
+func show_scale_card() -> void:
+	get_tree().paused = true
+	scale_card.show()
+	scale_card_timer.start()
+	scale_card_shown = true
+
+func hide_scale_card() -> void:
+	get_tree().paused = false
+	scale_card.hide()
+	scale_card_timer.stop()
+	scale_card_shown = false
+
+
+func _on_card_button_pressed() -> void:
+	if scale_card_shown:
+		player.scale_factor += 0.5
+		hide_scale_card()
+
+
+func _on_scale_card_timer_timeout() -> void:
+	if scale_card_shown:
+		hide_scale_card()

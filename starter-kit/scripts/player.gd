@@ -25,10 +25,6 @@ var coins := 0
 var dead := false
 @export var hit_damage := 3.0
 @export var health := 10.0
-var scale_factor : float = 1.0:
-	set(value):
-		scale_factor = value
-		scale = Vector3.ONE * scale_factor
 
 @onready var particles_trail = $ParticlesTrail
 @onready var sound_footsteps = $SoundFootsteps
@@ -37,9 +33,15 @@ var scale_factor : float = 1.0:
 @onready var modelBody = $Barbarian
 @onready var animationBody = $Barbarian/AnimationPlayer
 
+@onready var sword := $Barbarian/Rig_Medium/GeneralSkeleton/BoneAttachment3D/Sword
 @onready var hurtbox := %HurtBox
 
 @export var is_attacking := false
+
+var scale_factor : float = 1.0:
+	set(value):
+		scale_factor = value
+		sword.scale = Vector3.ONE * scale_factor
 
 # Functions
 
@@ -205,7 +207,6 @@ func hit(damage: float) -> void:
 		die()
 
 func _on_enemy_died() -> void:
-	scale_factor += 0.1
 	scaled.emit(scale_factor)
 
 
