@@ -32,6 +32,9 @@ func _ready() -> void:
 
 	total_obsticles_label.text = str(total_obsticles)
 
+	for node in get_tree().get_nodes_in_group("obsticle"):
+		node.destroyed.connect(_on_obsticle_destroyed)
+
 
 func _on_player_died() -> void:
 	level_lost.emit()

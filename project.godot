@@ -37,6 +37,7 @@ enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
 player=""
 coin=""
 enemy=""
+obsticle=""
 
 [gui]
 

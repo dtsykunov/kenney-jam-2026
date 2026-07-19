@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://degbvoxfqq3v0" path="res://items/forest-nature/Rock_3_M_Color1.gltf" id="4_lp7lw"]
 [ext_resource type="PackedScene" uid="uid://dmfbvt6sap6k2" path="res://items/forest-nature/Rock_3_O_Color1.gltf" id="5_2g53k"]
 [ext_resource type="PackedScene" uid="uid://c2wl1uhmnflis" path="res://items/forest-nature/Tree_1_A_Color1.gltf" id="6_g06lh"]
+[ext_resource type="Script" uid="uid://xr3t4p5eod18" path="res://assets/keykit/PrototypeCollection/Obsticle/Obsticle.gd" id="7_6v8l5"]
 [ext_resource type="PackedScene" uid="uid://cgqeth2i161la" path="res://items/dungeon/chest.gltf" id="12_jrh7q"]
 [ext_resource type="PackedScene" uid="uid://cwjh7evsoxf0d" path="res://items/dungeon/barrel_large.gltf" id="12_m72sb"]
 [ext_resource type="PackedScene" uid="uid://c2kggx236scio" path="res://items/dungeon/barrel_large_decorated.gltf" id="13_1jf4i"]
@@ -128,7 +129,8 @@ data = {
 [node name="Rock_3_N_Color12" parent="." unique_id=1574194874 instance=ExtResource("3_jgfk2")]
 transform = Transform3D(1.916, 0, 0, 0, 1.677, 0, 0, 0, 1.89, -19.3985, 2.099672, 16.727896)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_N_Color12" unique_id=872305306]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_N_Color12" unique_id=872305306 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_N_Color12/StaticBody3D" unique_id=1612513945]
 shape = SubResource("ConcavePolygonShape3D_6v8l5")
@@ -136,7 +138,8 @@ shape = SubResource("ConcavePolygonShape3D_6v8l5")
 [node name="Rock_3_M_Color12" parent="." unique_id=1623439332 instance=ExtResource("4_lp7lw")]
 transform = Transform3D(1.916, 0, 0, 0, 1.677, 0, 0, 0, 1.89, -16.94149, 2.1326017, 24.798943)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_M_Color12" unique_id=26814494]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_M_Color12" unique_id=26814494 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_M_Color12/StaticBody3D" unique_id=30634274]
 shape = SubResource("ConcavePolygonShape3D_n37mq")
@@ -168,7 +171,8 @@ shape = SubResource("ConcavePolygonShape3D_cwstm")
 [node name="Rock_3_N_Color13" parent="." unique_id=723828789 instance=ExtResource("3_jgfk2")]
 transform = Transform3D(1.916, 0, 0, 0, 1.677, 0, 0, 0, 1.89, -22.073833, 0.2207048, 26.152756)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_N_Color13" unique_id=329641933]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_N_Color13" unique_id=329641933 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_N_Color13/StaticBody3D" unique_id=1952683120]
 shape = SubResource("ConcavePolygonShape3D_vwuxx")
@@ -176,7 +180,8 @@ shape = SubResource("ConcavePolygonShape3D_vwuxx")
 [node name="Rock_3_O_Color12" parent="." unique_id=2098218892 instance=ExtResource("5_2g53k")]
 transform = Transform3D(1.8538318, 0, 0, 0, 1.1763968, -1.2594726, 0, 1.117532, 1.3258139, 3.716507, 2.3967152, 20.367325)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_O_Color12" unique_id=194155929]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_O_Color12" unique_id=194155929 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_O_Color12/StaticBody3D" unique_id=1454299697]
 shape = SubResource("ConcavePolygonShape3D_ynlks")
@@ -184,7 +189,8 @@ shape = SubResource("ConcavePolygonShape3D_ynlks")
 [node name="Tree_1_A_Color12" parent="." unique_id=985781567 instance=ExtResource("6_g06lh")]
 transform = Transform3D(1.916, 0, 0, 0, 1.677, 0, 0, 0, 1.89, -22.927322, 0.7454625, 33.342293)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_A_Color12" unique_id=365213490]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_A_Color12" unique_id=365213490 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_1_A_Color12/StaticBody3D" unique_id=656885343]
 shape = SubResource("ConcavePolygonShape3D_m72sb")
@@ -192,7 +198,8 @@ shape = SubResource("ConcavePolygonShape3D_m72sb")
 [node name="chest2" parent="." unique_id=1195922191 instance=ExtResource("12_jrh7q")]
 transform = Transform3D(-0.011949033, 0, 0.9999286, 0, 1, 0, -0.9999286, 0, -0.011949033, -0.4575348, 0.50000024, 59.378006)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="chest2" unique_id=977844725]
+[node name="StaticBody3D" type="StaticBody3D" parent="chest2" unique_id=977844725 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest2/StaticBody3D" unique_id=404029145]
 shape = SubResource("ConcavePolygonShape3D_1jf4i")
@@ -200,7 +207,8 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 [node name="chest11" parent="." unique_id=1003088646 instance=ExtResource("12_jrh7q")]
 transform = Transform3D(-0.7993238, 0, -0.6009009, 0, 1, 0, 0.6009009, 0, -0.7993238, 13.735098, 0.50000024, 66.23772)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="chest11" unique_id=1888085355]
+[node name="StaticBody3D" type="StaticBody3D" parent="chest11" unique_id=1888085355 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest11/StaticBody3D" unique_id=1672176328]
 shape = SubResource("ConcavePolygonShape3D_1jf4i")
@@ -208,7 +216,8 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 [node name="chest3" parent="." unique_id=661747378 instance=ExtResource("12_jrh7q")]
 transform = Transform3D(0.8812992, 0, -0.47255874, 0, 1, 0, 0.47255874, 0, 0.8812992, 2.902688, 0.49999976, 44.709908)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="chest3" unique_id=1730184908]
+[node name="StaticBody3D" type="StaticBody3D" parent="chest3" unique_id=1730184908 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest3/StaticBody3D" unique_id=889902279]
 shape = SubResource("ConcavePolygonShape3D_1jf4i")
@@ -216,7 +225,8 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 [node name="chest4" parent="." unique_id=1003108533 instance=ExtResource("12_jrh7q")]
 transform = Transform3D(-0.5286217, 0, 0.8488575, 0, 1, 0, -0.8488575, 0, -0.5286217, -12.584593, 0.50000024, 46.46239)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="chest4" unique_id=310046589]
+[node name="StaticBody3D" type="StaticBody3D" parent="chest4" unique_id=310046589 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest4/StaticBody3D" unique_id=518081590]
 shape = SubResource("ConcavePolygonShape3D_1jf4i")
@@ -224,7 +234,8 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 [node name="chest5" parent="." unique_id=1109412403 instance=ExtResource("12_jrh7q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.538403, 0.49999976, 28.415354)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="chest5" unique_id=708418359]
+[node name="StaticBody3D" type="StaticBody3D" parent="chest5" unique_id=708418359 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest5/StaticBody3D" unique_id=1520805480]
 shape = SubResource("ConcavePolygonShape3D_1jf4i")
@@ -232,7 +243,8 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 [node name="chest6" parent="." unique_id=808640576 instance=ExtResource("12_jrh7q")]
 transform = Transform3D(0.6874948, 0, -0.72618926, 0, 1, 0, 0.72618926, 0, 0.6874948, 13.495497, 0.50000024, 63.118927)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="chest6" unique_id=828677725]
+[node name="StaticBody3D" type="StaticBody3D" parent="chest6" unique_id=828677725 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest6/StaticBody3D" unique_id=1044035988]
 shape = SubResource("ConcavePolygonShape3D_1jf4i")
@@ -240,7 +252,8 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 [node name="chest7" parent="." unique_id=767368181 instance=ExtResource("12_jrh7q")]
 transform = Transform3D(0.83115417, 0, 0.5560421, 0, 1, 0, -0.5560421, 0, 0.83115417, 1.6515579, 0.50000024, 32.80858)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="chest7" unique_id=2105491553]
+[node name="StaticBody3D" type="StaticBody3D" parent="chest7" unique_id=2105491553 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest7/StaticBody3D" unique_id=1624034426]
 shape = SubResource("ConcavePolygonShape3D_1jf4i")
@@ -248,7 +261,8 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 [node name="chest8" parent="." unique_id=456768030 instance=ExtResource("12_jrh7q")]
 transform = Transform3D(0.41652122, 0, 0.909126, 0, 1, 0, -0.909126, 0, 0.41652122, -21.904915, 0.50000024, 35.374104)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="chest8" unique_id=751595893]
+[node name="StaticBody3D" type="StaticBody3D" parent="chest8" unique_id=751595893 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest8/StaticBody3D" unique_id=978758747]
 shape = SubResource("ConcavePolygonShape3D_1jf4i")
@@ -256,7 +270,8 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 [node name="chest9" parent="." unique_id=1522738886 instance=ExtResource("12_jrh7q")]
 transform = Transform3D(0.6820274, 0, 0.73132664, 0, 1, 0, -0.73132664, 0, 0.6820274, 12.953434, 0.50000024, 39.664047)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="chest9" unique_id=1689974674]
+[node name="StaticBody3D" type="StaticBody3D" parent="chest9" unique_id=1689974674 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest9/StaticBody3D" unique_id=895817598]
 shape = SubResource("ConcavePolygonShape3D_1jf4i")
@@ -264,7 +279,8 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 [node name="chest10" parent="." unique_id=1232967051 instance=ExtResource("12_jrh7q")]
 transform = Transform3D(-0.7196512, 0, 0.69433576, 0, 1, 0, -0.69433576, 0, -0.7196512, -14.101786, 0.50000024, 21.432219)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="chest10" unique_id=609866178]
+[node name="StaticBody3D" type="StaticBody3D" parent="chest10" unique_id=609866178 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest10/StaticBody3D" unique_id=2012850550]
 shape = SubResource("ConcavePolygonShape3D_1jf4i")
@@ -272,7 +288,8 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 [node name="barrel_large2" parent="." unique_id=418947078 instance=ExtResource("12_m72sb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.495693, 0.5, 51.828278)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large2" unique_id=1795166111]
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large2" unique_id=1795166111 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large2/StaticBody3D" unique_id=1809104714]
 shape = SubResource("ConcavePolygonShape3D_xhndu")
@@ -280,7 +297,8 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 [node name="barrel_large3" parent="." unique_id=195624785 instance=ExtResource("12_m72sb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6354446, 0.5, 44.177444)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large3" unique_id=895941145]
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large3" unique_id=895941145 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large3/StaticBody3D" unique_id=181580590]
 shape = SubResource("ConcavePolygonShape3D_xhndu")
@@ -288,7 +306,8 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 [node name="barrel_large4" parent="." unique_id=1732493714 instance=ExtResource("12_m72sb")]
 transform = Transform3D(0.71, 0, 0, 0, 0.71, 0, 0, 0, 0.71, -4.588173, 0.5, 39.41229)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large4" unique_id=492952606]
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large4" unique_id=492952606 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large4/StaticBody3D" unique_id=514526139]
 shape = SubResource("ConcavePolygonShape3D_xhndu")
@@ -296,7 +315,8 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 [node name="barrel_large5" parent="." unique_id=1165434334 instance=ExtResource("12_m72sb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.285332, 0.5, 24.170593)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large5" unique_id=444123454]
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large5" unique_id=444123454 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large5/StaticBody3D" unique_id=435225959]
 shape = SubResource("ConcavePolygonShape3D_xhndu")
@@ -304,7 +324,8 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 [node name="barrel_large6" parent="." unique_id=1368547485 instance=ExtResource("12_m72sb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6169662, 0.5, 37.41937)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large6" unique_id=1756751676]
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large6" unique_id=1756751676 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large6/StaticBody3D" unique_id=1766145622]
 shape = SubResource("ConcavePolygonShape3D_xhndu")
@@ -312,7 +333,8 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 [node name="barrel_large_decorated2" parent="." unique_id=2037271914 instance=ExtResource("13_1jf4i")]
 transform = Transform3D(0.655, 0, 0, 0, 0.655, 0, 0, 0, 0.655, -10.542324, 0.5019908, 53.510693)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated2" unique_id=1646977237]
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated2" unique_id=1646977237 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large_decorated2/StaticBody3D" unique_id=855970805]
 shape = SubResource("ConcavePolygonShape3D_xhndu")
@@ -320,7 +342,8 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 [node name="barrel_large_decorated3" parent="." unique_id=202936114 instance=ExtResource("13_1jf4i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.434763, 0.5019908, 35.44816)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated3" unique_id=1635449355]
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated3" unique_id=1635449355 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large_decorated3/StaticBody3D" unique_id=1304389211]
 shape = SubResource("ConcavePolygonShape3D_xhndu")
@@ -328,7 +351,8 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 [node name="barrel_large_decorated4" parent="." unique_id=295692997 instance=ExtResource("13_1jf4i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.261574, 0.5019908, 41.63664)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated4" unique_id=306885355]
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated4" unique_id=306885355 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large_decorated4/StaticBody3D" unique_id=2043384806]
 shape = SubResource("ConcavePolygonShape3D_xhndu")
@@ -336,7 +360,8 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 [node name="barrel_large_decorated5" parent="." unique_id=187262897 instance=ExtResource("13_1jf4i")]
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 11.503762, 0.5019908, 64.05541)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated5" unique_id=665256865]
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated5" unique_id=665256865 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large_decorated5/StaticBody3D" unique_id=1739223380]
 shape = SubResource("ConcavePolygonShape3D_xhndu")
@@ -344,7 +369,8 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 [node name="barrel_small_stack2" parent="." unique_id=2056470934 instance=ExtResource("14_xhndu")]
 transform = Transform3D(0.50828743, 0, -0.8611875, 0, 1, 0, 0.8611875, 0, 0.50828743, -26.35928, 0.5, 21.690147)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="barrel_small_stack2" unique_id=1469611509]
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_small_stack2" unique_id=1469611509 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_small_stack2/StaticBody3D" unique_id=1224157178]
 shape = SubResource("ConcavePolygonShape3D_045t2")
@@ -352,7 +378,8 @@ shape = SubResource("ConcavePolygonShape3D_045t2")
 [node name="barrel_small_stack3" parent="." unique_id=1789365956 instance=ExtResource("14_xhndu")]
 transform = Transform3D(0.78375024, 0, 0.6210761, 0, 1, 0, -0.6210761, 0, 0.78375024, 4.8799105, 0.5, 23.618845)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="barrel_small_stack3" unique_id=2034409123]
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_small_stack3" unique_id=2034409123 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_small_stack3/StaticBody3D" unique_id=1873250587]
 shape = SubResource("ConcavePolygonShape3D_045t2")
@@ -360,7 +387,8 @@ shape = SubResource("ConcavePolygonShape3D_045t2")
 [node name="barrel_small_stack4" parent="." unique_id=1272986041 instance=ExtResource("14_xhndu")]
 transform = Transform3D(0.9684574, 0, 0.24917926, 0, 1, 0, -0.24917926, 0, 0.9684574, -29.563728, 0.5, 44.73303)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="barrel_small_stack4" unique_id=4514713]
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_small_stack4" unique_id=4514713 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_small_stack4/StaticBody3D" unique_id=998896007]
 shape = SubResource("ConcavePolygonShape3D_045t2")
@@ -368,7 +396,8 @@ shape = SubResource("ConcavePolygonShape3D_045t2")
 [node name="Rock_3_C_Color12" parent="." unique_id=2019250064 instance=ExtResource("17_84sy7")]
 transform = Transform3D(1.47, 0, 0, 0, 1.47, 0, 0, 0, 1.47, -8.721424, 1.0185415, 31.74861)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_C_Color12" unique_id=1003593260]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_C_Color12" unique_id=1003593260 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_C_Color12/StaticBody3D" unique_id=1224187104]
 shape = SubResource("ConcavePolygonShape3D_50wyl")
@@ -376,7 +405,8 @@ shape = SubResource("ConcavePolygonShape3D_50wyl")
 [node name="Rock_3_E_Color12" parent="." unique_id=142779700 instance=ExtResource("19_bkrct")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.574673, 1.0915008, 39.388508)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_E_Color12" unique_id=1293701855]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_E_Color12" unique_id=1293701855 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_E_Color12/StaticBody3D" unique_id=324816478]
 shape = SubResource("ConcavePolygonShape3D_50wyl")
@@ -384,7 +414,8 @@ shape = SubResource("ConcavePolygonShape3D_50wyl")
 [node name="Rock_3_G_Color12" parent="." unique_id=1518544219 instance=ExtResource("21_g0vfp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1478014, 1.3728036, 41.106625)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_G_Color12" unique_id=1220383633]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_G_Color12" unique_id=1220383633 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_G_Color12/StaticBody3D" unique_id=42317263]
 shape = SubResource("ConcavePolygonShape3D_84sy7")
@@ -392,7 +423,8 @@ shape = SubResource("ConcavePolygonShape3D_84sy7")
 [node name="Rock_3_H_Color12" parent="." unique_id=1952048724 instance=ExtResource("22_dgqr4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.542944, 1.4761517, 26.185934)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_H_Color12" unique_id=1247801981]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_H_Color12" unique_id=1247801981 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_H_Color12/StaticBody3D" unique_id=1454154409]
 shape = SubResource("ConcavePolygonShape3D_84sy7")
@@ -400,7 +432,8 @@ shape = SubResource("ConcavePolygonShape3D_84sy7")
 [node name="Rock_3_I_Color12" parent="." unique_id=626620048 instance=ExtResource("23_y80vc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2291031, 1.5231934, 31.551006)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_I_Color12" unique_id=1723577112]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_I_Color12" unique_id=1723577112 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_I_Color12/StaticBody3D" unique_id=1130450026]
 shape = SubResource("ConcavePolygonShape3D_j5wgm")
@@ -408,7 +441,8 @@ shape = SubResource("ConcavePolygonShape3D_j5wgm")
 [node name="Rock_3_J_Color12" parent="." unique_id=353702667 instance=ExtResource("24_buss7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.608914, 1.417388, 48.081093)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_J_Color12" unique_id=1137052800]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_J_Color12" unique_id=1137052800 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_J_Color12/StaticBody3D" unique_id=2122979220]
 shape = SubResource("ConcavePolygonShape3D_bkrct")
@@ -416,7 +450,8 @@ shape = SubResource("ConcavePolygonShape3D_bkrct")
 [node name="Rock_3_K_Color12" parent="." unique_id=1410412077 instance=ExtResource("25_er8nq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.477539, 1.5094849, 49.216217)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_K_Color12" unique_id=930903383]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_K_Color12" unique_id=930903383 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_K_Color12/StaticBody3D" unique_id=1451716972]
 shape = SubResource("ConcavePolygonShape3D_gymyu")
@@ -424,7 +459,8 @@ shape = SubResource("ConcavePolygonShape3D_gymyu")
 [node name="Rock_3_L_Color12" parent="." unique_id=730318755 instance=ExtResource("26_121vm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.107077, 1.5459975, 47.52447)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_L_Color12" unique_id=538338957]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_L_Color12" unique_id=538338957 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_L_Color12/StaticBody3D" unique_id=1536380800]
 shape = SubResource("ConcavePolygonShape3D_gymyu")
@@ -432,7 +468,8 @@ shape = SubResource("ConcavePolygonShape3D_gymyu")
 [node name="Rock_3_M_Color13" parent="." unique_id=75411011 instance=ExtResource("4_lp7lw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3396595, 2.135922, 21.975813)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_M_Color13" unique_id=938506361]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_M_Color13" unique_id=938506361 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_M_Color13/StaticBody3D" unique_id=483651594]
 shape = SubResource("ConcavePolygonShape3D_g0vfp")
@@ -440,7 +477,8 @@ shape = SubResource("ConcavePolygonShape3D_g0vfp")
 [node name="Rock_3_N_Color14" parent="." unique_id=1895243849 instance=ExtResource("3_jgfk2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.416072, 1.1430986, 29.827766)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_N_Color14" unique_id=604385900]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_N_Color14" unique_id=604385900 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_N_Color14/StaticBody3D" unique_id=1039456106]
 shape = SubResource("ConcavePolygonShape3D_dgqr4")
@@ -448,7 +486,8 @@ shape = SubResource("ConcavePolygonShape3D_dgqr4")
 [node name="Rock_3_O_Color13" parent="." unique_id=388089489 instance=ExtResource("5_2g53k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9873629, 1.9263556, 24.81469)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_O_Color13" unique_id=461612037]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_O_Color13" unique_id=461612037 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_O_Color13/StaticBody3D" unique_id=1951885156]
 shape = SubResource("ConcavePolygonShape3D_y80vc")
@@ -456,7 +495,8 @@ shape = SubResource("ConcavePolygonShape3D_y80vc")
 [node name="Rock_3_P_Color12" parent="." unique_id=1278269822 instance=ExtResource("27_ja32f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.300558, 2.2424235, 29.517515)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_P_Color12" unique_id=1147797959]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_P_Color12" unique_id=1147797959 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_P_Color12/StaticBody3D" unique_id=85935681]
 shape = SubResource("ConcavePolygonShape3D_buss7")
@@ -464,7 +504,8 @@ shape = SubResource("ConcavePolygonShape3D_buss7")
 [node name="Rock_3_Q_Color12" parent="." unique_id=1873957577 instance=ExtResource("28_6e1sr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.81403, 2.1244798, 31.40792)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_Q_Color12" unique_id=1871512519]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_Q_Color12" unique_id=1871512519 groups=["obsticle"]]
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_Q_Color12/StaticBody3D" unique_id=31949947]
 shape = SubResource("ConcavePolygonShape3D_er8nq")
@@ -472,8 +513,9 @@ shape = SubResource("ConcavePolygonShape3D_er8nq")
 [node name="Rock_3_R_Color12" parent="." unique_id=1717547493 instance=ExtResource("29_mrcw8")]
 transform = Transform3D(1.1097841, 0, 0, 0, 1.1097841, 0, 0, 0, 1.1097841, 4.423973, 2.2084794, 41.669697)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_R_Color12" unique_id=1144269740]
+[node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_R_Color12" unique_id=1144269740 groups=["obsticle"]]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.40284276, 0.21513486, 0.054496765)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_R_Color12/StaticBody3D" unique_id=1855477727]
 shape = SubResource("CapsuleShape3D_6v8l5")
@@ -481,8 +523,9 @@ shape = SubResource("CapsuleShape3D_6v8l5")
 [node name="Tree_Bare_2_C_Color12" parent="." unique_id=1231871929 instance=ExtResource("30_da12d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.721578, 0.9630488, 26.797138)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_Bare_2_C_Color12" unique_id=721680253]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_Bare_2_C_Color12" unique_id=721680253 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_Bare_2_C_Color12/StaticBody3D" unique_id=1950868952]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -490,8 +533,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_4_C_Color12" parent="." unique_id=502926033 instance=ExtResource("31_kajfp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.986109, 0.85652405, 37.11281)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_4_C_Color12" unique_id=2010670821]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_4_C_Color12" unique_id=2010670821 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_4_C_Color12/StaticBody3D" unique_id=336562750]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -499,8 +543,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_4_B_Color12" parent="." unique_id=1972297657 instance=ExtResource("32_w4qdr")]
 transform = Transform3D(1.37, 0, 0, 0, 1.37, 0, 0, 0, 1.37, -12.126747, 0.6841228, 25.251637)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_4_B_Color12" unique_id=1384944630]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_4_B_Color12" unique_id=1384944630 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_4_B_Color12/StaticBody3D" unique_id=1735610063]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -508,8 +553,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_3_C_Color12" parent="." unique_id=831833867 instance=ExtResource("33_4rb0w")]
 transform = Transform3D(1.145, 0, 0, 0, 1.145, 0, 0, 0, 1.145, -12.638884, 0.69479036, 49.753548)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_C_Color12" unique_id=600211952]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_C_Color12" unique_id=600211952 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_3_C_Color12/StaticBody3D" unique_id=2011396488]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -517,8 +563,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_3_B_Color12" parent="." unique_id=1071217931 instance=ExtResource("34_6ifi4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.198531, 0.8410349, 37.787144)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_B_Color12" unique_id=1177170340]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_B_Color12" unique_id=1177170340 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_3_B_Color12/StaticBody3D" unique_id=1711652960]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -526,8 +573,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_3_A_Color12" parent="." unique_id=1568452010 instance=ExtResource("35_qcl7h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.409893, 0.76131797, 23.182003)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_A_Color12" unique_id=1928301578]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_A_Color12" unique_id=1928301578 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_3_A_Color12/StaticBody3D" unique_id=203253537]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -535,8 +583,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_2_E_Color12" parent="." unique_id=1889335876 instance=ExtResource("36_wb5hu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.526144, 0.93637216, 24.272861)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_E_Color12" unique_id=958212100]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_E_Color12" unique_id=958212100 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_2_E_Color12/StaticBody3D" unique_id=510415251]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -544,8 +593,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_1_C_Color12" parent="." unique_id=1794395842 instance=ExtResource("37_2tawv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.57118607, 0.89232165, 14.055645)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_C_Color12" unique_id=978520841]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_C_Color12" unique_id=978520841 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_1_C_Color12/StaticBody3D" unique_id=528353270]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -553,8 +603,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_2_A_Color12" parent="." unique_id=1961560980 instance=ExtResource("38_rnp8v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.92838, 0.8735182, 30.475857)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_A_Color12" unique_id=513566748]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_A_Color12" unique_id=513566748 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_2_A_Color12/StaticBody3D" unique_id=42685517]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -562,8 +613,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_1_C_Color13" parent="." unique_id=1949942416 instance=ExtResource("37_2tawv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.452291, 0.89231974, 41.915237)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_C_Color13" unique_id=726551016]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_C_Color13" unique_id=726551016 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_1_C_Color13/StaticBody3D" unique_id=1480924374]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -571,8 +623,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_1_A_Color13" parent="." unique_id=1897841174 instance=ExtResource("6_g06lh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.379869, 0.76131797, 53.50096)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_A_Color13" unique_id=1877143183]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_A_Color13" unique_id=1877143183 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_1_A_Color13/StaticBody3D" unique_id=62993458]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -580,8 +633,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_1_B_Color12" parent="." unique_id=1210098436 instance=ExtResource("39_wv4da")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0625696, 0.8410368, 59.587746)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_B_Color12" unique_id=603988375]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_B_Color12" unique_id=603988375 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_1_B_Color12/StaticBody3D" unique_id=1155456112]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -589,8 +643,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_1_C_Color14" parent="." unique_id=1448253039 instance=ExtResource("37_2tawv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.770514, 0.89231974, 66.37172)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_C_Color14" unique_id=1457706105]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_C_Color14" unique_id=1457706105 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_1_C_Color14/StaticBody3D" unique_id=1056771963]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -598,8 +653,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_3_A_Color13" parent="." unique_id=713030842 instance=ExtResource("35_qcl7h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.909718, 0.76131797, 67.98795)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_A_Color13" unique_id=1462052998]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_A_Color13" unique_id=1462052998 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_3_A_Color13/StaticBody3D" unique_id=1603996568]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -607,8 +663,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_3_C_Color13" parent="." unique_id=894274500 instance=ExtResource("33_4rb0w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.64438, 0.89231974, 59.903778)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_C_Color13" unique_id=1557128851]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_C_Color13" unique_id=1557128851 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_3_C_Color13/StaticBody3D" unique_id=1126068824]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -616,8 +673,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_2_D_Color12" parent="." unique_id=1371260407 instance=ExtResource("40_ld5d7")]
 transform = Transform3D(1.355, 0, 0, 0, 1.423, 0, 0, 0, 1.355, 0.5505295, 0.8932472, 21.531551)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_D_Color12" unique_id=1410251649]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_D_Color12" unique_id=1410251649 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_2_D_Color12/StaticBody3D" unique_id=576510547]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -625,8 +683,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_2_B_Color12" parent="." unique_id=1593779604 instance=ExtResource("41_xe30e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.196684, 0.844767, 38.91078)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_B_Color12" unique_id=561040357]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_B_Color12" unique_id=561040357 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_2_B_Color12/StaticBody3D" unique_id=784900067]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -634,8 +693,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_2_E_Color13" parent="." unique_id=1859433736 instance=ExtResource("36_wb5hu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.958076, 0.93637216, 43.35459)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_E_Color13" unique_id=1081032504]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_E_Color13" unique_id=1081032504 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_2_E_Color13/StaticBody3D" unique_id=1178922592]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -643,8 +703,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="Tree_3_C_Color14" parent="." unique_id=257270395 instance=ExtResource("33_4rb0w")]
 transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, -24.550613, 0.89231974, 19.273075)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_C_Color14" unique_id=2119723645]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_C_Color14" unique_id=2119723645 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_3_C_Color14/StaticBody3D" unique_id=932798745]
 shape = SubResource("CapsuleShape3D_n37mq")
@@ -652,8 +713,9 @@ shape = SubResource("CapsuleShape3D_n37mq")
 [node name="tree-pine-small2" parent="." unique_id=1168200586 instance=ExtResource("42_l5gso")]
 transform = Transform3D(3.245, 0, 0, 0, 3.245, 0, 0, 0, 3.245, 2.4235625, 0.5, 65.2454)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="tree-pine-small2" unique_id=790044081]
+[node name="StaticBody3D" type="StaticBody3D" parent="tree-pine-small2" unique_id=790044081 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69883925, 0)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree-pine-small2/StaticBody3D" unique_id=1458902331]
 shape = SubResource("CapsuleShape3D_sdcuc")
@@ -661,8 +723,9 @@ shape = SubResource("CapsuleShape3D_sdcuc")
 [node name="tree-pine2" parent="." unique_id=2002127473 instance=ExtResource("43_2rocq")]
 transform = Transform3D(3.245, 0, 0, 0, 3.245, 0, 0, 0, 3.245, -30.437492, 0.5, 47.304302)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="tree-pine2" unique_id=1381977099]
+[node name="StaticBody3D" type="StaticBody3D" parent="tree-pine2" unique_id=1381977099 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69883925, 0)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree-pine2/StaticBody3D" unique_id=1551657326]
 shape = SubResource("CapsuleShape3D_sdcuc")
@@ -670,8 +733,9 @@ shape = SubResource("CapsuleShape3D_sdcuc")
 [node name="tree2" parent="." unique_id=1065612484 instance=ExtResource("44_eyifw")]
 transform = Transform3D(3.245, 0, 0, 0, 3.245, 0, 0, 0, 3.245, 1.2212214, 0.5, 68.42012)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="tree2" unique_id=1006120235]
+[node name="StaticBody3D" type="StaticBody3D" parent="tree2" unique_id=1006120235 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69883925, 0)
+script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree2/StaticBody3D" unique_id=626402815]
 shape = SubResource("CapsuleShape3D_sdcuc")
@@ -743,7 +807,6 @@ transform = Transform3D(-0.35173726, -0.88008404, -6.751069, -2.2368052e-08, 5.2
 transform = Transform3D(-0.9780952, 0, -19.104345, 0, 14.015001, 0, 14.33202, 0, -1.3037847, -2.7781496, 0, 3.5692787)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=632909514]
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=785314746]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.364532)
@@ -752,7 +815,6 @@ debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1254553252]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 67.458206)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=404902554]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.453788)
@@ -761,7 +823,6 @@ debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=1796473194]
 transform = Transform3D(-0.008949562, 0, -0.99995995, 0, 1, 0, 0.99995995, 0, -0.008949562, 36.925827, 0, 37.92853)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=1785295169]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048858643, 0, 13.912653)
