@@ -4,13 +4,14 @@
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://starter-kit/scenes/main-environment.tres" id="2_6yumh"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://starter-kit/objects/player.tscn" id="3_nyf5e"]
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://starter-kit/scripts/view.gd" id="4_ke8g5"]
+[ext_resource type="PackedScene" uid="uid://ba17aqg10stfc" path="res://assets/keykit/PrototypeCollection/Obsticle/Obsticle.tscn" id="6_u743v"]
 [ext_resource type="PackedScene" uid="uid://d265pfnhxda5u" path="res://scenes/arena/Arena.tscn" id="9_u0e45"]
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://starter-kit/scripts/hud.gd" id="13_omv8b"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://starter-kit/fonts/lilita_one_regular.ttf" id="15_apxhq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_od15b"]
-vertices = PackedVector3Array(-47.5, -0.24982941, -3.5, -47.5, -0.24982941, 71.5, 51.5, -0.24982941, 71.5, 51.5, -0.24982941, -3.5)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+vertices = PackedVector3Array(-1.0230179, -0.24982941, 21.052689, -1.0230179, -0.24982941, 20.302689, -3.773018, -0.24982941, 10.802689, -5.273018, -0.24982941, 10.302689, -47.523018, -0.24982941, 21.052689, -5.273018, -0.24982941, 8.802689, -47.523018, -0.24982941, -3.4473114, -4.273018, -0.24982941, 8.552689, -4.273018, -0.24982941, -3.4473114, -3.023018, -0.24982941, 9.552689, 5.726982, -0.24982941, 9.802689, 5.976982, -0.24982941, 9.052689, -3.523018, -0.24982941, 8.552689, 6.976982, -0.24982941, 8.802689, 6.976982, -0.24982941, -3.4473114, 12.476982, -0.24982941, 16.802689, 10.976982, -0.24982941, 17.302689, 10.726982, -0.24982941, 18.052689, 7.976982, -0.24982941, 9.302689, 7.976982, -0.24982941, 10.552689, 10.976982, -0.24982941, 15.052689, 12.476982, -0.24982941, 15.302689, 51.476982, -0.24982941, -3.4473114, 10.726982, -0.24982941, 71.55269, 51.476982, -0.24982941, 71.55269, -3.023018, -0.24982941, 10.302689, 5.726982, -0.24982941, 10.302689, -0.5230179, -0.24982941, 19.552689, 0.47698212, -0.24982941, 19.552689, 10.226982, -0.24982941, 16.552689, 7.726982, -0.24982941, 11.052689, 10.226982, -0.24982941, 15.552689, 6.226982, -0.24982941, 11.052689, 1.2269821, -0.24982941, 20.302689, 1.2269821, -0.24982941, 21.302689, -0.023017883, -0.24982941, 21.802689, -0.023017883, -0.24982941, 71.55269, -47.523018, -0.24982941, 71.55269)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(3, 4, 5), PackedInt32Array(5, 4, 6), PackedInt32Array(7, 5, 8), PackedInt32Array(8, 5, 6), PackedInt32Array(11, 10, 9), PackedInt32Array(9, 12, 11), PackedInt32Array(11, 12, 13), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 8), PackedInt32Array(12, 7, 8), PackedInt32Array(17, 16, 15), PackedInt32Array(20, 19, 18), PackedInt32Array(20, 18, 21), PackedInt32Array(21, 18, 14), PackedInt32Array(21, 14, 22), PackedInt32Array(18, 13, 14), PackedInt32Array(15, 21, 22), PackedInt32Array(15, 22, 17), PackedInt32Array(17, 22, 23), PackedInt32Array(23, 22, 24), PackedInt32Array(26, 25, 10), PackedInt32Array(10, 25, 9), PackedInt32Array(25, 26, 2), PackedInt32Array(2, 26, 28), PackedInt32Array(2, 28, 27), PackedInt32Array(27, 1, 2), PackedInt32Array(29, 16, 17), PackedInt32Array(19, 20, 30), PackedInt32Array(30, 20, 31), PackedInt32Array(32, 29, 17), PackedInt32Array(31, 29, 30), PackedInt32Array(30, 29, 32), PackedInt32Array(32, 17, 26), PackedInt32Array(26, 17, 33), PackedInt32Array(26, 33, 28), PackedInt32Array(34, 33, 17), PackedInt32Array(34, 17, 35), PackedInt32Array(35, 17, 36), PackedInt32Array(36, 17, 23), PackedInt32Array(0, 35, 4), PackedInt32Array(4, 35, 36), PackedInt32Array(4, 36, 37)]
 
 [sub_resource type="LabelSettings" id="LabelSettings_38ys3"]
 font = ExtResource("15_apxhq")
@@ -94,7 +95,19 @@ size = 13.239
 navigation_mesh = SubResource("NavigationMesh_od15b")
 
 [node name="Floor" parent="World/NavigationRegion3D" unique_id=1224901886 instance=ExtResource("9_u0e45")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2498294, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02301979, -1.2498294, 0.0526886)
+
+[node name="Obsticle" parent="World/NavigationRegion3D" unique_id=2027688754 instance=ExtResource("6_u743v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.217702, -0.7461506, 9.699888)
+
+[node name="Obsticle2" parent="World/NavigationRegion3D" unique_id=1128364488 instance=ExtResource("6_u743v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09559822, -0.7461506, 20.696331)
+
+[node name="Obsticle3" parent="World/NavigationRegion3D" unique_id=1770582023 instance=ExtResource("6_u743v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9155235, -0.7461506, 10.050671)
+
+[node name="Obsticle4" parent="World/NavigationRegion3D" unique_id=1719995306 instance=ExtResource("6_u743v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.448479, -0.7461506, 16.167458)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=964166913]
 transform = Transform3D(-0.42261803, -0.6942719, 0.5825639, -1.1684953e-08, 0.64278793, 0.7660444, -0.9063081, 0.3237441, -0.27165377, -0.009939194, 0.03416252, -0.02141571)
@@ -125,6 +138,40 @@ offset_bottom = 126.0
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"
+label_settings = SubResource("LabelSettings_38ys3")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="HUD" unique_id=1706298623]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = 68.0
+offset_right = -6.0
+offset_bottom = 130.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ObsticlesLabel" type="Label" parent="HUD/VBoxContainer2" unique_id=565001665]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_38ys3")
+metadata/_edit_use_anchors_ = true
+
+[node name="x" type="Label" parent="HUD/VBoxContainer2" unique_id=581088159]
+layout_mode = 2
+text = "/"
+label_settings = SubResource("LabelSettings_38ys3")
+metadata/_edit_use_anchors_ = true
+
+[node name="TotalObsticlesLabel" type="Label" parent="HUD/VBoxContainer2" unique_id=161328079]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00"
 label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
@@ -160,4 +207,8 @@ autostart = true
 [connection signal="damaged" from="Player" to="." method="_on_player_damaged"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="scaled" from="Player" to="View" method="_on_player_scaled"]
+[connection signal="destroyed" from="World/NavigationRegion3D/Obsticle" to="." method="_on_obsticle_destroyed"]
+[connection signal="destroyed" from="World/NavigationRegion3D/Obsticle2" to="." method="_on_obsticle_destroyed"]
+[connection signal="destroyed" from="World/NavigationRegion3D/Obsticle3" to="." method="_on_obsticle_destroyed"]
+[connection signal="destroyed" from="World/NavigationRegion3D/Obsticle4" to="." method="_on_obsticle_destroyed"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]

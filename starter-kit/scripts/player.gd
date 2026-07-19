@@ -223,7 +223,7 @@ func _on_body_animation_player_animation_finished(anim_name: StringName) -> void
 
 
 func _on_hurt_box_body_entered(body: Node3D) -> void:
-	if is_attacking and body.is_in_group("enemy"):
+	if is_attacking and (body.is_in_group("enemy") or body.is_in_group("obsticle")):
 		body.hit(hit_damage * scale_factor)
 
 func die() -> void:
