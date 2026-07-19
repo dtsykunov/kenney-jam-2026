@@ -1,6 +1,7 @@
 extends Node3D
 
 signal level_lost
+signal level_up
 signal level_won(level_path : String)
 
 @export_file_path("*.tscn") var enemy_scene : String  = "res://starter-kit/objects/enemy/enemy.tscn"
@@ -13,9 +14,12 @@ signal level_won(level_path : String)
 @onready var obsticles_label: Label = %ObsticlesLabel
 @onready var total_obsticles_label: Label = %TotalObsticlesLabel
 @onready var health_bar: HSlider = %HealthBarSlider
+@onready var xp_bar: HSlider = %XPBar
+
+var player_xp := 0.0
+var player_level := 1
 
 var enemies_killed := 0
-
 var obsticles_destroyed := 0
 
 func _ready() -> void:
@@ -45,10 +49,11 @@ func _on_enemy_died() -> void:
 	enemies_killed += 1
 	kills_label.text = str(enemies_killed)
 
+	add_xp(1.0)
+
 
 func _on_player_damaged(health_left: float) -> void:
 	health_bar.value = health_left
-
 
 
 func _on_obsticle_destroyed() -> void:
@@ -57,3 +62,15 @@ func _on_obsticle_destroyed() -> void:
 
 	if obsticles_destroyed == total_obsticles:
 		level_won.emit("")
+
+
+func add_xp(amount: float) -> void:
+	player_xp += amount
+
+	if player_xp >= player_level * 5.0:
+		player_level += 1
+		player_xp = 0
+		level_up.emit()
+
+	xp_bar.value = player_xp
+	xp_bar.max_value = player_level * 5.0

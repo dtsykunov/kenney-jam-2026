@@ -46,6 +46,18 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 6
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfitm"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0.49411765, 0.8862745, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxt43"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -176,13 +188,30 @@ text = "00"
 label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
+[node name="XPBar" type="HSlider" parent="HUD" unique_id=499202688]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 201.0
+offset_top = 65.0
+offset_right = 1204.0
+offset_bottom = 127.0
+scale = Vector2(0.794349, 1.1177274)
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme_override_icons/grabber = SubResource("DPITexture_u0e45")
+theme_override_icons/grabber_highlight = SubResource("DPITexture_xxt43")
+theme_override_icons/grabber_disabled = SubResource("DPITexture_mfitm")
+theme_override_styles/slider = SubResource("StyleBoxFlat_u0e45")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_mfitm")
+max_value = 5.0
+
 [node name="HealthBarSlider" type="HSlider" parent="HUD" unique_id=677023783]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 141.0
-offset_top = 897.0
+offset_top = 899.0
 offset_right = 1144.0
-offset_bottom = 959.0
+offset_bottom = 961.0
 mouse_filter = 2
 mouse_behavior_recursive = 1
 theme_override_icons/grabber = SubResource("DPITexture_u0e45")
@@ -216,3 +245,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.925886, -0.7498028, 5.2640
 [connection signal="destroyed" from="World/NavigationRegion3D/Obsticle3" to="." method="_on_obsticle_destroyed"]
 [connection signal="destroyed" from="World/NavigationRegion3D/Obsticle4" to="." method="_on_obsticle_destroyed"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
+[connection signal="died" from="RigidBody3D" to="." method="_on_enemy_died"]
