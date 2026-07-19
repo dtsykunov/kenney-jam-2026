@@ -1,0 +1,16 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://cyh1pxfgwx28s"]
+
+[ext_resource type="AudioStream" uid="uid://dsuj0eilflypd" path="res://assets/kenney/audio/impactMetal_heavy_000.ogg" id="1_067e6"]
+[ext_resource type="AudioStream" uid="uid://du4vx3nq5t6lg" path="res://assets/kenney/audio/impactMetal_heavy_001.ogg" id="2_tmfxl"]
+[ext_resource type="AudioStream" uid="uid://djuo351pvhe7" path="res://assets/kenney/audio/impactMetal_heavy_002.ogg" id="3_vh5lf"]
+[ext_resource type="AudioStream" uid="uid://bll8bppdqug50" path="res://assets/kenney/audio/impactMetal_heavy_003.ogg" id="4_2lgxm"]
+[ext_resource type="AudioStream" uid="uid://clb6q64r1pqlf" path="res://assets/kenney/audio/impactMetal_heavy_004.ogg" id="5_avujg"]
+
+[resource]
+random_pitch = 1.005793
+streams_count = 5
+stream_0/stream = ExtResource("1_067e6")
+stream_1/stream = ExtResource("2_tmfxl")
+stream_2/stream = ExtResource("3_vh5lf")
+stream_3/stream = ExtResource("4_2lgxm")
+stream_4/stream = ExtResource("5_avujg")

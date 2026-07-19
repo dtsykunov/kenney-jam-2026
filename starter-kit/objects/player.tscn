@@ -151,6 +151,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.71568954, 0)
 shape = SubResource("BoxShape3D_gwup8")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=510432440]
+volume_db = -13.638
+max_polyphony = 3
 bus = &"SFX"
 
 [connection signal="body_entered" from="Barbarian/Rig_Medium/GeneralSkeleton/BoneAttachment3D/Sword/HurtBox" to="." method="_on_hurt_box_body_entered"]
