@@ -86,13 +86,11 @@ func add_xp(amount: float) -> void:
 
 
 func show_scale_card() -> void:
-	get_tree().paused = true
 	scale_card.show()
 	scale_card_timer.start()
 	scale_card_shown = true
 
 func hide_scale_card() -> void:
-	get_tree().paused = false
 	scale_card.hide()
 	scale_card_timer.stop()
 	scale_card_shown = false
