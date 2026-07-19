@@ -4,7 +4,6 @@
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://starter-kit/scenes/main-environment.tres" id="2_6yumh"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://starter-kit/objects/player.tscn" id="3_nyf5e"]
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://starter-kit/scripts/view.gd" id="4_ke8g5"]
-[ext_resource type="PackedScene" uid="uid://ba17aqg10stfc" path="res://assets/keykit/PrototypeCollection/Obsticle/Obsticle.tscn" id="6_u743v"]
 [ext_resource type="Script" uid="uid://cqmb0av7n74r8" path="res://starter-kit/scenes/hud/scale_card.gd" id="9_mfitm"]
 [ext_resource type="PackedScene" uid="uid://d265pfnhxda5u" path="res://scenes/arena/Arena.tscn" id="9_u0e45"]
 [ext_resource type="PackedScene" uid="uid://2sn2j0sbib0b" path="res://starter-kit/objects/enemy/rigid_enemy.tscn" id="9_xxt43"]
@@ -122,7 +121,7 @@ environment = ExtResource("2_6yumh")
 
 [node name="Player" parent="." unique_id=1565091568 node_paths=PackedStringArray("view") instance=ExtResource("3_nyf5e")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022997856, 0.5071248, -0.033013344)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022997856, 0.5071248, 49.12348)
 view = NodePath("../View")
 hit_damage = 4.0
 
@@ -144,18 +143,6 @@ navigation_mesh = SubResource("NavigationMesh_od15b")
 
 [node name="Floor" parent="World/NavigationRegion3D" unique_id=1224901886 instance=ExtResource("9_u0e45")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02301979, -1.2498294, 0.0526886)
-
-[node name="Obsticle" parent="World/NavigationRegion3D" unique_id=2027688754 instance=ExtResource("6_u743v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.217702, -0.7461506, 9.699888)
-
-[node name="Obsticle2" parent="World/NavigationRegion3D" unique_id=1128364488 instance=ExtResource("6_u743v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09559822, -0.7461506, 20.696331)
-
-[node name="Obsticle3" parent="World/NavigationRegion3D" unique_id=1770582023 instance=ExtResource("6_u743v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9155235, -0.7461506, 10.050671)
-
-[node name="Obsticle4" parent="World/NavigationRegion3D" unique_id=1719995306 instance=ExtResource("6_u743v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.448479, -0.7461506, 16.167458)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=964166913]
 transform = Transform3D(-0.42261803, -0.6942719, 0.5825639, -1.1684953e-08, 0.64278793, 0.7660444, -0.9063081, 0.3237441, -0.27165377, -0.009939194, 0.03416252, -0.02141571)
@@ -336,10 +323,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.925886, -0.7498028, 5.2640
 [connection signal="damaged" from="Player" to="." method="_on_player_damaged"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="scaled" from="Player" to="View" method="_on_player_scaled"]
-[connection signal="destroyed" from="World/NavigationRegion3D/Obsticle" to="." method="_on_obsticle_destroyed"]
-[connection signal="destroyed" from="World/NavigationRegion3D/Obsticle2" to="." method="_on_obsticle_destroyed"]
-[connection signal="destroyed" from="World/NavigationRegion3D/Obsticle3" to="." method="_on_obsticle_destroyed"]
-[connection signal="destroyed" from="World/NavigationRegion3D/Obsticle4" to="." method="_on_obsticle_destroyed"]
 [connection signal="pressed" from="HUD/ScaleCard/VBoxContainer/Button" to="." method="_on_card_button_pressed"]
 [connection signal="timeout" from="HUD/ScaleCard/ScaleCardTimer" to="." method="_on_scale_card_timer_timeout"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
