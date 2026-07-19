@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cayi14dkjcdmu"
-path="res://.godot/imported/Mannequin.blend-6e41a9be726a7476c869b2aa91d8fab3.scn"
+uid="uid://2ax0gmyvyupl"
+path="res://.godot/imported/Barbarian.glb-51a4f765891c9b84b2dfca83c3cdae89.scn"
 
 [deps]
 
-source_file="res://assets/keykit/Mannequin.blend"
-dest_files=["res://.godot/imported/Mannequin.blend-6e41a9be726a7476c869b2aa91d8fab3.scn"]
+source_file="res://assets/keykit/Barbarian.glb"
+dest_files=["res://.godot/imported/Barbarian.glb-51a4f765891c9b84b2dfca83c3cdae89.scn"]
 
 [params]
 
@@ -46,24 +46,6 @@ _subresources={
 }
 }
 }
-blender/nodes/visible=0
-blender/nodes/active_collection_only=false
-blender/nodes/punctual_lights=true
-blender/nodes/cameras=true
-blender/nodes/custom_properties=true
-blender/nodes/modifiers=1
-blender/meshes/vertex_colors=1
-blender/meshes/uvs=true
-blender/meshes/normals=true
-blender/meshes/export_geometry_nodes_instances=false
-blender/meshes/gpu_instances=false
-blender/meshes/tangents=true
-blender/meshes/skins=2
-blender/meshes/export_bones_deforming_mesh_only=false
-blender/materials/unpack_enabled=true
-blender/materials/export_materials=1
-blender/animation/limit_playback=true
-blender/animation/always_sample=true
-blender/animation/group_tracks=true
 gltf/naming_version=2
+gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

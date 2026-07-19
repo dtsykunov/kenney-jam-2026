@@ -51,7 +51,7 @@ shape = SubResource("CapsuleShape3D_gdq8c")
 [node name="Barbarian" parent="." unique_id=854783404 instance=ExtResource("3_3eil1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="GeneralSkeleton" parent="Barbarian/Rig_Medium" parent_id_path=PackedInt32Array(854783404, 999213936) index="0" unique_id=411251183]
+[node name="GeneralSkeleton" parent="Barbarian/Rig_Medium" parent_id_path=PackedInt32Array(854783404, 1799297845) index="0" unique_id=236498118]
 bones/0/rotation = Quaternion(-8.557133e-09, 1.2043154e-07, -2.0610973e-15, 1)
 bones/1/position = Vector3(-1.02508946e-10, 0.39206377, 0.0004960834)
 bones/1/rotation = Quaternion(-3.3329052e-17, -0.006636501, -1.5415917e-08, 0.999978)
@@ -83,16 +83,16 @@ bones/20/rotation = Quaternion(0.2857893, -7.2464765e-08, 2.0050733e-07, 0.95829
 bones/21/rotation = Quaternion(-0.5459386, 0.114650294, -0.0065558613, 0.82991767)
 bones/22/rotation = Quaternion(-5.5580065e-05, 0.9202208, -0.39139974, 1.2766015e-05)
 
-[node name="Barbarian_LegLeft" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="5" unique_id=2001096225]
+[node name="Barbarian_LegLeft" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="5" unique_id=918351084]
 visible = false
 
-[node name="Barbarian_LegRight" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="6" unique_id=227596872]
+[node name="Barbarian_LegRight" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="6" unique_id=254488482]
 visible = false
 
 [node name="BoneAttachment3D" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="7" unique_id=45601563]
-transform = Transform3D(0.46693537, -0.3450821, -0.8141803, 0.013922185, -0.9177321, 0.39695597, -0.884182, -0.19668788, -0.42371732, -0.58466804, 0.79538405, -0.15590532)
+transform = Transform3D(0.46693537, -0.3450821, -0.8141803, 0.0139222145, -0.9177321, 0.396956, -0.88418204, -0.1966879, -0.4237173, -0.58466804, 0.79538405, -0.15590532)
 
-[node name="Sword" parent="Barbarian/Rig_Medium/GeneralSkeleton/BoneAttachment3D" index="0" unique_id=512072015]
+[node name="Sword" parent="Barbarian/Rig_Medium/GeneralSkeleton/BoneAttachment3D" index="0" unique_id=1360844501]
 transform = Transform3D(-0.45515525, -0.88982826, -0.032235194, -0.88364697, 0.4469469, 0.13930684, -0.10955175, 0.091890775, -0.98972446, -0.068749785, 0.14926046, 0.0034629703)
 
 [node name="HurtBox" type="Area3D" parent="Barbarian/Rig_Medium/GeneralSkeleton/BoneAttachment3D/Sword" index="1" unique_id=1589727926]
@@ -108,22 +108,22 @@ debug_color = Color(1, 0, 0, 0.41960785)
 [node name="BarbarianLegs" parent="." unique_id=425867692 instance=ExtResource("3_3eil1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="Barbarian_ArmLeft" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 411251183) index="0" unique_id=2003629610]
+[node name="Barbarian_ArmLeft" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 236498118) index="0" unique_id=2103011377]
 visible = false
 
-[node name="Barbarian_ArmRight" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 411251183) index="1" unique_id=1228990168]
+[node name="Barbarian_ArmRight" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 236498118) index="1" unique_id=214221996]
 visible = false
 
-[node name="Barbarian_BearHat" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 411251183) index="2" unique_id=1244107446]
+[node name="Barbarian_BearHat" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 236498118) index="2" unique_id=528750787]
 visible = false
 
-[node name="Barbarian_Body" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 411251183) index="3" unique_id=833817705]
+[node name="Barbarian_Body" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 236498118) index="3" unique_id=230613305]
 visible = false
 
-[node name="Barbarian_Head" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 411251183) index="4" unique_id=89488014]
+[node name="Barbarian_Head" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 236498118) index="4" unique_id=304110664]
 visible = false
 
-[node name="BoneAttachment3D" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 411251183) index="7" unique_id=45601563]
+[node name="BoneAttachment3D" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 236498118) index="7" unique_id=45601563]
 visible = false
 
 [node name="ParticlesTrail" type="GPUParticles3D" parent="." unique_id=895423842]

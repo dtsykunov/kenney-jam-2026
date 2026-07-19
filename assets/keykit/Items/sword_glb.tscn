@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b20ylfggc15w5"]
+
+[ext_resource type="PackedScene" uid="uid://bqxmgeqjjqj6d" path="res://assets/keykit/Items/Sword.glb" id="1_fgwt3"]
+
+[node name="Sword" unique_id=1360844501 instance=ExtResource("1_fgwt3")]
