@@ -109,6 +109,3 @@ func _on_hit_box_body_exited(body: Node3D) -> void:
 
 func _on_navigation_agent_3d_velocity_computed(safe_velocity: Vector3) -> void:
 	pass # Replace with function body.
-
-func _on_navigation_agent_3d_velocity_computed(safe_velocity: Vector3) -> void:
-	pass # Replace with function body.

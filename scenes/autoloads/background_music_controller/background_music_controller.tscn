@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bhvk23qv5h5pe"]
+
+[ext_resource type="Script" uid="uid://ywdesfpxwxxx" path="res://scenes/autoloads/background_music_controller/background_music_controller.gd" id="1_nx5db"]
+[ext_resource type="AudioStream" uid="uid://bx5v8g8hf467x" path="res://assets/ovani-music/Rhythmic Culture Intensity 1.wav" id="1_wfrea"]
+[ext_resource type="AudioStream" uid="uid://lixemb3xl0q5" path="res://assets/ovani-music/Rhythmic Culture Intensity 2.wav" id="2_nx5db"]
+[ext_resource type="AudioStream" uid="uid://dfoyjalxyundo" path="res://assets/ovani-music/Rhythmic Culture Main.wav" id="3_3txik"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_od15b"]
+clip_count = 3
+clip_0/name = &"INT1"
+clip_0/stream = ExtResource("1_wfrea")
+clip_0/auto_advance = 0
+clip_1/name = &"INT2"
+clip_1/stream = ExtResource("2_nx5db")
+clip_1/auto_advance = 0
+clip_2/name = &"MAIN"
+clip_2/stream = ExtResource("3_3txik")
+clip_2/auto_advance = 0
+initial_clip = 1
+_transitions = {
+Vector2i(0, 1): {
+"fade_beats": 1.0,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(0, 2): {
+"fade_beats": 1.0,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(1, 2): {
+"fade_beats": 1.0,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(2, 0): {
+"fade_beats": 1.0,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(2, 1): {
+"fade_beats": 1.0,
+"fade_mode": 4,
+"from_time": 0,
+"to_time": 0
+}
+}
+
+[node name="Node" type="Node" unique_id=209844506]
+process_mode = 3
+script = ExtResource("1_nx5db")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=945634615]
+stream = SubResource("AudioStreamInteractive_od15b")
+autoplay = true
+bus = &"Music"

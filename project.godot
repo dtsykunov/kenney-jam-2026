@@ -20,6 +20,7 @@ run/max_fps=60
 Global="*uid://cohloyy6bqshe"
 ProjectUiSoundController="*uid://cc37235kj4384"
 Audio="*uid://71e1lia2abr7"
+BackgroundMusicController="*uid://bhvk23qv5h5pe"
 
 [display]
 

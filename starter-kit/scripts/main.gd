@@ -32,6 +32,13 @@ func _ready() -> void:
 	for node in get_tree().get_nodes_in_group("obsticle"):
 		node.destroyed.connect(_on_obsticle_destroyed)
 
+func _process(delta: float) -> void:
+	var playback : AudioStreamPlayback = BackgroundMusicController.audio_stream.get_stream_playback()
+	var playing_clip_name = BackgroundMusicController.audio_stream.stream.get_clip_name(playback.get_current_clip_index())
+
+	if playing_clip_name != "MAIN":
+		playback.switch_to_clip_by_name("MAIN")
+
 
 func _on_player_died() -> void:
 	level_lost.emit()
@@ -84,3 +91,7 @@ func add_xp(amount: float) -> void:
 
 func _on_card_button_pressed() -> void:
 	player.scale_factor += 0.5
+
+func _play_game_music() -> void:
+	var playback : AudioStreamPlayback = BackgroundMusicController.audio_stream.get_stream_playback()
+	playback.switch_to_clip_by_name("MAIN")

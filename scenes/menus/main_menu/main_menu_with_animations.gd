@@ -33,3 +33,6 @@ func _input(event : InputEvent) -> void:
 func _ready() -> void:
 	super._ready()
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
+
+	var playback : AudioStreamPlayback = BackgroundMusicController.audio_stream.get_stream_playback()
+	playback.switch_to_clip_by_name("INT2")
