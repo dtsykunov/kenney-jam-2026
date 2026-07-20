@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://duntm6mycnajk"]
+
+[ext_resource type="PackedScene" uid="uid://5swa2rh3h31q" path="res://assets/keykit/Barbarian.tscn" id="1_mixe7"]
+[ext_resource type="Texture2D" uid="uid://cb7sdk1i5rx04" path="res://starter-kit/sprites/skybox.png" id="1_qbnve"]
+[ext_resource type="PackedScene" uid="uid://dj0kpg88xbpgx" path="res://items/forest-nature/Rock_3_B_Color1.gltf" id="2_m0scj"]
+[ext_resource type="PackedScene" uid="uid://btt640r0ktntd" path="res://items/forest-nature/Tree_3_B_Color1.gltf" id="3_qbnve"]
+[ext_resource type="PackedScene" uid="uid://ygq6g5753ar7" path="res://items/dungeon/chest_gold.gltf" id="4_e8vms"]
+[ext_resource type="MeshLibrary" uid="uid://chme1jtcbi6ec" path="res://assets/keykit/PrototypeCollection/MeshLib.res" id="6_e8vms"]
+[ext_resource type="PackedScene" uid="uid://dk86i41qac5gi" path="res://items/forest-nature/Tree_4_B_Color1.gltf" id="7_cm5v3"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cme76"]
+panorama = ExtResource("1_qbnve")
+
+[sub_resource type="Sky" id="Sky_7bk1c"]
+sky_material = SubResource("PanoramaSkyMaterial_cme76")
+
+[sub_resource type="Environment" id="Environment_e8vms"]
+background_mode = 2
+background_color = Color(0.752941, 0.776471, 0.827451, 1)
+sky = SubResource("Sky_7bk1c")
+ambient_light_source = 2
+ambient_light_color = Color(0.80999845, 0.843779, 0.9999983, 1)
+tonemap_mode = 2
+tonemap_exposure = 0.9
+ssao_enabled = true
+ssao_radius = 0.45
+ssao_intensity = 1.0
+ssao_power = 15.0
+glow_enabled = true
+glow_levels/2 = 0.6
+glow_levels/3 = 0.6
+glow_intensity = 2.0
+adjustment_enabled = true
+adjustment_brightness = 0.9
+adjustment_contrast = 1.1
+adjustment_saturation = 1.1
+
+[node name="Node3D" type="Node3D" unique_id=1528619934]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1118603241]
+transform = Transform3D(1, 0, 0, 0, 0.995888, 0.090593226, 0, -0.090593226, 0.995888, -0.6912772, 2.2065146, 2.9934895)
+projection = 1
+fov = 55.0
+size = 3.5
+
+[node name="Environment" type="WorldEnvironment" parent="." unique_id=107263628]
+environment = SubResource("Environment_e8vms")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1198909615]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Barbarian" parent="." unique_id=854783404 instance=ExtResource("1_mixe7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7393323, 0.48220754, -0.0053982735)
+
+[node name="GeneralSkeleton" parent="Barbarian/Rig_Medium" parent_id_path=PackedInt32Array(854783404, 1799297845) index="0" unique_id=236498118]
+bones/0/rotation = Quaternion(-8.557133e-09, 1.2043154e-07, -2.0610973e-15, 1)
+bones/1/position = Vector3(0.008410762, 0.3608366, -2.6732636e-10)
+bones/1/rotation = Quaternion(-2.3474968e-16, -1.0331727e-07, 5.814742e-23, 1)
+bones/2/rotation = Quaternion(-0.06059948, -0.13028215, -0.0079780845, 0.9895912)
+bones/3/rotation = Quaternion(0.033031814, 0.0010799369, -0.00878471, 0.9994151)
+bones/4/position = Vector3(0.24804358, 0.110857114, 0.08258157)
+bones/4/rotation = Quaternion(-0.59132636, -0.24405223, -0.7129052, 0.2872943)
+bones/5/rotation = Quaternion(2.3582842e-07, 9.938424e-08, -0.61303073, 0.7900591)
+bones/7/rotation = Quaternion(-0.14644012, -0.7023035, -0.052989528, 0.69463456)
+bones/8/position = Vector3(-2.9288433e-08, 0.096125096, -0.05750011)
+bones/8/rotation = Quaternion(1.0513275e-07, -5.6854226e-08, -0.7071067, 0.7071068)
+bones/9/rotation = Quaternion(0.06411771, 0.13050729, 0.018413804, 0.98920053)
+bones/10/position = Vector3(-0.17668213, 0.111703604, 0.0891542)
+bones/10/rotation = Quaternion(-0.26065543, 0.3913381, 0.82274383, 0.3193837)
+bones/11/rotation = Quaternion(2.023491e-07, -7.2551174e-08, 0.5320695, 0.8467007)
+bones/13/rotation = Quaternion(-0.27348325, 0.1888361, -0.061104797, 0.941177)
+bones/14/position = Vector3(5.909079e-08, 0.09612511, -0.05749996)
+bones/14/rotation = Quaternion(0.15571064, -0.18945535, 0.67028916, 0.7004094)
+bones/15/position = Vector3(0.17094506, 0.11358725, 1.717665e-08)
+bones/15/rotation = Quaternion(0.98959285, 0.075856455, 0.041603953, 0.114982985)
+bones/16/position = Vector3(-1.1194018e-08, 0.22707741, -2.320756e-08)
+bones/16/rotation = Quaternion(0.4563179, 7.160638e-08, -3.0458196e-07, 0.88981694)
+bones/17/rotation = Quaternion(-0.64813745, -0.20793463, 0.07375432, 0.7288631)
+bones/18/position = Vector3(-1.6149015e-10, 0.16565003, 8.797638e-10)
+bones/18/rotation = Quaternion(-8.760788e-06, 0.9201106, -0.39165887, 1.9554038e-06)
+bones/19/position = Vector3(-0.17094503, 0.11358725, 6.4279604e-09)
+bones/19/rotation = Quaternion(0.98541933, -0.040947396, -0.01309931, 0.1646225)
+bones/20/rotation = Quaternion(0.4867203, -6.787111e-08, 3.4376018e-07, 0.873558)
+bones/21/rotation = Quaternion(-0.6560495, 0.10942709, -0.03794391, 0.7457782)
+bones/22/rotation = Quaternion(6.4858496e-06, 0.9201104, -0.3916592, -7.6778554e-07)
+
+[node name="BoneAttachment3D" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="7" unique_id=45601563]
+transform = Transform3D(-0.7860443, 0.13795868, -0.602579, -0.400235, -0.85646385, 0.3260086, -0.47111148, 0.49743038, 0.72843456, -0.36319777, 0.78132904, 0.35799456)
+
+[node name="AnimationPlayer" parent="Barbarian" index="1" unique_id=867007891]
+autoplay = &"CombatMelee_Animations/Melee_2H_Idle"
+
+[node name="Rock_3_B_Color12" parent="." unique_id=1582370893 instance=ExtResource("2_m0scj")]
+transform = Transform3D(2.485, 0, 0, 0, 2.485, 0, 0, 0, 2.485, 3, 0.48220754, -3.7907906)
+
+[node name="Rock_3_B_Color13" parent="." unique_id=1670832163 instance=ExtResource("2_m0scj")]
+transform = Transform3D(10.55329, 0, 1.9939076, 0, 10.74, 0, -1.9939076, 0, 10.55329, 2.999938, 0.49556112, -8.081582)
+
+[node name="Rock_3_B_Color14" parent="." unique_id=1981584333 instance=ExtResource("2_m0scj")]
+transform = Transform3D(10.55329, 0, 1.9939076, 0, 10.74, 0, -1.9939076, 0, 10.55329, -3.35954, 0.49556112, -7.029948)
+
+[node name="Tree_3_B_Color12" parent="." unique_id=1071217931 instance=ExtResource("3_qbnve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5336015, 0.48220754, -2.4807835)
+
+[node name="chest_gold2" parent="." unique_id=364298096 instance=ExtResource("4_e8vms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57168937, 0.48220742, -1.3870711)
+
+[node name="chest_gold" parent="chest_gold2" index="0" unique_id=817874408]
+transform = Transform3D(0.735, 0, 0, 0, 0.735, 0, 0, 0, 0.735, 0.18465498, 0, 0)
+
+[node name="chest_gold_lid" parent="chest_gold2/chest_gold" index="0" unique_id=1929591001]
+visible = false
+
+[node name="GridMap" type="GridMap" parent="." unique_id=615843467]
+mesh_library = ExtResource("6_e8vms")
+cell_size = Vector3(4, 4, 4)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65535, 65535, 1, 65535, 0, 1, 0, 0, 1, 0, 65535, 1, 1, 65535, 1, 1, 0, 1, 65534, 65535, 1, 65534, 65534, 1, 65534, 65533, 1, 65535, 65533, 1, 0, 65533, 1, 0, 65534, 1, 65535, 65534, 1, 1, 65534, 1)
+}
+
+[node name="Tree_4_B_Color12" parent="." unique_id=1972297657 instance=ExtResource("7_cm5v3")]
+transform = Transform3D(0.775, 0, 0, 0, 0.775, 0, 0, 0, 0.775, 1.4475985, 0.8763888, -2.0851893)
+
+[editable path="Barbarian"]
+[editable path="chest_gold2"]
