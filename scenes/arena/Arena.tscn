@@ -130,6 +130,7 @@ data = {
 transform = Transform3D(1.916, 0, 0, 0, 1.677, 0, 0, 0, 1.89, -19.3985, 2.099672, 16.727896)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_N_Color12" unique_id=872305306 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_N_Color12/StaticBody3D" unique_id=1612513945]
@@ -139,6 +140,7 @@ shape = SubResource("ConcavePolygonShape3D_6v8l5")
 transform = Transform3D(1.916, 0, 0, 0, 1.677, 0, 0, 0, 1.89, -16.94149, 2.1326017, 24.798943)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_M_Color12" unique_id=26814494 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_M_Color12/StaticBody3D" unique_id=30634274]
@@ -148,6 +150,7 @@ shape = SubResource("ConcavePolygonShape3D_n37mq")
 transform = Transform3D(4.781, 0, 0, 0, 4.187, 0, 0, 0, 4.746, -49.116978, 2.624446, 24.14462)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_M_Color14" unique_id=1514627144]
+input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_M_Color14/StaticBody3D" unique_id=1477965405]
 shape = SubResource("ConcavePolygonShape3D_sdcuc")
@@ -156,6 +159,7 @@ shape = SubResource("ConcavePolygonShape3D_sdcuc")
 transform = Transform3D(4.781, 0, 0, 0, 4.187, 0, 0, 0, 4.746, -50.355328, 2.624446, 65.62926)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_M_Color15" unique_id=219817817]
+input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_M_Color15/StaticBody3D" unique_id=1506434169]
 shape = SubResource("ConcavePolygonShape3D_c0bnw")
@@ -164,6 +168,7 @@ shape = SubResource("ConcavePolygonShape3D_c0bnw")
 transform = Transform3D(3.7608771, 0, 2.9302988, 0, 4.187, 0, -2.951909, 0, 3.7333455, -50.355328, 2.624446, 70.99224)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_M_Color22" unique_id=1107876941]
+input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_M_Color22/StaticBody3D" unique_id=406266735]
 shape = SubResource("ConcavePolygonShape3D_cwstm")
@@ -172,6 +177,7 @@ shape = SubResource("ConcavePolygonShape3D_cwstm")
 transform = Transform3D(1.916, 0, 0, 0, 1.677, 0, 0, 0, 1.89, -22.073833, 0.2207048, 26.152756)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_N_Color13" unique_id=329641933 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_N_Color13/StaticBody3D" unique_id=1952683120]
@@ -181,6 +187,7 @@ shape = SubResource("ConcavePolygonShape3D_vwuxx")
 transform = Transform3D(1.8538318, 0, 0, 0, 1.1763968, -1.2594726, 0, 1.117532, 1.3258139, 3.716507, 2.3967152, 20.367325)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_O_Color12" unique_id=194155929 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_O_Color12/StaticBody3D" unique_id=1454299697]
@@ -190,6 +197,7 @@ shape = SubResource("ConcavePolygonShape3D_ynlks")
 transform = Transform3D(1.916, 0, 0, 0, 1.677, 0, 0, 0, 1.89, -22.927322, 0.7454625, 33.342293)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_A_Color12" unique_id=365213490 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_1_A_Color12/StaticBody3D" unique_id=656885343]
@@ -199,6 +207,7 @@ shape = SubResource("ConcavePolygonShape3D_m72sb")
 transform = Transform3D(-0.011949033, 0, 0.9999286, 0, 1, 0, -0.9999286, 0, -0.011949033, -0.4575348, 0.50000024, 59.378006)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="chest2" unique_id=977844725 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest2/StaticBody3D" unique_id=404029145]
@@ -208,6 +217,7 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 transform = Transform3D(-0.7993238, 0, -0.6009009, 0, 1, 0, 0.6009009, 0, -0.7993238, 13.735098, 0.50000024, 66.23772)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="chest11" unique_id=1888085355 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest11/StaticBody3D" unique_id=1672176328]
@@ -217,6 +227,7 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 transform = Transform3D(0.8812992, 0, -0.47255874, 0, 1, 0, 0.47255874, 0, 0.8812992, 2.902688, 0.49999976, 44.709908)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="chest3" unique_id=1730184908 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest3/StaticBody3D" unique_id=889902279]
@@ -226,6 +237,7 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 transform = Transform3D(-0.5286217, 0, 0.8488575, 0, 1, 0, -0.8488575, 0, -0.5286217, -12.584593, 0.50000024, 46.46239)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="chest4" unique_id=310046589 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest4/StaticBody3D" unique_id=518081590]
@@ -235,6 +247,7 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.538403, 0.49999976, 28.415354)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="chest5" unique_id=708418359 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest5/StaticBody3D" unique_id=1520805480]
@@ -244,6 +257,7 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 transform = Transform3D(0.6874948, 0, -0.72618926, 0, 1, 0, 0.72618926, 0, 0.6874948, 13.495497, 0.50000024, 63.118927)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="chest6" unique_id=828677725 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest6/StaticBody3D" unique_id=1044035988]
@@ -253,6 +267,7 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 transform = Transform3D(0.83115417, 0, 0.5560421, 0, 1, 0, -0.5560421, 0, 0.83115417, 1.6515579, 0.50000024, 32.80858)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="chest7" unique_id=2105491553 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest7/StaticBody3D" unique_id=1624034426]
@@ -262,6 +277,7 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 transform = Transform3D(0.41652122, 0, 0.909126, 0, 1, 0, -0.909126, 0, 0.41652122, -21.904915, 0.50000024, 35.374104)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="chest8" unique_id=751595893 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest8/StaticBody3D" unique_id=978758747]
@@ -271,6 +287,7 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 transform = Transform3D(0.6820274, 0, 0.73132664, 0, 1, 0, -0.73132664, 0, 0.6820274, 12.953434, 0.50000024, 39.664047)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="chest9" unique_id=1689974674 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest9/StaticBody3D" unique_id=895817598]
@@ -280,6 +297,7 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 transform = Transform3D(-0.7196512, 0, 0.69433576, 0, 1, 0, -0.69433576, 0, -0.7196512, -14.101786, 0.50000024, 21.432219)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="chest10" unique_id=609866178 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chest10/StaticBody3D" unique_id=2012850550]
@@ -289,6 +307,7 @@ shape = SubResource("ConcavePolygonShape3D_1jf4i")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.495693, 0.5, 51.828278)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="barrel_large2" unique_id=1795166111 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large2/StaticBody3D" unique_id=1809104714]
@@ -298,6 +317,7 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6354446, 0.5, 44.177444)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="barrel_large3" unique_id=895941145 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large3/StaticBody3D" unique_id=181580590]
@@ -307,6 +327,7 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 transform = Transform3D(0.71, 0, 0, 0, 0.71, 0, 0, 0, 0.71, -4.588173, 0.5, 39.41229)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="barrel_large4" unique_id=492952606 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large4/StaticBody3D" unique_id=514526139]
@@ -316,6 +337,7 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.285332, 0.5, 24.170593)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="barrel_large5" unique_id=444123454 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large5/StaticBody3D" unique_id=435225959]
@@ -325,6 +347,7 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6169662, 0.5, 37.41937)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="barrel_large6" unique_id=1756751676 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large6/StaticBody3D" unique_id=1766145622]
@@ -334,6 +357,7 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 transform = Transform3D(0.655, 0, 0, 0, 0.655, 0, 0, 0, 0.655, -10.542324, 0.5019908, 53.510693)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated2" unique_id=1646977237 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large_decorated2/StaticBody3D" unique_id=855970805]
@@ -343,6 +367,7 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.434763, 0.5019908, 35.44816)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated3" unique_id=1635449355 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large_decorated3/StaticBody3D" unique_id=1304389211]
@@ -352,6 +377,7 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.261574, 0.5019908, 41.63664)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated4" unique_id=306885355 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large_decorated4/StaticBody3D" unique_id=2043384806]
@@ -361,6 +387,7 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 11.503762, 0.5019908, 64.05541)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated5" unique_id=665256865 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large_decorated5/StaticBody3D" unique_id=1739223380]
@@ -370,6 +397,7 @@ shape = SubResource("ConcavePolygonShape3D_xhndu")
 transform = Transform3D(0.50828743, 0, -0.8611875, 0, 1, 0, 0.8611875, 0, 0.50828743, -26.35928, 0.5, 21.690147)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="barrel_small_stack2" unique_id=1469611509 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_small_stack2/StaticBody3D" unique_id=1224157178]
@@ -379,6 +407,7 @@ shape = SubResource("ConcavePolygonShape3D_045t2")
 transform = Transform3D(0.78375024, 0, 0.6210761, 0, 1, 0, -0.6210761, 0, 0.78375024, 4.8799105, 0.5, 23.618845)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="barrel_small_stack3" unique_id=2034409123 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_small_stack3/StaticBody3D" unique_id=1873250587]
@@ -388,6 +417,7 @@ shape = SubResource("ConcavePolygonShape3D_045t2")
 transform = Transform3D(0.9684574, 0, 0.24917926, 0, 1, 0, -0.24917926, 0, 0.9684574, -29.563728, 0.5, 44.73303)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="barrel_small_stack4" unique_id=4514713 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_small_stack4/StaticBody3D" unique_id=998896007]
@@ -397,6 +427,7 @@ shape = SubResource("ConcavePolygonShape3D_045t2")
 transform = Transform3D(1.47, 0, 0, 0, 1.47, 0, 0, 0, 1.47, -8.721424, 1.0185415, 31.74861)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_C_Color12" unique_id=1003593260 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_C_Color12/StaticBody3D" unique_id=1224187104]
@@ -406,6 +437,7 @@ shape = SubResource("ConcavePolygonShape3D_50wyl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.574673, 1.0915008, 39.388508)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_E_Color12" unique_id=1293701855 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_E_Color12/StaticBody3D" unique_id=324816478]
@@ -415,6 +447,7 @@ shape = SubResource("ConcavePolygonShape3D_50wyl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1478014, 1.3728036, 41.106625)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_G_Color12" unique_id=1220383633 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_G_Color12/StaticBody3D" unique_id=42317263]
@@ -424,6 +457,7 @@ shape = SubResource("ConcavePolygonShape3D_84sy7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.542944, 1.4761517, 26.185934)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_H_Color12" unique_id=1247801981 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_H_Color12/StaticBody3D" unique_id=1454154409]
@@ -433,6 +467,7 @@ shape = SubResource("ConcavePolygonShape3D_84sy7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2291031, 1.5231934, 31.551006)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_I_Color12" unique_id=1723577112 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_I_Color12/StaticBody3D" unique_id=1130450026]
@@ -442,6 +477,7 @@ shape = SubResource("ConcavePolygonShape3D_j5wgm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.608914, 1.417388, 48.081093)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_J_Color12" unique_id=1137052800 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_J_Color12/StaticBody3D" unique_id=2122979220]
@@ -451,6 +487,7 @@ shape = SubResource("ConcavePolygonShape3D_bkrct")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.477539, 1.5094849, 49.216217)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_K_Color12" unique_id=930903383 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_K_Color12/StaticBody3D" unique_id=1451716972]
@@ -460,6 +497,7 @@ shape = SubResource("ConcavePolygonShape3D_gymyu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.107077, 1.5459975, 47.52447)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_L_Color12" unique_id=538338957 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_L_Color12/StaticBody3D" unique_id=1536380800]
@@ -469,6 +507,7 @@ shape = SubResource("ConcavePolygonShape3D_gymyu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3396595, 2.135922, 21.975813)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_M_Color13" unique_id=938506361 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_M_Color13/StaticBody3D" unique_id=483651594]
@@ -478,6 +517,7 @@ shape = SubResource("ConcavePolygonShape3D_g0vfp")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.416072, 1.1430986, 29.827766)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_N_Color14" unique_id=604385900 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_N_Color14/StaticBody3D" unique_id=1039456106]
@@ -487,6 +527,7 @@ shape = SubResource("ConcavePolygonShape3D_dgqr4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9873629, 1.9263556, 24.81469)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_O_Color13" unique_id=461612037 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_O_Color13/StaticBody3D" unique_id=1951885156]
@@ -496,6 +537,7 @@ shape = SubResource("ConcavePolygonShape3D_y80vc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.300558, 2.2424235, 29.517515)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_P_Color12" unique_id=1147797959 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_P_Color12/StaticBody3D" unique_id=85935681]
@@ -505,6 +547,7 @@ shape = SubResource("ConcavePolygonShape3D_buss7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.81403, 2.1244798, 31.40792)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_Q_Color12" unique_id=1871512519 groups=["obsticle"]]
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_Q_Color12/StaticBody3D" unique_id=31949947]
@@ -515,6 +558,7 @@ transform = Transform3D(1.1097841, 0, 0, 0, 1.1097841, 0, 0, 0, 1.1097841, 4.423
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_3_R_Color12" unique_id=1144269740 groups=["obsticle"]]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.40284276, 0.21513486, 0.054496765)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rock_3_R_Color12/StaticBody3D" unique_id=1855477727]
@@ -525,6 +569,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.721578, 0.9630488, 26.7971
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_Bare_2_C_Color12" unique_id=721680253 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_Bare_2_C_Color12/StaticBody3D" unique_id=1950868952]
@@ -535,6 +580,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.986109, 0.85652405, 37.112
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_4_C_Color12" unique_id=2010670821 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_4_C_Color12/StaticBody3D" unique_id=336562750]
@@ -545,6 +591,7 @@ transform = Transform3D(1.37, 0, 0, 0, 1.37, 0, 0, 0, 1.37, -12.126747, 0.684122
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_4_B_Color12" unique_id=1384944630 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_4_B_Color12/StaticBody3D" unique_id=1735610063]
@@ -555,6 +602,7 @@ transform = Transform3D(1.145, 0, 0, 0, 1.145, 0, 0, 0, 1.145, -12.638884, 0.694
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_C_Color12" unique_id=600211952 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_3_C_Color12/StaticBody3D" unique_id=2011396488]
@@ -565,6 +613,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.198531, 0.8410349, 37.7871
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_B_Color12" unique_id=1177170340 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_3_B_Color12/StaticBody3D" unique_id=1711652960]
@@ -575,6 +624,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.409893, 0.76131797, 23.182
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_A_Color12" unique_id=1928301578 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_3_A_Color12/StaticBody3D" unique_id=203253537]
@@ -585,6 +635,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.526144, 0.93637216, 24.2728
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_E_Color12" unique_id=958212100 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_2_E_Color12/StaticBody3D" unique_id=510415251]
@@ -595,6 +646,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.57118607, 0.89232165, 14.05
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_C_Color12" unique_id=978520841 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_1_C_Color12/StaticBody3D" unique_id=528353270]
@@ -605,6 +657,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.92838, 0.8735182, 30.47585
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_A_Color12" unique_id=513566748 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_2_A_Color12/StaticBody3D" unique_id=42685517]
@@ -615,6 +668,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.452291, 0.89231974, 41.9152
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_C_Color13" unique_id=726551016 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_1_C_Color13/StaticBody3D" unique_id=1480924374]
@@ -625,6 +679,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.379869, 0.76131797, 53.50
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_A_Color13" unique_id=1877143183 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_1_A_Color13/StaticBody3D" unique_id=62993458]
@@ -635,6 +690,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0625696, 0.8410368, 59.587
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_B_Color12" unique_id=603988375 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_1_B_Color12/StaticBody3D" unique_id=1155456112]
@@ -645,6 +701,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.770514, 0.89231974, 66.37
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_1_C_Color14" unique_id=1457706105 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_1_C_Color14/StaticBody3D" unique_id=1056771963]
@@ -655,6 +712,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.909718, 0.76131797, 67.98
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_A_Color13" unique_id=1462052998 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_3_A_Color13/StaticBody3D" unique_id=1603996568]
@@ -665,6 +723,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.64438, 0.89231974, 59.903
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_C_Color13" unique_id=1557128851 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_3_C_Color13/StaticBody3D" unique_id=1126068824]
@@ -675,6 +734,7 @@ transform = Transform3D(1.355, 0, 0, 0, 1.423, 0, 0, 0, 1.355, 0.5505295, 0.8932
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_D_Color12" unique_id=1410251649 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_2_D_Color12/StaticBody3D" unique_id=576510547]
@@ -685,6 +745,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.196684, 0.844767, 38.91078
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_B_Color12" unique_id=561040357 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_2_B_Color12/StaticBody3D" unique_id=784900067]
@@ -695,6 +756,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.958076, 0.93637216, 43.35
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_2_E_Color13" unique_id=1081032504 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_2_E_Color13/StaticBody3D" unique_id=1178922592]
@@ -705,6 +767,7 @@ transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, -24.550613, 0.892319
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_3_C_Color14" unique_id=2119723645 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047408223, 3.3437505, -0.053433597)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_3_C_Color14/StaticBody3D" unique_id=932798745]
@@ -715,6 +778,7 @@ transform = Transform3D(3.245, 0, 0, 0, 3.245, 0, 0, 0, 3.245, 2.4235625, 0.5, 6
 
 [node name="StaticBody3D" type="StaticBody3D" parent="tree-pine-small2" unique_id=790044081 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69883925, 0)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree-pine-small2/StaticBody3D" unique_id=1458902331]
@@ -725,6 +789,7 @@ transform = Transform3D(3.245, 0, 0, 0, 3.245, 0, 0, 0, 3.245, -30.437492, 0.5, 
 
 [node name="StaticBody3D" type="StaticBody3D" parent="tree-pine2" unique_id=1381977099 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69883925, 0)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree-pine2/StaticBody3D" unique_id=1551657326]
@@ -735,6 +800,7 @@ transform = Transform3D(3.245, 0, 0, 0, 3.245, 0, 0, 0, 3.245, 1.2212214, 0.5, 6
 
 [node name="StaticBody3D" type="StaticBody3D" parent="tree2" unique_id=1006120235 groups=["obsticle"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69883925, 0)
+input_ray_pickable = false
 script = ExtResource("7_6v8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree2/StaticBody3D" unique_id=626402815]
@@ -807,6 +873,7 @@ transform = Transform3D(-0.35173726, -0.88008404, -6.751069, -2.2368052e-08, 5.2
 transform = Transform3D(-0.9780952, 0, -19.104345, 0, 14.015001, 0, 14.33202, 0, -1.3037847, -2.7781496, 0, 3.5692787)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=632909514]
+input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=785314746]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.364532)
@@ -815,6 +882,7 @@ debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1254553252]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 67.458206)
+input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=404902554]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.453788)
@@ -823,6 +891,7 @@ debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=1796473194]
 transform = Transform3D(-0.008949562, 0, -0.99995995, 0, 1, 0, 0.99995995, 0, -0.008949562, 36.925827, 0, 37.92853)
+input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=1785295169]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048858643, 0, 13.912653)
@@ -831,6 +900,7 @@ debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=1212132016]
 transform = Transform3D(-0.008949562, 0, -0.99995995, 0, 1, 0, 0.99995995, 0, -0.008949562, -34.77578, 0, 37.255665)
+input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=863427207]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006877899, 0, 7.685116)
