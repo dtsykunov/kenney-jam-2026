@@ -48,13 +48,14 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 67.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 48
-text = "Minimal Game Template"
+theme_override_font_sizes/font_size = 124
+text = "DESTROY EVERYTHING"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("7_j7612")
 
 [node name="SubTitleMargin" type="MarginContainer" parent="MenuContainer" unique_id=893436372]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_top = 92
 
@@ -105,22 +106,30 @@ script = ExtResource("4_l1ebe")
 
 [node name="NewGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=1434444510]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
+theme_override_font_sizes/font_size = 51
 text = "New Game"
 
 [node name="OptionsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=1028226159]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
+theme_override_font_sizes/font_size = 51
 text = "Options"
 
 [node name="CreditsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=1695433230]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
+theme_override_font_sizes/font_size = 51
 text = "Credits"
 
 [node name="ExitButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=1226331361]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
+theme_override_font_sizes/font_size = 51
 text = "Exit"
 
 [node name="VersionMargin" type="MarginContainer" parent="." unique_id=115503069]

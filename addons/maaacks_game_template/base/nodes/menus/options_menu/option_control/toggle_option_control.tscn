@@ -4,5 +4,8 @@
 
 [node name="OptionControl" unique_id=1710271706 instance=ExtResource("1_8rnmo")]
 
+[node name="OptionLabel" parent="." index="0" unique_id=65623640]
+theme_override_font_sizes/font_size = 51
+
 [node name="CheckButton" type="CheckButton" parent="." index="1" unique_id=1607688426]
 layout_mode = 2

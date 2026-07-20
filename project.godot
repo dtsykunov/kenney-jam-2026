@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Kenney Jam"
+config/name="DESTROY EVERYTHING"
 run/main_scene="res://scenes/opening/opening.tscn"
 config/features=PackedStringArray("4.7")
 run/max_fps=60
@@ -41,7 +41,7 @@ obsticle=""
 
 [gui]
 
-theme/custom="res://resources/themes/lab.tres"
+theme/custom="uid://dogstuda81afi"
 common/drop_mouse_on_gui_input_disabled=true
 
 [input]

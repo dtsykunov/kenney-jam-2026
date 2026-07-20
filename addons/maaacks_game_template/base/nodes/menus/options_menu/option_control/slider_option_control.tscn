@@ -8,6 +8,9 @@ offset_bottom = 28.0
 property_type = 3
 default_value = 1.0
 
+[node name="OptionLabel" parent="." index="0" unique_id=65623640]
+theme_override_font_sizes/font_size = 51
+
 [node name="HSlider" type="HSlider" parent="." index="1" unique_id=1977975168]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2

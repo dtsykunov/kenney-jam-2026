@@ -24,4 +24,5 @@ text = "Options"
 
 [node name="CloseButton" parent="ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(1139131565) index="0" unique_id=283447605]
 size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 51
 text = "Back"
