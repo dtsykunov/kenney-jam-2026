@@ -9,7 +9,7 @@ enum State {
 	KNOCKED,
 }
 
-@export var movement_speed: float = 4.0
+@export var movement_speed: float = 5.0
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var player : CharacterBody3D = get_tree().get_first_node_in_group("player")

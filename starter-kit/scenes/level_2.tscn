@@ -237,7 +237,7 @@ unique_name_in_owner = true
 transform = Transform3D(-0.41390315, 0.26124343, 0.87202036, 0, 0.9579366, -0.2869775, -0.91031104, -0.118783005, -0.39649305, -12.397259, -0.6448294, -8.583166)
 
 [node name="EnemySpawnTimer" type="Timer" parent="." unique_id=1930182169]
-wait_time = 2.0
+wait_time = 1.5
 autostart = true
 
 [connection signal="coin_collected" from="Player" to="CanvasLayer/HUD" method="_on_coin_collected"]
