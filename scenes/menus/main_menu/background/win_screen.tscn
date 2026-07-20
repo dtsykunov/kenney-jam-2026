@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://6x07k4kmk1g"]
+
+[ext_resource type="Texture2D" uid="uid://cb7sdk1i5rx04" path="res://starter-kit/sprites/skybox.png" id="1_ydfai"]
+[ext_resource type="PackedScene" uid="uid://5swa2rh3h31q" path="res://assets/keykit/Barbarian.tscn" id="2_43w10"]
+[ext_resource type="PackedScene" uid="uid://b20ylfggc15w5" path="res://assets/keykit/Items/sword_glb.tscn" id="3_43w10"]
+[ext_resource type="PackedScene" uid="uid://dj0kpg88xbpgx" path="res://items/forest-nature/Rock_3_B_Color1.gltf" id="3_g524f"]
+[ext_resource type="PackedScene" uid="uid://btt640r0ktntd" path="res://items/forest-nature/Tree_3_B_Color1.gltf" id="4_s0hmr"]
+[ext_resource type="PackedScene" uid="uid://ygq6g5753ar7" path="res://items/dungeon/chest_gold.gltf" id="5_3c3ec"]
+[ext_resource type="MeshLibrary" uid="uid://chme1jtcbi6ec" path="res://assets/keykit/PrototypeCollection/MeshLib.res" id="6_g3ui5"]
+[ext_resource type="PackedScene" uid="uid://dk86i41qac5gi" path="res://items/forest-nature/Tree_4_B_Color1.gltf" id="7_doec2"]
+[ext_resource type="Shader" uid="uid://c5r5ny0r4bu56" path="res://scenes/menus/main_menu/background/win_screen.gdshader" id="9_g524f"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cme76"]
+panorama = ExtResource("1_ydfai")
+
+[sub_resource type="Sky" id="Sky_7bk1c"]
+sky_material = SubResource("PanoramaSkyMaterial_cme76")
+
+[sub_resource type="Environment" id="Environment_e8vms"]
+background_mode = 2
+background_color = Color(0.752941, 0.776471, 0.827451, 1)
+sky = SubResource("Sky_7bk1c")
+ambient_light_source = 2
+ambient_light_color = Color(0.80999845, 0.843779, 0.9999983, 1)
+tonemap_mode = 2
+tonemap_exposure = 0.9
+ssao_enabled = true
+ssao_radius = 0.45
+ssao_intensity = 1.0
+ssao_power = 15.0
+glow_enabled = true
+glow_levels/2 = 0.6
+glow_levels/3 = 0.6
+glow_intensity = 2.0
+adjustment_enabled = true
+adjustment_brightness = 0.9
+adjustment_contrast = 1.1
+adjustment_saturation = 1.1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g524f"]
+shader = ExtResource("9_g524f")
+shader_parameter/speed = 120.00000475
+shader_parameter/sway_strength = 20.2050009597375
+shader_parameter/sway_speed = 2.78200012888512
+shader_parameter/spin_speed = 3.5
+shader_parameter/piece_size = 10.0
+shader_parameter/aspect_ratio = 2.0
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/col0 = Color(1, 0.2, 0.2, 1)
+shader_parameter/col1 = Color(1, 0.75, 0.1, 1)
+shader_parameter/col2 = Color(0.1, 0.8, 0.3, 1)
+shader_parameter/col3 = Color(0.15, 0.55, 1, 1)
+shader_parameter/col4 = Color(0.85, 0.2, 1, 1)
+shader_parameter/col5 = Color(1, 0.4, 0.7, 1)
+shader_parameter/col6 = Color(0.1, 0.9, 0.95, 1)
+shader_parameter/col7 = Color(1, 1, 1, 1)
+
+[node name="Node3D" type="Node3D" unique_id=1528619934]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1118603241]
+transform = Transform3D(1, 0, 0, 0, 0.995888, 0.090593226, 0, -0.090593226, 0.995888, -0.6912772, 2.2065146, 2.9934895)
+projection = 1
+fov = 55.0
+size = 3.5
+
+[node name="Environment" type="WorldEnvironment" parent="." unique_id=107263628]
+environment = SubResource("Environment_e8vms")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1198909615]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Barbarian" parent="." unique_id=854783404 instance=ExtResource("2_43w10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7393323, 0.48220754, -0.0053982735)
+
+[node name="GeneralSkeleton" parent="Barbarian/Rig_Medium" parent_id_path=PackedInt32Array(854783404, 1799297845) index="0" unique_id=236498118]
+bones/1/position = Vector3(-3.4030235e-22, 0.3836279, 8.881784e-16)
+bones/1/rotation = Quaternion(-2.3474968e-16, -1.0331727e-07, 5.814742e-23, 1)
+bones/2/rotation = Quaternion(0.004567929, 1.7790144e-15, -6.661826e-18, 0.99998957)
+bones/3/rotation = Quaternion(0.0075940173, -8.892654e-15, 6.7191855e-17, 0.99997115)
+bones/4/position = Vector3(0.21200737, 0.1341321, 8.590336e-08)
+bones/4/rotation = Quaternion(-0.5940171, -0.10672298, -0.6326382, 0.48530698)
+bones/5/rotation = Quaternion(2.2840753e-07, 2.99438e-08, -0.5188271, 0.8548792)
+bones/6/position = Vector3(2.913316e-08, 0.2600438, -1.3041883e-07)
+bones/6/rotation = Quaternion(-2.1654274e-07, 4.4955836e-10, 0.0266581, 0.99964464)
+bones/7/rotation = Quaternion(-0.31973487, -0.35244608, 0.23726726, 0.84690946)
+bones/8/position = Vector3(5.138512e-10, 0.09612506, -0.057500005)
+bones/8/rotation = Quaternion(1.025661e-07, -5.4205252e-08, -0.7071067, 0.7071068)
+bones/9/rotation = Quaternion(-4.656688e-10, 9.727285e-15, -5.603463e-18, 1)
+bones/10/position = Vector3(-0.21200737, 0.1341321, 7.317454e-08)
+bones/10/rotation = Quaternion(-0.5868936, 0.15595573, 0.6528033, 0.45285943)
+bones/11/rotation = Quaternion(2.353491e-07, -2.3487132e-08, 0.45145994, 0.89229137)
+bones/12/rotation = Quaternion(-2.3558806e-07, -1.5771134e-08, -0.02665808, 0.99964464)
+bones/13/rotation = Quaternion(-0.35269302, 0.29818338, -0.20725514, 0.8624034)
+bones/14/position = Vector3(-5.138512e-10, 0.09612506, -0.057500005)
+bones/14/rotation = Quaternion(1.051916e-07, 5.665903e-08, 0.7071067, 0.7071068)
+bones/15/position = Vector3(0.17094503, 0.11358725, 1.6025348e-08)
+bones/15/rotation = Quaternion(0.9931829, 0.0016141149, 0.00080667716, 0.1165526)
+bones/16/position = Vector3(-1.1194018e-08, 0.22707741, -2.320756e-08)
+bones/16/rotation = Quaternion(0.35716334, 7.2490806e-08, -2.500948e-07, 0.934042)
+bones/17/rotation = Quaternion(-0.5904711, -0.0038748193, 0.0012620013, 0.8070485)
+bones/18/position = Vector3(-1.6149015e-10, 0.16565003, 8.797638e-10)
+bones/18/rotation = Quaternion(1.5329832e-07, 0.9201887, -0.39147523, 1.3594189e-07)
+bones/19/position = Vector3(-0.17094505, 0.11358725, 4.308766e-09)
+bones/19/rotation = Quaternion(0.9931829, -0.0016141052, -0.00080668385, 0.1165526)
+bones/20/rotation = Quaternion(0.35716334, -7.218502e-08, 2.5113584e-07, 0.934042)
+bones/21/rotation = Quaternion(-0.5904711, 0.003875135, -0.0012621313, 0.8070485)
+bones/22/rotation = Quaternion(-1.0485529e-07, 0.9201887, -0.39147523, 2.0246708e-07)
+
+[node name="BoneAttachment3D" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="7" unique_id=45601563]
+transform = Transform3D(0.15810566, 0.0008508265, -0.98742163, 0.010202199, -0.9999476, 0.00077202916, -0.98736954, -0.010195956, -0.15810609, -0.58126193, 0.733978, 0.09489407)
+
+[node name="Sword" parent="Barbarian/Rig_Medium/GeneralSkeleton/BoneAttachment3D" index="0" unique_id=1360844501]
+transform = Transform3D(-0.45515525, -0.88982826, -0.032235194, -0.88364697, 0.4469469, 0.13930684, -0.10955175, 0.091890775, -0.98972446, -0.14, 0.149, 0.003)
+visible = false
+
+[node name="AnimationPlayer" parent="Barbarian" index="1" unique_id=867007891]
+autoplay = &"MovementBasic/Jump_Full_Short"
+
+[node name="Sword2" parent="." unique_id=1473756451 instance=ExtResource("3_43w10")]
+transform = Transform3D(-2.7437618, 1.7450454, -0.74081993, 1.8945822, 2.5703983, -0.9622029, 0.06750102, -1.2124739, -3.1060543, -2.8018444, 1.512819, 1.0055156)
+
+[node name="Rock_3_B_Color12" parent="." unique_id=1582370893 instance=ExtResource("3_g524f")]
+transform = Transform3D(2.485, 0, 0, 0, 2.485, 0, 0, 0, 2.485, 3, 0.48220754, -3.7907906)
+
+[node name="Rock_3_B_Color13" parent="." unique_id=1670832163 instance=ExtResource("3_g524f")]
+transform = Transform3D(10.55329, 0, 1.9939076, 0, 10.74, 0, -1.9939076, 0, 10.55329, 2.999938, 0.49556112, -8.081582)
+
+[node name="Rock_3_B_Color14" parent="." unique_id=1981584333 instance=ExtResource("3_g524f")]
+transform = Transform3D(10.55329, 0, 1.9939076, 0, 10.74, 0, -1.9939076, 0, 10.55329, -3.35954, 0.49556112, -7.029948)
+
+[node name="Tree_3_B_Color12" parent="." unique_id=1071217931 instance=ExtResource("4_s0hmr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5336015, 0.48220754, -2.4807835)
+
+[node name="chest_gold2" parent="." unique_id=364298096 instance=ExtResource("5_3c3ec")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57168937, 0.48220742, -1.3870711)
+
+[node name="chest_gold" parent="chest_gold2" index="0" unique_id=817874408]
+transform = Transform3D(0.735, 0, 0, 0, 0.735, 0, 0, 0, 0.735, 0.18465498, 0, 0)
+
+[node name="chest_gold_lid" parent="chest_gold2/chest_gold" index="0" unique_id=1929591001]
+visible = false
+
+[node name="GridMap" type="GridMap" parent="." unique_id=615843467]
+mesh_library = ExtResource("6_g3ui5")
+cell_size = Vector3(4, 4, 4)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65535, 65535, 1, 65535, 0, 1, 0, 0, 1, 0, 65535, 1, 1, 65535, 1, 1, 0, 1, 65534, 65535, 1, 65534, 65534, 1, 65534, 65533, 1, 65535, 65533, 1, 0, 65533, 1, 0, 65534, 1, 65535, 65534, 1, 1, 65534, 1)
+}
+
+[node name="Tree_4_B_Color12" parent="." unique_id=1972297657 instance=ExtResource("7_doec2")]
+transform = Transform3D(0.775, 0, 0, 0, 0.775, 0, 0, 0, 0.775, 1.4475985, 0.8763888, -2.0851893)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=67821154]
+process_mode = 3
+material = SubResource("ShaderMaterial_g524f")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[editable path="Barbarian"]
+[editable path="chest_gold2"]

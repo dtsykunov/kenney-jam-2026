@@ -12,9 +12,18 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 5
 bbcode_enabled = true
-text = "[font_size=48]Collaborators[/font_size]
+text = "[rainbow freq=0.2 sat=0.8 val=0.8 speed=1.0]Congratulations![/rainbow]
 
-[font_size=32]Role[/font_size]
+[rainbow freq=0.2 sat=0.8 val=0.8 speed=1.0]You've won![/rainbow]
+
+
+
+
+
+
+
+[font_size=48]Credits[/font_size]
+
 Dima Tsykunov  
 Daria Vladimirova
 
@@ -33,29 +42,25 @@ Author: Ovani Sound
 Source: [url=https://ovanisound.com/]ovanisound.com[/url]  
 License: [url=https://ovanisound.com/policies/terms-of-service]Royalty-free license[/url]
 
-[font_size=24]Godot Engine Logo[/font_size]
-Author: Andrea Calabró  
-Source: [url=https://godotengine.org/press/]godotengine.org : press[/url]  
-License: [url=https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.txt]CC BY 4.0 International[/url] 
-
 [font_size=24]Godot[/font_size]
-[img=80]res:///assets/godot_engine_logo/logo_vertical_color_dark.png[/img]  
 Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
 Source: [url=https://godotengine.org/]godotengine.org[/url]  
 License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url] 
 
 [font_size=24]Godot Minimal Game Template[/font_size]
-[img=80]res:///assets/plugin_logo/logo.png[/img]  
 Author: [url=https://github.com/Maaack/Godot-Minimal-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
 Source: [url=https://github.com/Maaack/Godot-Minimal-Game-Template]github: Godot-Minimal-Game-Template[/url]  
 License: [url=LICENSE.txt]MIT License[/url]  
 
 [font_size=24]Git[/font_size]
-[img=80]res:///assets/git_logo/Git-Logo-2Color.png[/img]  
 Author: [url=https://github.com/torvalds]Linus Torvalds[/url]  
 Source: [url=https://git-scm.com/downloads]git-scm.com[/url]  
 License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License version 2[/url]
-"
+
+[font_size=24]Confetti (shader)[/font_size]
+Author: RedKnack Interactive
+Source: [url=https://godotshaders.com/shader/confetti-colorrect-godot-4-5/]godotshaders.com[/url]  
+License: [url=https://opensource.org/license/MIT]MIT License[/url]"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
