@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://1yk7xwdr3xhv"]
+
+[ext_resource type="PackedScene" uid="uid://6gdbfi0172ji" path="res://addons/maaacks_game_template/base/nodes/windows/overlaid_window.tscn" id="1_lvgsn"]
+
+[node name="OverlaidWindow" unique_id=875172468 instance=ExtResource("1_lvgsn")]
+process_mode = 3
+custom_minimum_size = Vector2(600, 200)
+pauses_game = true
+update_content = true
+title = "Tutorial"
+text = "The label at the bottom-center displays the current input action detected, if any are setup for the project."
+
+[node name="TitleLabel" parent="ContentContainer/BoxContainer/TitleMargin/BoxContainer" parent_id_path=PackedInt32Array(91647963) index="0" unique_id=1128241240]
+theme_override_font_sizes/font_size = 51
+text = "Tutorial"
+
+[node name="BodyMargin" parent="ContentContainer/BoxContainer" parent_id_path=PackedInt32Array(181378129) index="1" unique_id=1009835268]
+theme_override_constants/margin_top = 33
+theme_override_constants/margin_bottom = 33
+
+[node name="DescriptionLabel" parent="ContentContainer/BoxContainer/BodyMargin" index="0" unique_id=369403681]
+visible = false
+text = "DESTROY EVERYTHING
+
+[rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]SURVIVE[/rainbow]"
+
+[node name="DescriptionLabel2" type="RichTextLabel" parent="ContentContainer/BoxContainer/BodyMargin" index="1" unique_id=1548550007]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "move with wasd
+
+LEFT CLICK TO ATTACK
+
+DESTROY EVERYTHING
+
+[rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]SURVIVE[/rainbow]
+"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1

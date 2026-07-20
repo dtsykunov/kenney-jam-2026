@@ -3,16 +3,24 @@
 [ext_resource type="PackedScene" uid="uid://6gdbfi0172ji" path="res://addons/maaacks_game_template/base/nodes/windows/overlaid_window.tscn" id="1_b2dkv"]
 
 [node name="OverlaidWindow" unique_id=1234282323 instance=ExtResource("1_b2dkv")]
+process_mode = 3
 custom_minimum_size = Vector2(420, 200)
+pauses_game = true
 update_content = true
 title = "Tutorial"
 text = "Click the Win button to progress.
 Click the Lose button to try again."
 
 [node name="TitleLabel" parent="ContentContainer/BoxContainer/TitleMargin/BoxContainer" parent_id_path=PackedInt32Array(91647963) index="0" unique_id=1128241240]
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 51
 text = "Tutorial"
 
-[node name="DescriptionLabel" parent="ContentContainer/BoxContainer/BodyMargin" parent_id_path=PackedInt32Array(1009835268) index="0" unique_id=369403681]
-text = "Click the Win button to progress.
-Click the Lose button to try again."
+[node name="BodyMargin" parent="ContentContainer/BoxContainer" parent_id_path=PackedInt32Array(181378129) index="1" unique_id=1009835268]
+theme_override_constants/margin_top = 33
+theme_override_constants/margin_bottom = 34
+
+[node name="DescriptionLabel" parent="ContentContainer/BoxContainer/BodyMargin" index="0" unique_id=369403681]
+custom_minimum_size = Vector2(450, 0)
+text = "DESTROY EVERYTHING.
+
+[rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]SURVIVE[/rainbow]"

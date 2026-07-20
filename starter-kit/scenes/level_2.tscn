@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://bcg2kkbsnttec" path="res://starter-kit/scripts/view.gd" id="4_ke8g5"]
 [ext_resource type="PackedScene" uid="uid://da7xhui8v2h0h" path="res://scenes/windows/level_up_card.tscn" id="8_u0e45"]
 [ext_resource type="PackedScene" uid="uid://d265pfnhxda5u" path="res://scenes/arena/Arena.tscn" id="9_u0e45"]
+[ext_resource type="Script" uid="uid://bll85ag2um7hl" path="res://scenes/game_scene/tutorial_manager.gd" id="9_xxt43"]
+[ext_resource type="PackedScene" uid="uid://1yk7xwdr3xhv" path="res://scenes/game_scene/tutorials/tutorial.tscn" id="10_xxt43"]
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://starter-kit/scripts/hud.gd" id="13_omv8b"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://starter-kit/fonts/lilita_one_regular.ttf" id="15_apxhq"]
 
@@ -93,12 +95,12 @@ environment = ExtResource("2_6yumh")
 
 [node name="Player" parent="." unique_id=1565091568 node_paths=PackedStringArray("view") instance=ExtResource("3_nyf5e")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022997856, 0.5071248, 49.12348)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022997856, -0.4772035, 49.12348)
 view = NodePath("../View")
 hit_damage = 4.0
 
 [node name="View" type="Node3D" parent="." unique_id=179348308 node_paths=PackedStringArray("target")]
-transform = Transform3D(0.70710695, -0.29883596, 0.64085615, 0, 0.90630794, 0.42261764, -0.70710695, -0.29883596, 0.64085615, 0, 0, 0)
+transform = Transform3D(0.70710695, -0.29883596, 0.64085615, 0, 0.90630794, 0.42261764, -0.70710695, -0.29883596, 0.64085615, 6.4549828, 0, 51.28377)
 script = ExtResource("4_ke8g5")
 target = NodePath("../Player")
 
@@ -239,6 +241,12 @@ transform = Transform3D(-0.41390315, 0.26124343, 0.87202036, 0, 0.9579366, -0.28
 [node name="EnemySpawnTimer" type="Timer" parent="." unique_id=1930182169]
 wait_time = 1.5
 autostart = true
+
+[node name="TutorialManager" type="Node" parent="." unique_id=1730493069]
+unique_name_in_owner = true
+script = ExtResource("9_xxt43")
+tutorial_scenes = Array[PackedScene]([ExtResource("10_xxt43")])
+auto_open = true
 
 [connection signal="coin_collected" from="Player" to="CanvasLayer/HUD" method="_on_coin_collected"]
 [connection signal="damaged" from="Player" to="." method="_on_player_damaged"]
