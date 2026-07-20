@@ -18,19 +18,26 @@ text = "[font_size=48]Collaborators[/font_size]
 Dima Tsykunov  
 Daria Vladimirova
 
-[font_size=48]Sourced[/font_size]
-[font_size=32]Asset Type[/font_size]
-[font_size=24]Use Case[/font_size]
-Author: [url=]Name[/url]  
-Source: [url=]Domain : webpage.html[/url]  
-License: [url=]License[/url]
+[font_size=24]Various Assets[/font_size]
+Author: Kay Lousberg
+Source: [url=https://kaylousberg.com/]kaylousberg.com[/url]  
+License: [url=]CC0[/url]
+
+[font_size=24]Various Assets[/font_size]
+Author: Kenney
+Source: [url=https://kenney.nl/]kenney.nl[/url]  
+License: [url=]CC0[/url]
+
+[font_size=24]Music[/font_size]
+Author: Ovani Sound
+Source: [url=https://ovanisound.com/]ovanisound.com[/url]  
+License: [url=https://ovanisound.com/policies/terms-of-service]Royalty-free license[/url]
 
 [font_size=24]Godot Engine Logo[/font_size]
 Author: Andrea Calabró  
 Source: [url=https://godotengine.org/press/]godotengine.org : press[/url]  
 License: [url=https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.txt]CC BY 4.0 International[/url] 
 
-[font_size=48]Tools[/font_size]
 [font_size=24]Godot[/font_size]
 [img=80]res:///assets/godot_engine_logo/logo_vertical_color_dark.png[/img]  
 Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
