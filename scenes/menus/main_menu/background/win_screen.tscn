@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ygq6g5753ar7" path="res://items/dungeon/chest_gold.gltf" id="5_3c3ec"]
 [ext_resource type="MeshLibrary" uid="uid://chme1jtcbi6ec" path="res://assets/keykit/PrototypeCollection/MeshLib.res" id="6_g3ui5"]
 [ext_resource type="PackedScene" uid="uid://dk86i41qac5gi" path="res://items/forest-nature/Tree_4_B_Color1.gltf" id="7_doec2"]
-[ext_resource type="Shader" uid="uid://c5r5ny0r4bu56" path="res://scenes/menus/main_menu/background/win_screen.gdshader" id="9_g524f"]
+[ext_resource type="Shader" uid="uid://c5r5ny0r4bu56" path="res://starter-kit/objects/win_screen.gdshader" id="9_g524f"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cme76"]
 panorama = ExtResource("1_ydfai")

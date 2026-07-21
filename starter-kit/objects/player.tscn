@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://br1k30d32naot" path="res://starter-kit/scripts/player.gd" id="1_ffboj"]
 [ext_resource type="PackedScene" uid="uid://5swa2rh3h31q" path="res://assets/keykit/Barbarian.tscn" id="3_3eil1"]
-[ext_resource type="ArrayMesh" uid="uid://deu06eho4c74" path="res://starter-kit/meshes/dust.res" id="4_mvhqy"]
+[ext_resource type="Material" uid="uid://3xoxo5a5eeaw" path="res://starter-kit/objects/new_standard_material_3d.tres" id="3_i12i4"]
+[ext_resource type="Material" uid="uid://ccyckgs4m0w46" path="res://starter-kit/objects/new_particle_process_material.tres" id="4_wvm4x"]
+[ext_resource type="ArrayMesh" uid="uid://bdirc0dlodpdv" path="res://starter-kit/objects/new_standard_material_3d_1.tres" id="5_1t75i"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
 radius = 0.3
@@ -10,31 +12,6 @@ height = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_od15b"]
 size = Vector3(2.042, 0.275, 1.925)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7stj"]
-diffuse_mode = 2
-specular_mode = 2
-metallic_specular = 0.0
-backlight = Color(0, 0.521569, 0.709804, 1)
-billboard_keep_scale = true
-grow_amount = 1.882
-proximity_fade_distance = 0.25
-
-[sub_resource type="Curve" id="Curve_xh1e2"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.249284, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_f46kd"]
-curve = SubResource("Curve_xh1e2")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3rerk"]
-particle_flag_align_y = true
-emission_shape = 1
-emission_sphere_radius = 0.2
-direction = Vector3(0, 0, 0)
-gravity = Vector3(0, 0.1, 0)
-scale_min = 0.75
-scale_curve = SubResource("CurveTexture_f46kd")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gwup8"]
 size = Vector3(200, 0.1, 200)
@@ -128,12 +105,12 @@ visible = false
 [node name="ParticlesTrail" type="GPUParticles3D" parent="." unique_id=895423842]
 physics_interpolation_mode = 2
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_q7stj")
+material_override = ExtResource("3_i12i4")
 cast_shadow = 0
 amount = 60
 fixed_fps = 0
-process_material = SubResource("ParticleProcessMaterial_3rerk")
-draw_pass_1 = ExtResource("4_mvhqy")
+process_material = ExtResource("4_wvm4x")
+draw_pass_1 = ExtResource("5_1t75i")
 
 [node name="MouseArea" type="Area3D" parent="." unique_id=726582649]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1800452, 0)

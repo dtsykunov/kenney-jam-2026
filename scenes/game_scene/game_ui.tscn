@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bnmwccmxfg6ym" path="res://scenes/windows/level_won_window.tscn" id="7_wr4n6"]
 [ext_resource type="Script" uid="uid://wjq7li836lwj" path="res://addons/maaacks_game_template/extras/scripts/scene_lister.gd" id="8_ukb12"]
 [ext_resource type="Script" uid="uid://bnhmjy582mlax" path="res://scenes/game_scene/configurable_sub_viewport.gd" id="10_rkfhe"]
+[ext_resource type="PackedScene" uid="uid://cd0jbh4metflb" path="res://scenes/menus/loading_screen/loading_screen.tscn" id="11_lvlld"]
 
 [node name="GameUI" type="Control" unique_id=916921519]
 layout_mode = 3
@@ -23,9 +24,10 @@ script = ExtResource("1_onvsj")
 pause_menu_packed = ExtResource("2_8qp3c")
 focused_viewport = NodePath("../ViewportContainer/ConfigurableSubViewport")
 
-[node name="LevelLoader" type="Node" parent="." unique_id=1495189569 node_paths=PackedStringArray("level_container")]
+[node name="LevelLoader" type="Node" parent="." unique_id=1495189569 node_paths=PackedStringArray("level_container", "level_loading_screen")]
 script = ExtResource("3_bmy5n")
 level_container = NodePath("../ViewportContainer/ConfigurableSubViewport")
+level_loading_screen = NodePath("../LevelLoadingScreen")
 
 [node name="LevelManager" type="Node" parent="." unique_id=835425583 node_paths=PackedStringArray("level_loader", "scene_lister")]
 script = ExtResource("4_7aihr")
@@ -61,3 +63,6 @@ physics_object_picking = true
 size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 script = ExtResource("10_rkfhe")
+
+[node name="LevelLoadingScreen" parent="." unique_id=999943005 instance=ExtResource("11_lvlld")]
+visible = false

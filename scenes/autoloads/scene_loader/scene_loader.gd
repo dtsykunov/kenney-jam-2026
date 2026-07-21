@@ -77,7 +77,7 @@ func set_loading_screen(value : String) -> void:
 	_loading_screen = load(loading_screen_path)
 
 func is_loading_scene(check_scene_path) -> bool:
-	return check_scene_path == _scene_path
+	return ResourceUID.ensure_path(check_scene_path) == ResourceUID.ensure_path(_scene_path)
 
 func has_loading_screen() -> bool:
 	return _loading_screen != null

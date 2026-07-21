@@ -4,7 +4,7 @@
 
 [node name="LoadingScreen" type="CanvasLayer" unique_id=788661482]
 process_mode = 3
-layer = 20
+layer = 150
 script = ExtResource("1_gbk34")
 
 [node name="Control" type="Control" parent="." unique_id=1999015458]
