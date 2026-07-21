@@ -17,7 +17,10 @@ close_button_text = "Continue"
 visible = false
 
 [node name="DescriptionLabel" parent="ContentContainer/BoxContainer/BodyMargin" parent_id_path=PackedInt32Array(1009835268) index="0" unique_id=369403681]
-text = "You won!"
+custom_minimum_size = Vector2(700, 0)
+text = "[rainbow freq=0.2 sat=0.8 val=0.8 speed=1.0]Congratulations![/rainbow]
+
+[rainbow freq=0.2 sat=0.8 val=0.8 speed=1.0]You won![/rainbow]"
 
 [node name="MenuButtons" parent="ContentContainer/BoxContainer/MenuButtonsMargin" parent_id_path=PackedInt32Array(1873987737) index="0" unique_id=1139131565]
 vertical = false

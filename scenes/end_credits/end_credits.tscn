@@ -9,7 +9,6 @@
 script = ExtResource("2_0sycx")
 main_menu_scene_path = "res://scenes/menus/main_menu/main_menu_with_animations.tscn"
 force_mouse_mode_visible = false
-scroll_paused = true
 
 [node name="Node3D" parent="." index="0" unique_id=1528619934 instance=ExtResource("3_0sycx")]
 
@@ -34,7 +33,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="ScrollContainer" parent="." index="3" unique_id=1833156576]
-scroll_vertical = 3981
+scroll_vertical = 19
 
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1621709252) index="1" unique_id=899960257]
 theme_override_colors/default_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
@@ -51,6 +50,7 @@ mouse_filter = 2
 
 [node name="EndMessagePanel" type="Panel" parent="CenterContainer" index="0" unique_id=431203042]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(750, 180)
 layout_mode = 2
 

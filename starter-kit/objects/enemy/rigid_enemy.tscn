@@ -26,7 +26,7 @@ shape = SubResource("CapsuleShape3D_u0e45")
 [node name="SkeletonWarrior" parent="." unique_id=148154388 instance=ExtResource("2_0ninx")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="GeneralSkeleton" parent="SkeletonWarrior/Rig_Medium" parent_id_path=PackedInt32Array(148154388, 605364865) index="0" unique_id=876716063]
+[node name="GeneralSkeleton" parent="SkeletonWarrior/Rig_Medium" parent_id_path=PackedInt32Array(148154388, 376585555) index="0" unique_id=1440602964]
 bones/0/rotation = Quaternion(-8.557133e-09, 1.2043154e-07, -2.0610976e-15, 1)
 bones/1/position = Vector3(-2.8726737e-22, 0.39206377, 8.881784e-16)
 bones/1/rotation = Quaternion(-6.181375e-16, 0.043157768, 1.8626456e-09, 0.9990683)
@@ -69,7 +69,7 @@ bones/20/rotation = Quaternion(0.2740081, -7.208485e-08, 1.9092425e-07, 0.961727
 bones/21/rotation = Quaternion(-0.55903924, 0.11451283, -0.008627658, 0.82115006)
 bones/22/rotation = Quaternion(-9.288468e-05, 0.9202329, -0.39137125, 2.1228336e-05)
 
-[node name="head" parent="SkeletonWarrior/Rig_Medium/GeneralSkeleton" index="0" unique_id=1137453323]
+[node name="head" parent="SkeletonWarrior/Rig_Medium/GeneralSkeleton" index="0" unique_id=1292051933]
 transform = Transform3D(0.9997204, -2.160494e-12, 0.023646604, -4.0357473e-10, 1, 1.7153521e-08, -0.023646604, -1.7158266e-08, 0.9997204, -3.1105527e-09, 1.2278256, -2.0878957e-08)
 
 [node name="AnimationPlayer" parent="SkeletonWarrior" index="1" unique_id=2061873554]

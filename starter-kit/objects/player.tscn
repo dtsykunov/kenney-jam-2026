@@ -140,6 +140,7 @@ draw_pass_1 = ExtResource("4_mvhqy")
 stream = ExtResource("5_ics1s")
 volume_db = -5.0
 autoplay = true
+bus = &"SFX"
 
 [node name="MouseArea" type="Area3D" parent="." unique_id=726582649]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1800452, 0)

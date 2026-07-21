@@ -370,6 +370,7 @@ modulate = Color(1, 1, 1, 0)
 
 [node name="MenuContainer_MenuButtonsMargin_MenuButtonsContainer#MenuButtonsBoxContainer" type="BoxContainer" parent="." index="4" unique_id=1691719897]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = 279.0
 offset_top = 133.0

@@ -12,17 +12,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 5
 bbcode_enabled = true
-text = "[rainbow freq=0.2 sat=0.8 val=0.8 speed=1.0]Congratulations![/rainbow]
-
-[rainbow freq=0.2 sat=0.8 val=0.8 speed=1.0]You've won![/rainbow]
-
-
-
-
-
-
-
-[font_size=48]Credits[/font_size]
+text = "[font_size=48]Credits[/font_size]
 
 Dima Tsykunov  
 Daria Vladimirova
