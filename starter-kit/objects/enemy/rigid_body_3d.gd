@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-signal died
+signal died(_self: RigidBody3D)
 
 enum State {
 	IDLE,
@@ -24,6 +24,8 @@ var state := State.FOLLOWING
 @export var health := 10.0
 var attack_damage := 3.0
 
+var dead := false
+
 var attack_anims := ["kick", "punch"]
 var hit_anims := ["hit_a", "hit_b"]
 
@@ -32,13 +34,19 @@ var is_player_inside_hurtbox := false
 func _ready() -> void:
 	pass
 
+func reset() -> void:
+	dead = false
+	health = 10.0
+
 func _physics_process(delta: float) -> void:
+	if dead: return
 	if state == State.IDLE:
 		state = State.FOLLOWING
 	elif state == State.FOLLOWING:
 		pass
 
 func _integrate_forces(physics_state: PhysicsDirectBodyState3D) -> void:
+	if dead: return
 	if state == State.FOLLOWING:
 		_integrate_forces_following(physics_state)
 
@@ -71,14 +79,17 @@ func look_in_player_direction() -> void:
 	look_at(global_position + player_direction)
 
 func hit(damage: float) -> void:
+	if dead:
+		return
 	state = State.KNOCKED
 	anim_player.play("idle")
 	anim_player.play(hit_anims.pick_random())
 
 	health -= damage
 	if health <= 0.0:
-		died.emit()
-		queue_free()
+		dead = true
+		died.emit(self)
+		# queue_free()
 
 	# up and away vector
 	var away_vector := Vector3.UP + (global_position - player.global_position).normalized()

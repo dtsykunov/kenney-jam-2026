@@ -15,6 +15,7 @@ signal level_won(level_path : String)
 @onready var total_obsticles_label: Label = %TotalObsticlesLabel
 @onready var health_bar: HSlider = %HealthBarSlider
 @onready var xp_bar: HSlider = %XPBar
+@onready var enemy_queue := %EnemyQueue
 
 @onready var level_up_card :Control = %LevelUpCard
 
@@ -48,19 +49,21 @@ func _on_enemy_spawn_timer_timeout() -> void:
 	enemy_spawn.progress_ratio = randf()
 
 	var spawn_loc := enemy_spawn.global_position
-	var loaded_enemy_scene := load(enemy_scene)
-	var enemy : Node3D = loaded_enemy_scene.instantiate()
 
+	if enemy_queue.get_child_count() == 0:
+		return
+	var enemy := enemy_queue.get_child(0)
+	enemy_queue.remove_child(enemy)
 	add_child(enemy)
+	enemy.reset()
 	enemy.global_position = spawn_loc
 
-	enemy.died.connect(_on_enemy_died)
-	enemy.died.connect(player._on_enemy_died)
+func _on_enemy_died(enemy: RigidBody3D) -> void:
+	remove_child(enemy)
+	enemy_queue.add_child(enemy)
 
-func _on_enemy_died() -> void:
 	enemies_killed += 1
 	kills_label.text = str(enemies_killed)
-
 	add_xp(1.0)
 
 

@@ -41,6 +41,7 @@ var dead := false
 	set(value):
 		scale_factor = value
 		sword.scale = Vector3.ONE * scale_factor
+		scaled.emit(scale_factor)
 
 # Functions
 
@@ -200,8 +201,8 @@ func hit(damage: float) -> void:
 	if health <= 0.0:
 		die()
 
-func _on_enemy_died() -> void:
-	scaled.emit(scale_factor)
+func _on_enemy_died(_enemy: RigidBody3D) -> void:
+	pass
 
 
 func _on_legs_animation_player_started(anim_name: StringName) -> void:
@@ -227,3 +228,5 @@ func die() -> void:
 	dead = true
 	animation.play("die")
 	died.emit()
+
+

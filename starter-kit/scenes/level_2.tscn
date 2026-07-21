@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d265pfnhxda5u" path="res://scenes/arena/Arena.tscn" id="9_u0e45"]
 [ext_resource type="Script" uid="uid://bll85ag2um7hl" path="res://scenes/game_scene/tutorial_manager.gd" id="9_xxt43"]
 [ext_resource type="PackedScene" uid="uid://1yk7xwdr3xhv" path="res://scenes/game_scene/tutorials/tutorial.tscn" id="10_xxt43"]
+[ext_resource type="PackedScene" uid="uid://2sn2j0sbib0b" path="res://starter-kit/objects/enemy/rigid_enemy.tscn" id="11_mfitm"]
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://starter-kit/scripts/hud.gd" id="13_omv8b"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://starter-kit/fonts/lilita_one_regular.ttf" id="15_apxhq"]
 
@@ -248,9 +249,315 @@ script = ExtResource("9_xxt43")
 tutorial_scenes = Array[PackedScene]([ExtResource("10_xxt43")])
 auto_open = true
 
+[node name="EnemyQueue" type="Node3D" parent="." unique_id=35941867]
+unique_name_in_owner = true
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.995205, 0, 0)
+visible = false
+
+[node name="RigidBody3D" parent="EnemyQueue" unique_id=2048651071 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D2" parent="EnemyQueue" unique_id=2115800668 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D3" parent="EnemyQueue" unique_id=1533708796 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D4" parent="EnemyQueue" unique_id=602991472 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D5" parent="EnemyQueue" unique_id=1628896072 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D6" parent="EnemyQueue" unique_id=2146891982 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D7" parent="EnemyQueue" unique_id=480656580 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D8" parent="EnemyQueue" unique_id=1135108040 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D9" parent="EnemyQueue" unique_id=1437642047 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D10" parent="EnemyQueue" unique_id=1666951261 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D11" parent="EnemyQueue" unique_id=554467871 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D12" parent="EnemyQueue" unique_id=939459006 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D13" parent="EnemyQueue" unique_id=2111167092 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D14" parent="EnemyQueue" unique_id=1924275938 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D15" parent="EnemyQueue" unique_id=1611366502 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D16" parent="EnemyQueue" unique_id=802026113 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D17" parent="EnemyQueue" unique_id=339173833 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D18" parent="EnemyQueue" unique_id=644780493 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D19" parent="EnemyQueue" unique_id=1455762333 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D20" parent="EnemyQueue" unique_id=1889083661 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D21" parent="EnemyQueue" unique_id=962297974 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D22" parent="EnemyQueue" unique_id=1116559843 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D23" parent="EnemyQueue" unique_id=1025077220 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D24" parent="EnemyQueue" unique_id=699025851 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D25" parent="EnemyQueue" unique_id=1354837103 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D26" parent="EnemyQueue" unique_id=896104509 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D27" parent="EnemyQueue" unique_id=1835992114 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D28" parent="EnemyQueue" unique_id=1842261784 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D29" parent="EnemyQueue" unique_id=1741310200 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D30" parent="EnemyQueue" unique_id=515917727 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D31" parent="EnemyQueue" unique_id=1966828060 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D32" parent="EnemyQueue" unique_id=1113037635 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D33" parent="EnemyQueue" unique_id=427534786 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D34" parent="EnemyQueue" unique_id=477451060 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D35" parent="EnemyQueue" unique_id=1497877397 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D36" parent="EnemyQueue" unique_id=1981850965 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D37" parent="EnemyQueue" unique_id=1852846321 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D38" parent="EnemyQueue" unique_id=605883615 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D39" parent="EnemyQueue" unique_id=617594943 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D40" parent="EnemyQueue" unique_id=579016875 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D41" parent="EnemyQueue" unique_id=2061302613 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D42" parent="EnemyQueue" unique_id=737892305 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D43" parent="EnemyQueue" unique_id=1285464583 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D44" parent="EnemyQueue" unique_id=60735656 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D45" parent="EnemyQueue" unique_id=1267196345 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D46" parent="EnemyQueue" unique_id=87612385 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D47" parent="EnemyQueue" unique_id=1100526046 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D48" parent="EnemyQueue" unique_id=1487289769 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D49" parent="EnemyQueue" unique_id=1994795873 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D50" parent="EnemyQueue" unique_id=713145382 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D51" parent="EnemyQueue" unique_id=1086954201 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D52" parent="EnemyQueue" unique_id=1608290503 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D53" parent="EnemyQueue" unique_id=1228843751 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D54" parent="EnemyQueue" unique_id=647589206 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D55" parent="EnemyQueue" unique_id=546028318 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D56" parent="EnemyQueue" unique_id=79965874 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D57" parent="EnemyQueue" unique_id=1395355230 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D58" parent="EnemyQueue" unique_id=389182752 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D59" parent="EnemyQueue" unique_id=837692743 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
+[node name="RigidBody3D60" parent="EnemyQueue" unique_id=187530276 instance=ExtResource("11_mfitm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7317, 0.78066444, 37.90857)
+
 [connection signal="coin_collected" from="Player" to="CanvasLayer/HUD" method="_on_coin_collected"]
 [connection signal="damaged" from="Player" to="." method="_on_player_damaged"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="scaled" from="Player" to="View" method="_on_player_scaled"]
 [connection signal="accepted" from="CanvasLayer/HUD/LevelUpCard" to="." method="_on_card_button_pressed"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
+[connection signal="died" from="EnemyQueue/RigidBody3D" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D2" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D2" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D3" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D3" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D4" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D4" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D5" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D5" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D6" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D6" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D7" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D7" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D8" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D8" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D9" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D9" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D10" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D10" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D11" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D11" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D12" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D12" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D13" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D13" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D14" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D14" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D15" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D15" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D16" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D16" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D17" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D17" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D18" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D18" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D19" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D19" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D20" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D20" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D21" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D21" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D22" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D22" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D23" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D23" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D24" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D24" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D25" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D25" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D26" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D26" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D27" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D27" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D28" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D28" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D29" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D29" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D30" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D30" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D31" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D31" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D32" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D32" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D33" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D33" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D34" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D34" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D35" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D35" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D36" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D36" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D37" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D37" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D38" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D38" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D39" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D39" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D40" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D40" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D41" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D41" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D42" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D42" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D43" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D43" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D44" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D44" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D45" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D45" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D46" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D46" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D47" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D47" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D48" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D48" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D49" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D49" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D50" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D50" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D51" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D51" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D52" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D52" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D53" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D53" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D54" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D54" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D55" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D55" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D56" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D56" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D57" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D57" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D58" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D58" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D59" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D59" to="Player" method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D60" to="." method="_on_enemy_died"]
+[connection signal="died" from="EnemyQueue/RigidBody3D60" to="Player" method="_on_enemy_died"]
