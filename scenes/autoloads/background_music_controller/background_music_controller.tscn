@@ -56,5 +56,4 @@ script = ExtResource("1_nx5db")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=945634615]
 stream = SubResource("AudioStreamInteractive_od15b")
-autoplay = true
 bus = &"Music"

@@ -35,4 +35,6 @@ func _ready() -> void:
 	animation_state_machine = $MenuAnimationTree.get("parameters/playback")
 
 	var playback : AudioStreamPlayback = BackgroundMusicController.audio_stream.get_stream_playback()
-	playback.switch_to_clip_by_name("INT2")
+	if not playback:
+		BackgroundMusicController.audio_stream.play()
+	BackgroundMusicController.audio_stream.get_stream_playback().switch_to_clip_by_name("INT2")
