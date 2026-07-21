@@ -2022,7 +2022,7 @@ _data = {
 
 [node name="SkeletonWarrior" unique_id=148154388 instance=ExtResource("1_gcsq8")]
 
-[node name="GeneralSkeleton" parent="Rig_Medium" parent_id_path=PackedInt32Array(1376983420) index="0" unique_id=1518695158]
+[node name="GeneralSkeleton" parent="Rig_Medium" parent_id_path=PackedInt32Array(666636463) index="0" unique_id=2034139405]
 bones/0/rotation = Quaternion(-8.557133e-09, 1.2043154e-07, -2.0610973e-15, 1)
 bones/1/position = Vector3(4.3558297e-18, 0.35611328, 8.881784e-16)
 bones/1/rotation = Quaternion(0.0052512162, -1.0331584e-07, 5.425413e-10, 0.99998623)
@@ -2062,7 +2062,7 @@ bones/20/rotation = Quaternion(0.81343925, -4.4758472e-08, 5.716046e-07, 0.58165
 bones/21/rotation = Quaternion(-0.61344564, 3.1981642e-07, -4.347298e-07, 0.789737)
 bones/22/rotation = Quaternion(9.676124e-08, 0.79233766, -0.61008286, 1.449053e-07)
 
-[node name="head" parent="Rig_Medium/GeneralSkeleton" index="0" unique_id=353691674]
+[node name="head" parent="Rig_Medium/GeneralSkeleton" index="0" unique_id=1437051527]
 transform = Transform3D(0.9592211, -0.27519128, 0.06453565, 0.28264293, 0.931548, -0.22875988, 0.0028346032, 0.23767158, 0.97134155, 0.05273878, 1.0892339, 0.32147726)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=2061873554]

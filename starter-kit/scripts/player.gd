@@ -27,7 +27,6 @@ var dead := false
 @export var health := 10.0
 
 @onready var particles_trail = $ParticlesTrail
-# @onready var sound_footsteps = $SoundFootsteps
 @onready var model = $BarbarianLegs
 @onready var animation = $BarbarianLegs/AnimationPlayer
 @onready var modelBody = $Barbarian
@@ -97,7 +96,6 @@ func _physics_process(delta):
 func handle_effects(delta):
 
 	particles_trail.emitting = false
-	# sound_footsteps.stream_paused = true
 
 	if is_on_floor():
 		var horizontal_velocity = Vector2(velocity.x, velocity.z)
@@ -105,10 +103,6 @@ func handle_effects(delta):
 		if speed_factor > 0.05:
 			if animation.current_animation != "walk":
 				animation.play("walk", 0.1)
-
-# 			if speed_factor > 0.3:
-# 				sound_footsteps.stream_paused = false
-# 				sound_footsteps.pitch_scale = speed_factor
 
 			if speed_factor > 0.75:
 				particles_trail.emitting = true

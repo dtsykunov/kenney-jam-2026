@@ -73,7 +73,7 @@ shadow_enabled = true
 [node name="Barbarian" parent="." unique_id=854783404 instance=ExtResource("2_43w10")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7393323, 0.48220754, -0.0053982735)
 
-[node name="GeneralSkeleton" parent="Barbarian/Rig_Medium" parent_id_path=PackedInt32Array(854783404, 1799297845) index="0" unique_id=236498118]
+[node name="GeneralSkeleton" parent="Barbarian/Rig_Medium" parent_id_path=PackedInt32Array(854783404, 1044142548) index="0" unique_id=1881342573]
 bones/1/position = Vector3(-3.4030235e-22, 0.3836279, 8.881784e-16)
 bones/1/rotation = Quaternion(-2.3474968e-16, -1.0331727e-07, 5.814742e-23, 1)
 bones/2/rotation = Quaternion(0.004567929, 1.7790144e-15, -6.661826e-18, 0.99998957)
@@ -135,10 +135,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5336015, 0.48220754, -2.48
 [node name="chest_gold2" parent="." unique_id=364298096 instance=ExtResource("5_3c3ec")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57168937, 0.48220742, -1.3870711)
 
-[node name="chest_gold" parent="chest_gold2" index="0" unique_id=817874408]
+[node name="chest_gold" parent="chest_gold2" index="0" unique_id=1454644164]
 transform = Transform3D(0.735, 0, 0, 0, 0.735, 0, 0, 0, 0.735, 0.18465498, 0, 0)
 
-[node name="chest_gold_lid" parent="chest_gold2/chest_gold" index="0" unique_id=1929591001]
+[node name="chest_gold_lid" parent="chest_gold2/chest_gold" index="0" unique_id=1765797714]
 visible = false
 
 [node name="GridMap" type="GridMap" parent="." unique_id=615843467]

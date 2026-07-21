@@ -1,27 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0e27836xgmhi"]
+[gd_scene format=3 uid="uid://c0e27836xgmhi"]
 
-[ext_resource type="PackedScene" uid="uid://xy8rvnjp22n5" path="res://models/character.glb" id="1_vn7w5"]
+[ext_resource type="PackedScene" uid="uid://xy8rvnjp22n5" path="res://starter-kit/models/character.glb" id="1_vn7w5"]
 
-[node name="character" instance=ExtResource("1_vn7w5")]
+[node name="character" unique_id=1866557625 instance=ExtResource("1_vn7w5")]
 
-[node name="leg-left" parent="character/root" index="0"]
+[node name="leg-left" parent="character/root" parent_id_path=PackedInt32Array(15627977) index="0" unique_id=1410081292]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0.125, 0.17625, -0.02375)
 
-[node name="leg-right" parent="character/root" index="1"]
+[node name="leg-right" parent="character/root" parent_id_path=PackedInt32Array(15627977) index="1" unique_id=954337412]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -0.125, 0.17625, -0.02375)
 
-[node name="torso" parent="character/root" index="2"]
+[node name="torso" parent="character/root" parent_id_path=PackedInt32Array(15627977) index="2" unique_id=2121755393]
 transform = Transform3D(1, 0, 0, 0, 0.996194, 0.0871557, 0, -0.0871557, 0.996194, -1.80478e-15, 0.17625, -0.02375)
 
-[node name="arm-left" parent="character/root/torso" index="0"]
+[node name="arm-left" parent="character/root/torso" index="0" unique_id=317732724]
 transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 0.3, 0.175, 0)
 
-[node name="arm-right" parent="character/root/torso" index="1"]
+[node name="arm-right" parent="character/root/torso" index="1" unique_id=477211237]
 transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, -0.3, 0.1195, 0)
 
-[node name="antenna" parent="character/root/torso" index="2"]
+[node name="antenna" parent="character/root/torso" index="2" unique_id=1045012353]
 transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0.6, 0)
 
-[node name="AnimationPlayer" parent="." index="1"]
+[node name="AnimationPlayer" parent="." index="1" unique_id=699390822]
 deterministic = true
 playback_default_blend_time = 0.2

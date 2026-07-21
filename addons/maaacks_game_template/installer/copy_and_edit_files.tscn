@@ -11,6 +11,7 @@ replace_strings_map = {
 }
 
 [node name="DestinationDialog" parent="." unique_id=1136445827 instance=ExtResource("2_g35hh")]
+size = Vector2i(1398, 640)
 
 [connection signal="canceled" from="DestinationDialog" to="." method="_on_destination_dialog_canceled"]
 [connection signal="dir_selected" from="DestinationDialog" to="." method="_on_destination_dialog_dir_selected"]

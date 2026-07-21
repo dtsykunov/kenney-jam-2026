@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://br1k30d32naot" path="res://starter-kit/scripts/player.gd" id="1_ffboj"]
 [ext_resource type="PackedScene" uid="uid://5swa2rh3h31q" path="res://assets/keykit/Barbarian.tscn" id="3_3eil1"]
 [ext_resource type="ArrayMesh" uid="uid://deu06eho4c74" path="res://starter-kit/meshes/dust.res" id="4_mvhqy"]
-[ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://starter-kit/sounds/walking.ogg" id="5_ics1s"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
 radius = 0.3
@@ -51,7 +50,7 @@ shape = SubResource("CapsuleShape3D_gdq8c")
 [node name="Barbarian" parent="." unique_id=854783404 instance=ExtResource("3_3eil1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="GeneralSkeleton" parent="Barbarian/Rig_Medium" parent_id_path=PackedInt32Array(854783404, 1799297845) index="0" unique_id=236498118]
+[node name="GeneralSkeleton" parent="Barbarian/Rig_Medium" parent_id_path=PackedInt32Array(854783404, 1044142548) index="0" unique_id=1881342573]
 bones/0/rotation = Quaternion(-8.557133e-09, 1.2043154e-07, -2.0610973e-15, 1)
 bones/1/position = Vector3(-1.02508946e-10, 0.39206377, 0.0004960834)
 bones/1/rotation = Quaternion(-3.3329052e-17, -0.006636501, -1.5415917e-08, 0.999978)
@@ -83,10 +82,10 @@ bones/20/rotation = Quaternion(0.2857893, -7.2464765e-08, 2.0050733e-07, 0.95829
 bones/21/rotation = Quaternion(-0.5459386, 0.114650294, -0.0065558613, 0.82991767)
 bones/22/rotation = Quaternion(-5.5580065e-05, 0.9202208, -0.39139974, 1.2766015e-05)
 
-[node name="Barbarian_LegLeft" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="5" unique_id=918351084]
+[node name="Barbarian_LegLeft" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="5" unique_id=806199254]
 visible = false
 
-[node name="Barbarian_LegRight" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="6" unique_id=254488482]
+[node name="Barbarian_LegRight" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="6" unique_id=1465091958]
 visible = false
 
 [node name="BoneAttachment3D" parent="Barbarian/Rig_Medium/GeneralSkeleton" index="7" unique_id=45601563]
@@ -108,22 +107,22 @@ debug_color = Color(1, 0, 0, 0.41960785)
 [node name="BarbarianLegs" parent="." unique_id=425867692 instance=ExtResource("3_3eil1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="Barbarian_ArmLeft" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 236498118) index="0" unique_id=2103011377]
+[node name="Barbarian_ArmLeft" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 1881342573) index="0" unique_id=2065435815]
 visible = false
 
-[node name="Barbarian_ArmRight" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 236498118) index="1" unique_id=214221996]
+[node name="Barbarian_ArmRight" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 1881342573) index="1" unique_id=598560791]
 visible = false
 
-[node name="Barbarian_BearHat" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 236498118) index="2" unique_id=528750787]
+[node name="Barbarian_BearHat" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 1881342573) index="2" unique_id=597803115]
 visible = false
 
-[node name="Barbarian_Body" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 236498118) index="3" unique_id=230613305]
+[node name="Barbarian_Body" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 1881342573) index="3" unique_id=850949842]
 visible = false
 
-[node name="Barbarian_Head" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 236498118) index="4" unique_id=304110664]
+[node name="Barbarian_Head" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 1881342573) index="4" unique_id=742763724]
 visible = false
 
-[node name="BoneAttachment3D" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 236498118) index="7" unique_id=45601563]
+[node name="BoneAttachment3D" parent="BarbarianLegs/Rig_Medium/GeneralSkeleton" parent_id_path=PackedInt32Array(425867692, 1881342573) index="7" unique_id=45601563]
 visible = false
 
 [node name="ParticlesTrail" type="GPUParticles3D" parent="." unique_id=895423842]
@@ -135,12 +134,6 @@ amount = 60
 fixed_fps = 0
 process_material = SubResource("ParticleProcessMaterial_3rerk")
 draw_pass_1 = ExtResource("4_mvhqy")
-
-[node name="SoundFootsteps" type="AudioStreamPlayer" parent="." unique_id=345833540]
-stream = ExtResource("5_ics1s")
-volume_db = -5.0
-autoplay = true
-bus = &"SFX"
 
 [node name="MouseArea" type="Area3D" parent="." unique_id=726582649]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1800452, 0)

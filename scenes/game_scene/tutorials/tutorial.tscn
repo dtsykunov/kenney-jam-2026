@@ -20,9 +20,7 @@ theme_override_constants/margin_bottom = 33
 
 [node name="DescriptionLabel" parent="ContentContainer/BoxContainer/BodyMargin" index="0" unique_id=369403681]
 visible = false
-text = "DESTROY EVERYTHING
-
-[rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]SURVIVE[/rainbow]"
+text = "The label at the bottom-center displays the current input action detected, if any are setup for the project."
 
 [node name="DescriptionLabel2" type="RichTextLabel" parent="ContentContainer/BoxContainer/BodyMargin" index="1" unique_id=1548550007]
 unique_name_in_owner = true

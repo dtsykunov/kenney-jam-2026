@@ -281,7 +281,7 @@ _data = {
 
 [node name="Barbarian" unique_id=854783404 instance=ExtResource("1_tvxmi")]
 
-[node name="GeneralSkeleton" parent="Rig_Medium" parent_id_path=PackedInt32Array(1799297845) index="0" unique_id=236498118]
+[node name="GeneralSkeleton" parent="Rig_Medium" parent_id_path=PackedInt32Array(1044142548) index="0" unique_id=1881342573]
 bones/1/position = Vector3(0.0067739394, 0.21609509, 0.2337026)
 bones/1/rotation = Quaternion(0.5413459, 0.07418099, 0.005825669, 0.83750093)
 bones/2/rotation = Quaternion(0.05019244, 0.004778109, 0.0043445444, 0.9987187)

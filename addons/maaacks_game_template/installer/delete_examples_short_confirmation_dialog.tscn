@@ -4,7 +4,7 @@
 oversampling_override = 1.0
 title = "Delete Source Examples"
 initial_position = 2
-size = Vector2i(1024, 300)
+size = Vector2i(1024, 899)
 visible = true
 ok_button_text = "Yes"
 dialog_text = "This will delete the original examples folder from the plugin (inside of addons/).

@@ -4,7 +4,7 @@
 oversampling_override = 1.0
 title = "Setup Complete!"
 initial_position = 2
-size = Vector2i(1032, 360)
+size = Vector2i(3179, 472)
 visible = true
 dialog_text = "Thanks for installing Maaack's Minimal Game Template!
 

@@ -7,7 +7,7 @@ size = Vector3(4, 1, 4)
 
 [node name="Floor_Dirt2" unique_id=170557613 instance=ExtResource("1_n4udk")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Floor_Dirt" parent_id_path=PackedInt32Array(1500559462) index="0" unique_id=1332504660]
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor_Dirt" parent_id_path=PackedInt32Array(1243496109) index="0" unique_id=1332504660]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor_Dirt/StaticBody3D" index="0" unique_id=1082996754]
 shape = SubResource("BoxShape3D_od15b")
